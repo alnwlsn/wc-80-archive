@@ -1,0 +1,31 @@
+Name        io-decoder;
+Partno                           ;
+Revision    1                    ;
+Date        06/13/2020           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+/** ---------------------------------- PIN Declarations --------------- **/
+
+PIN 1 = IORQ;
+PIN 2 = A0;
+PIN 3 = A1;
+PIN 4 = A2;
+PIN 5 = A3;
+PIN 6 = A4;
+PIN 7 = A5;
+PIN 8 = A6;
+PIN 9 = A7;
+
+PIN 23 = VCRT;
+PIN 22 = nVCRT;
+
+/** ----------------------------------- Boolean Equation Segment ------ **/
+
+/** EQUATIONS **/
+
+!VCRT = !IORQ & (A7 & !A6 & !A5 & !A4 & A3 & !A2 & !A1);
+nVCRT = !VCRT;

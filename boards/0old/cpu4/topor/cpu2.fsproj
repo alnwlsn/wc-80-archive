@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--**********************************-->
+<!--   File    : cpu2.fsproj          -->
+<!--   Format  : TopoR Project file   -->
+<!--   Version : 2                    -->
+<!--   Program : TopoR Lite 7.0.18508 -->
+<!--   Date    : Sunday, May 09, 2021 -->
+<!--   Time    : 11:24                -->
+<!--**********************************-->
+
+<Project>
+   <Version current="2"/>
+   <GUID>{33865A72-39E8-4E2D-B9DE-D4B3C4EDB3BD}</GUID>
+   <Documents>
+      <Section name="PCB" isExpanded="true">
+         <File path=".\cpu2.fsx" isopened="0" dateChange="2021-05-08 08:28:57"/>
+         <File path=".\cpu2-arcs16.fsx" isopened="0" dateChange="2021-05-09 07:38:47"/>
+      </Section>
+      <Section name="AutoRouting" isExpanded="true">
+         <File path=".\autoroute_210509011304\cpu2-arcs16_10957-106sa.fsb" isopened="0" dateChange="2021-05-09 06:50:24"/>
+         <File path=".\autoroute_210509005456\cpu2-arcs16_11458-92sa.fsb" isopened="0" dateChange="2021-05-09 00:56:42"/>
+         <File path=".\autoroute_210509011304\cpu2-arcs16_11487-73sa.fsb" isopened="0" dateChange="2021-05-09 07:13:51"/>
+         <File path=".\autoroute_210509011136\cpu2-arcs16_11586-99sa.fsb" isopened="0" dateChange="2021-05-09 01:11:46"/>
+         <File path=".\autoroute_210509010225\cpu2-arcs16_11687-102sa.fsb" isopened="0" dateChange="2021-05-09 01:02:37"/>
+         <File path=".\autoroute_210509010330\cpu2-arcs16_11796-86sa.fsb" isopened="0" dateChange="2021-05-09 01:04:34"/>
+         <File path=".\autoroute_210509010521\cpu2-arcs16_11800-82sa.fsb" isopened="0" dateChange="2021-05-09 01:10:15"/>
+         <File path=".\autoroute_210507225930\cpu2_10512-258sa.fsb" isopened="0" dateChange="2021-05-08 07:25:36"/>
+         <File path=".\autoroute_210507225930\cpu2_10917-104sa.fsb" isopened="0" dateChange="2021-05-08 07:35:52"/>
+         <File path=".\autoroute_210508091713\cpu2_11072-128sa.fsb" isopened="0" dateChange="2021-05-08 09:21:14"/>
+         <File path=".\autoroute_210507224352\cpu2_11154-110sa.fsb" isopened="0" dateChange="2021-05-07 22:49:52"/>
+         <File path=".\autoroute_210508092630\cpu2_11328-59sa.fsb" isopened="0" dateChange="2021-05-08 09:57:32"/>
+         <File path=".\autoroute_210507223550\cpu2_11356-85sa.fsb" isopened="0" dateChange="2021-05-07 22:36:31"/>
+         <File path=".\autoroute_210508075826\cpu2_11513-77sa.fsb" isopened="0" dateChange="2021-05-08 08:26:04"/>
+         <File path=".\autoroute_210508101346\cpu2_11542-63sa.fsb" isopened="0" dateChange="2021-05-08 12:20:29"/>
+         <File path=".\autoroute_210508101346\cpu2_11548-66sa.fsb" isopened="0" dateChange="2021-05-08 10:36:37"/>
+         <File path=".\autoroute_210508082920\cpu2_11582-68sa.fsb" isopened="0" dateChange="2021-05-08 09:12:26"/>
+         <File path=".\autoroute_210507225930\cpu2_11653-70sa.fsb" isopened="0" dateChange="2021-05-08 07:47:39"/>
+         <File path=".\autoroute_210507225930\cpu2_11691-69sa.fsb" isopened="0" dateChange="2021-05-08 07:12:52"/>
+         <File path=".\autoroute_210507224108\cpu2_11784-78sa.fsb" isopened="0" dateChange="2021-05-07 22:41:42"/>
+         <File path=".\autoroute_210507225254\cpu2_11818-76sa.fsb" isopened="0" dateChange="2021-05-07 22:55:01"/>
+         <File path=".\autoroute_210507223810\cpu2_11894-83sa.fsb" isopened="0" dateChange="2021-05-07 22:38:27"/>
+         <File path=".\autoroute_210507225109\cpu2_12097-76sa.fsb" isopened="0" dateChange="2021-05-07 22:51:37"/>
+         <File path=".\autoroute_210507225930\cpu2_12139-58sa.fsb" isopened="0" dateChange="2021-05-08 07:20:58"/>
+         <File path=".\autoroute_210507225930\cpu2_12230-56sa.fsb" isopened="0" dateChange="2021-05-08 07:47:32"/>
+         <File path=".\autoroute_210507225930\cpu2_12399-55sa.fsb" isopened="0" dateChange="2021-05-08 07:37:32"/>
+      </Section>
+   </Documents>
+</Project>

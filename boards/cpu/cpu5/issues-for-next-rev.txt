@@ -1,0 +1,5 @@
+silkscreen for r3 and c1 was swapped (fixed)
+
+labels RAMROM and MEMCHIP should be swapped
+
+possibly connect MEMCHIP to the selector register file

@@ -1,0 +1,180 @@
+                                ;hack player
+                                ;format:
+                                ;	<chip data 8> <chip address reg 8> <time+chip le 16>
+                                ;                                  (be) <chip 3> <time 13>
+                                
+                                org 0x6000
+                                
+                                songPlay:
+6000: 3E 00                     	ld a,0
+6002: D3 73                     	out (0x73),a
+6004: 21 00 00                  	ld hl,0 ;ld hl,sp
+6007: ED 7A                     	adc hl,sp 
+6009: 22 1D 60                  	ld (songPlay_sp_p),hl
+600C: 3E 00                     	ld a,0x00
+600E: 32 1C 60                  	ld (songPlay_bank),a
+6011: 3A 1C 60                  	ld a,(songPlay_bank)
+6014: D3 7E                     	out (0x7e),a
+6016: 31 00 C0                  	ld sp,0xc000
+6019: C3 1F 60                  	jp songPlay_main
+                                	
+601C: 00                        songPlay_bank: db 0x00
+601D: 00 00                     songPlay_sp_p: db 0x00, 0x00
+                                	
+                                songPlay_main:
+601F: 21 00 00                  	ld hl,0 ;ld hl,sp
+6022: ED 7A                     	adc hl,sp  
+                                	;cp hl with de
+6024: 11 00 E0                  	ld de,0xe000
+6027: B7                        	or a
+6028: ED 52                     	sbc hl,de
+602A: 19                        	add hl,de
+602B: CA 78 60                  	jp z,songPlay_nextbank
+                                	
+602E: D1                        	pop de
+602F: E1                        	pop hl
+                                	
+6030: 7C                        	ld a,h ;see if time/chip is 0xff - if it is, then stop
+6031: A5                        	and l
+6032: FE FF                     	cp 0xff
+6034: CA 00 60                  	jp z, songPlay ;song end (or go back to the beginning)
+                                	
+6037: 7C                        	ld a,h ;get chip id
+6038: 07                        	rlca
+6039: 07                        	rlca
+603A: 07                        	rlca
+603B: E6 07                     	and 0b00000111
+                                	;a contains chip id
+603D: FE 00                     	cp 0
+603F: CA D1 60                  	jp z,songChip_reg
+6042: FE 01                     	cp 1
+6044: CA C4 60                  	jp z,songChip_2413
+6047: FE 02                     	cp 2
+6049: CA D7 60                  	jp z,songChip_2612_0
+604C: FE 03                     	cp 3
+604E: CA E4 60                  	jp z,songChip_2612_1
+6051: FE 04                     	cp 4
+6053: CA AA 60                  	jp z,songChip_262_0
+6056: FE 05                     	cp 5
+6058: CA B7 60                  	jp z,songChip_262_1
+                                	
+                                	
+                                	songPlay_timing_ret:
+                                	
+605B: 7C                        	ld a,h
+605C: E6 1F                     	and 0b00011111
+605E: 67                        	ld h,a
+                                	;hl contains timing in millis
+                                	
+                                	songPlay_delayloop:
+605F: 7D                        		ld a,l ;check to see if hl is zero. if it is, go back to the start of the loop
+6060: B4                        		or h
+6061: FE 00                     		cp 0
+6063: CA 1F 60                  		jp z,songPlay_main 
+6066: 2B                        		dec hl
+6067: DB 61                     		in a,(0x61)
+6069: F6 C0                     		or 0b11000000
+606B: FE FF                     		cp 0xff
+606D: C2 F1 60                  		jp nz,songChip_exit
+6070: 06 D3                     		ld b,0xd3
+                                		songPlay_delayloop2: ;each instanxe of this loop should be like 1 ms
+6072: 00                        			nop
+6073: 10 FD                     			djnz songPlay_delayloop2
+6075: C3 5F 60                  		jp songPlay_delayloop
+                                
+                                songPlay_nextbank:
+6078: 3A 1C 60                  	ld a,(songPlay_bank)
+607B: 3C                        	inc a
+607C: D3 7E                     	out (0x7e),a
+607E: 32 1C 60                  	ld (songPlay_bank),a
+6081: 0E 77                     	ld c,0x77
+                                	;ioHexPrint8
+6083: 47                        	ld b,a
+6084: E6 F0                     	and 0xf0
+6086: 0F                        	rrca
+6087: 0F                        	rrca
+6088: 0F                        	rrca
+6089: 0F                        	rrca
+608A: E6 0F                     	and 0x0f
+608C: C6 30                     	add a,0x30
+608E: FE 3A                     	cp 0x3a ;if carry, 0x0a>a
+6090: 38 02                     	jr c,ioPrintHex8_1
+6092: C6 07                     	add a,0x07
+                                	ioPrintHex8_1:
+6094: ED 79                     	out (c),a
+6096: 0D                        	dec c
+6097: 78                        	ld a,b
+6098: E6 0F                     	and 0x0f
+609A: C6 30                     	add a,0x30
+609C: FE 3A                     	cp 0x3a
+609E: 38 02                     	jr c,ioPrintHex8_2
+60A0: C6 07                     	add a,0x07
+                                	ioPrintHex8_2:
+60A2: ED 79                     	out (c),a
+                                	
+60A4: 31 00 C0                  	ld sp,0xc000
+60A7: C3 1F 60                  	jp songPlay_main	
+                                
+                                
+                                songChip_262_0: ;write address 1 or 0 for the 262 chip
+60AA: 3E A8                     	ld a,0xa8
+60AC: 4F                        	ld c,a
+60AD: ED 51                     	out (c),d
+60AF: 3E A9                     	ld a,0xa9
+60B1: 4F                        	ld c,a
+60B2: ED 59                     	out (c),e
+60B4: C3 5B 60                  	jp songPlay_timing_ret
+                                
+                                songChip_262_1:
+60B7: 3E AA                     	ld a,0xaa
+60B9: 4F                        	ld c,a
+60BA: ED 51                     	out (c),d
+60BC: 3E A9                     	ld a,0xa9
+60BE: 4F                        	ld c,a
+60BF: ED 59                     	out (c),e
+60C1: C3 5B 60                  	jp songPlay_timing_ret
+                                
+                                songChip_2413:
+60C4: 3E A2                     	ld a,0xa2
+60C6: 4F                        	ld c,a
+60C7: ED 51                     	out (c),d
+60C9: 3E A3                     	ld a,0xa3
+60CB: 4F                        	ld c,a
+60CC: ED 59                     	out (c),e
+60CE: C3 5B 60                  	jp songPlay_timing_ret
+                                
+                                songChip_reg:
+60D1: 4A                        	ld c,d
+60D2: ED 59                     	out (c),e
+60D4: C3 5B 60                  	jp songPlay_timing_ret
+                                	
+                                songChip_2612_0: 
+60D7: 3E A4                     	ld a,0xa4
+60D9: 4F                        	ld c,a
+60DA: ED 51                     	out (c),d
+60DC: 3E A5                     	ld a,0xa5
+60DE: 4F                        	ld c,a
+60DF: ED 59                     	out (c),e
+60E1: C3 5B 60                  	jp songPlay_timing_ret
+                                
+                                songChip_2612_1:
+60E4: 3E A6                     	ld a,0xa6
+60E6: 4F                        	ld c,a
+60E7: ED 51                     	out (c),d
+60E9: 3E A7                     	ld a,0xa7
+60EB: 4F                        	ld c,a
+60EC: ED 59                     	out (c),e
+60EE: C3 5B 60                  	jp songPlay_timing_ret
+                                
+                                songChip_exit:
+60F1: 2A 1D 60                  	ld hl,(songPlay_sp_p)
+60F4: F9                        	ld sp,hl
+60F5: 3E 80                         ld a,0x80 ;expint extra ram
+60F7: D3 7C                         out (0x7c),a
+60F9: D3 7D                         out (0x7d),a
+60FB: D3 7E                         out (0x7e),a
+60FD: D3 7F                         out (0x7f),a
+60FF: C9                            ret
+                                 
+
+6100:

@@ -1,0 +1,154 @@
+                                ; MINIMON - Shared Ram Control Program for trs-80 1k dual port RAM at 3000h
+                                org 0x3000
+                                ; Commands are entered by setting the [control register] to:
+                                ; 0 - do nothing and exit immediately, as if returning from a keyboard call (normal trs-80 operation)
+                                ; 1 - keep locked in loader program loop (normal operation when using MINIMON)
+                                ; 2 - read byte at address stored in [address register] to [data register]
+                                ; 3 - write byte stored in [data register] to address stored in [address register]
+                                
+                                start:
+3000: ED 73 F5 33               	ld (stackBack),sp  ;save existing stack location
+3004: 31 AF 30                  	ld sp,programEnd   ;start local stack at end of program	
+3007: C5                        	push bc
+3008: D5                        	push de
+3009: E5                        	push hl
+300A: 11 15 40                  	ld de,4015h ;get keypress
+300D: CD 13 00                  	call 0013h
+3010: 32 F7 33                  	ld (inKey),a
+                                	
+3013: CD 7A 30                  	call dispScreenOnLEDs
+                                	
+                                	;check lock into trsterm loop by keypress (shift+@)
+                                	;ld a,(3801h)
+                                    ;ld d,a
+                                    ;ld a,(3880h)
+                                	;and d
+                                    ;cp 01h ;compare with 0b00000001
+                                	;jp z,trsterment
+                                	
+                                main:
+                                	;LD a,(4040h) ;display clock/timer on debug display. This will only update if interrupts are enabled.
+                                	;out (0b6h),a
+3016: 3A F0 33                  	ld A,(controlReg)
+3019: FE 00                     	cp 0
+301B: CA 5C 30                  	JP Z,exit        ;command 0
+301E: 3D                        	DEC A
+301F: 3D                        	DEC A
+3020: CA 37 30                  	JP Z,read        ;command 2
+3023: 3D                        	DEC A
+3024: CA 49 30                  	JP Z,write       ;command 3
+3027: 3D                        	DEC A
+3028: CA 67 30                  	JP Z,exitKey     ;4
+302B: C3 16 30                  	JP main
+                                	
+                                ;trsterment:
+                                ;	jr main
+                                
+                                posSet: ;positivly sets memory at hl with value of a
+302E: 57                        	ld d,a
+                                	posSet2:
+302F: 7A                        	ld a,d
+3030: 77                        	ld (hl),a
+3031: 7E                        	ld a,(hl)
+3032: BA                        	cp d
+3033: C8                        	ret z 
+3034: C3 2F 30                  	jp posSet2
+                                
+                                read:
+3037: ED 5B F2 33               	ld de,(addressReg)
+303B: 1A                        	ld a,(de)
+303C: 32 F1 33                  	ld (dataReg),a
+303F: 3E 01                     	ld a,1
+3041: 21 F0 33                  	ld hl,controlReg
+3044: CD 2E 30                  	call posSet
+3047: 18 CD                     	jr main
+                                write:
+3049: ED 5B F2 33               	ld de,(addressReg)
+304D: 3A F1 33                  	ld a,(dataReg)
+3050: 12                        	ld (de),a
+                                	;out (0bdh),a
+                                	;out (0b6h),a
+3051: 3E 01                     	ld a,1
+3053: 21 F0 33                  	ld hl,controlReg
+3056: CD 2E 30                  	call posSet
+3059: C3 16 30                  	jp main
+                                
+                                exit: ;load orignal stack pointer and return with keypress from keyboard
+                                	;control reg is already zero
+305C: 3A F7 33                  	ld a,(inKey)
+305F: E1                        	pop hl
+3060: D1                        	pop de
+3061: C1                        	pop bc
+3062: ED 7B F5 33               	ld sp,(stackBack)
+3066: C9                        	ret
+                                exitKey: ;load orignal stack pointer and return with keypress from data register
+3067: 3E 00                     	ld a,0
+3069: 21 F0 33                  	ld hl,controlReg
+306C: CD 2E 30                  	call posSet
+306F: 3A F1 33                  	ld a,(dataReg)
+3072: E1                        	pop hl
+3073: D1                        	pop de
+3074: C1                        	pop bc
+3075: ED 7B F5 33               	ld sp,(stackBack)
+3079: C9                        	ret
+                                	
+                                dispScreenOnLEDs:
+307A: 21 C0 3F                  	ld hl,0x3fc0
+307D: 0E 70                     	ld c,0x70
+307F: 06 0F                     	ld b,15
+                                	dispScreenOnLEDsLoop:
+3081: 0D                        	dec c
+3082: ED A3                     	OUTI ;out (c),(hl) ;inc hl ;dec b
+3084: C2 81 30                  	jp nz,dispScreenOnLEDsLoop
+3087: C9                        	ret
+                                	
+                                disphex: ;display hex value in A on screen at location DE
+3088: C5                        	push bc
+3089: 47                        	ld b,a
+308A: 4F                        	ld c,a
+308B: CB 29                     	sra c
+308D: CB 29                     	sra c
+308F: CB 29                     	sra c
+3091: CB 29                     	sra c
+3093: 3E 0F                     	ld a,0x0f
+3095: A1                        	and c
+3096: CD A4 30                  	call disphexascii
+3099: 12                        	ld (de),a
+309A: 13                        	inc de
+309B: 3E 0F                     	ld a,0x0f
+309D: A0                        	and b
+309E: CD A4 30                  	call disphexascii
+30A1: 12                        	ld (de),a
+30A2: C1                        	pop bc
+30A3: C9                        	ret
+                                disphexascii: ;makes 4 lower bits in A to ascii 0-f
+30A4: C6 30                     	add a,48
+30A6: FE 3A                     	cp 58
+30A8: 30 01                     	jr nc,disphexasciif
+                                	disphexasciifret:
+30AA: C9                        	ret
+                                	disphexasciif: ;for characters A-F
+30AB: C6 07                     	add a,7
+30AD: 18 FB                     	jr disphexasciifret
+                                	
+                                programEnd:
+                                
+                                seek 0x03F0
+                                org 0x33f0
+                                ;dataArea (starts at 0x33f0)
+                                controlReg:
+33F0: 00                        db 0x00
+                                dataReg:
+33F1: 00                        db 0x00
+                                addressReg:
+33F2: 00                        db 0x00
+33F3: 00                        db 0x00
+                                trs80Key:
+33F4: 00                        db 0x00
+                                stackBack:
+33F5: 00                        db 0x00
+33F6: 00                        db 0x00
+                                inKey:
+33F7: 00                        db 0x00
+
+33F8:

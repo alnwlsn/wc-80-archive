@@ -1,0 +1,52 @@
+Name		wc80-keyboard;
+Partno							 ;
+Revision	1					 ;
+Date		09/20/2021			 ;
+Designer						 ;
+Company		alnwlsn				 ;
+Assembly	None				 ;
+Location						 ;
+Device		g22v10				 ;
+Format		jedec				 ;
+
+/** Programmable logic chip for the keyboard **/
+/** Decodes IO address for writing keyboard options **/
+/** and decodes memory read address for reading the keyboard matrix **/
+
+/** Inputs	**/
+Pin 1	=  nEXMEM; 
+Pin 2	=  nMEMRD;
+Pin 3	=  nOUT;
+Pin 4	=  A8;
+Pin 5	=  A9;
+Pin 6	=  A10;
+Pin 7	=  A11;
+Pin 8	=  A12;
+Pin 9	=  A13; 
+Pin 10	=  A14; 
+Pin 11	=  A15; 
+Pin 13	=  nA012; /** If all A0 A1 A2 are 0, this will be 1 **/
+Pin 14  =  A3; 
+Pin 15	=  A4;
+Pin 16  =  A5;
+Pin 17	=  A6;
+Pin 20  =  A7;
+Pin 21	=  S0; /** Option bits for keyboard address location **/
+Pin 22  =  S1;
+
+/** Outputs **/
+Pin 18  =  nKBD; /** To enable pins of keyboard matrix read buffer **/
+Pin 19	=  INUSE; 
+Pin 23  =  OPT; /** To Clock pin of option / LED register **/
+
+/** Equations **/
+
+OPT = (!nOUT & !A7 & A6 & A5 & A4 & A3 & nA012); /** 0x78 **/
+
+!nKBD = !nEXMEM & ( 
+		(!nMEMRD & !S0 & !S1 & !A15 & !A14 & A13 & A12 & A11 & !A10 & !A9 & !A8)  /** 0x38xx (original TRS-80) **/
+	  # (!nMEMRD & !S0 &  S1 &  A15 &  A14 & A13 & !A12 & A11 &  A10 &  A9 &  A8)  /** 0xEFxx **/
+	  # (!nMEMRD &  S0 & !S1 &  A15 &  A14 & A13 & A12 & !A11 & A10 & !A9 & !A8)  /** 0xF4xx (TRS-80 model 4) **/
+	  # (!nMEMRD &  S0 &  S1 &  !A15 & A14 & A13 & A12 & A11 & !A10 & !A9 & !A8)); /** 0x78xx (3800 IN SLOT 1)**/
+
+INUSE = !nKBD;

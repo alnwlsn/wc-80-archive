@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name wilson-z80)(type Legacy)(uri ${KIPRJMOD}/wilson-z80.lib)(options "")(descr ""))
+)

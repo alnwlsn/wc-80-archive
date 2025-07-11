@@ -1,0 +1,75 @@
+%SIGNAL
+PIN   3 =  A0 
+PIN   4 =  A1 
+PIN   5 =  A2 
+PIN   6 =  A3 
+PIN   7 =  A4 
+PIN   8 =  A5 
+PIN   9 =  A6 
+PIN  10 =  A7 
+PIN  22 =  A10 
+PIN  21 =  A11 
+PIN  15 =  A12 
+PIN  14 =  A13 
+PIN  13 =  A14 
+PIN  11 =  A15 
+PIN  18 =  nDpRAM 
+PIN  17 =  nENEXTRA 
+PIN  23 =  nEXMEM 
+PIN  19 =  nExRAM 
+PIN  16 =  nINUSE 
+PIN   2 =  nMEMRQ 
+PIN   1 =  nOUT 
+PIN  20 =  nSelector 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+NC =>
+    nINUSE
+
+!nDpRAM =>
+    !A10 & !A11 & A12 & A13 & !A14 & !A15 & !nEXMEM & !nMEMRQ
+
+!nExRAM =>
+    A15 & !nENEXTRA & !nEXMEM & !nMEMRQ
+
+!nINUSE =>
+    nDpRAM & nExRAM
+
+!nSelector =>
+    A2 & A3 & A4 & A5 & A6 & !A7 & !nOUT
+
+A10.oe  =>
+    0 
+
+A11.oe  =>
+    0 
+
+A12.oe  =>
+    0 
+
+A13.oe  =>
+    0 
+
+nDpRAM.oe  =>
+    1 
+
+nENEXTRA.oe  =>
+    0 
+
+nEXMEM.oe  =>
+    0 
+
+nExRAM.oe  =>
+    1 
+
+nINUSE.oe  =>
+    1 
+
+nSelector.oe  =>
+    1 
+
+%END

@@ -1,0 +1,36 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Sat Jan 16 21:21:16 2021
+
+LISTING FOR SIMULATION FILE: dsky2.si
+
+   1: Name     dsky;
+   2: PartNo   ;
+   3: Date     01/16/2021;
+   4: Revision 1;
+   5: Designer ;
+   6: Company  alnwlsn;
+   7: Assembly None;
+   8: Location ;
+   9: Device   g22v10;
+  10: 
+  11: 
+  12: ORDER: A4, A5, A6, A7, DDIR, INUSE, KEYBOARD, LED, nEXMEM, nIN, nOUT; 
+  13: 
+  14: 
+
+====================
+            K       
+            E       
+            Y n     
+           IB E     
+          DNO X n   
+          DUALMnO   
+      AAAAISREEIU   
+      4567REDDMNT   
+====================
+0001: 0110LXLH*01
+              ^
+[0021sa] invalid test value:  *
+

@@ -1,0 +1,32 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 74HC670
+D 4X4 REGISTER FILE
+$ENDCMP
+#
+$CMP AS6C4008
+D SRAM 4M, 2.7-5.5V, 55ns 512K x 8 Asynch SRAM
+F https://www.mouser.com/datasheet/2/12/AS6C4008-1265427.pdf
+$ENDCMP
+#
+$CMP ATF22V10C
+D CMOS programmable logic device
+F https://ww1.microchip.com/downloads/en/DeviceDoc/doc0735.pdf
+$ENDCMP
+#
+$CMP SST39SF040
+D NOR Flash 512K X 8
+F https://www.mouser.com/datasheet/2/268/39%20Series_MPF_MPF__Product%20Brief-373259.pdf
+$ENDCMP
+#
+$CMP TRS80W-header
+D 40 Pin male header for Wilson Z80 / TRS-80 computer
+$ENDCMP
+#
+$CMP Z80CPU
+D 8-bit General Purpose Microprocessor, DIP-40
+K Z80 CPU uP
+F www.zilog.com/manage_directlink.php?filepath=docs/z80/um0080
+$ENDCMP
+#
+#End Doc Library

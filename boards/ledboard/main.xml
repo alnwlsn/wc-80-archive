@@ -1,0 +1,2306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\alnwlsn\lizard-sync\projects\computers\trs-80\wc-80\boards\ledboard\main.sch</source>
+    <date>3/21/2022 8:50:28 PM</date>
+    <tool>Eeschema (6.0.4)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>main.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000608c2bb4</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000608c3321</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000608c38c8</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000608c3c6d</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006266a910</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060cb3eb9</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006267a1c4</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060cb3ed1</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006266b147</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000626ca0d7</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000626ca932</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000626cb53b</tstamps>
+    </comp>
+    <comp ref="C13">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000626cbc44</tstamps>
+    </comp>
+    <comp ref="C14">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060cbf7d2</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>D0</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000609a475e</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>D2</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060afc5f4</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>D4</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060aed0bd</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>D6</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060b01620</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>D7</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060af205f</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>D5</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060b0643c</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>D3</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060af7776</tstamps>
+    </comp>
+    <comp ref="D8">
+      <value>D1</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060b0b3d2</tstamps>
+    </comp>
+    <comp ref="D9">
+      <value>A0</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060bdda0b</tstamps>
+    </comp>
+    <comp ref="D10">
+      <value>A2</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060bdda3b</tstamps>
+    </comp>
+    <comp ref="D11">
+      <value>A4</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060bdda17</tstamps>
+    </comp>
+    <comp ref="D12">
+      <value>A6</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060bdda47</tstamps>
+    </comp>
+    <comp ref="D13">
+      <value>A7</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060bdda23</tstamps>
+    </comp>
+    <comp ref="D14">
+      <value>A5</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060bdda53</tstamps>
+    </comp>
+    <comp ref="D15">
+      <value>A3</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060bdda2f</tstamps>
+    </comp>
+    <comp ref="D16">
+      <value>A1</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060bdda5f</tstamps>
+    </comp>
+    <comp ref="D17">
+      <value>A8</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060beb825</tstamps>
+    </comp>
+    <comp ref="D18">
+      <value>A10</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060beb855</tstamps>
+    </comp>
+    <comp ref="D19">
+      <value>A12</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060beb831</tstamps>
+    </comp>
+    <comp ref="D20">
+      <value>A14</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060beb861</tstamps>
+    </comp>
+    <comp ref="D21">
+      <value>A15</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060beb83d</tstamps>
+    </comp>
+    <comp ref="D22">
+      <value>A13</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060beb86d</tstamps>
+    </comp>
+    <comp ref="D23">
+      <value>A11</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060beb849</tstamps>
+    </comp>
+    <comp ref="D24">
+      <value>A9</value>
+      <footprint>LED_THT:LED_D3.0mm_FlatTop</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060beb879</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060a5cc74</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060a5d8d3</tstamps>
+    </comp>
+    <comp ref="H3">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060a5dc7a</tstamps>
+    </comp>
+    <comp ref="H4">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060a5dfdb</tstamps>
+    </comp>
+    <comp ref="H5">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000624a283d</tstamps>
+    </comp>
+    <comp ref="H6">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000624a1d08</tstamps>
+    </comp>
+    <comp ref="H7">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006259640e</tstamps>
+    </comp>
+    <comp ref="H8">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062596414</tstamps>
+    </comp>
+    <comp ref="H9">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006259641a</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>TRS80W-header</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical</footprint>
+      <libsource lib="wilson-z80" part="TRS80W-header" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000607dd279</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_02x04_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000609814ca</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>Conn_02x04_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060982d72</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>4.7K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060ac1e71</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>4.7K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060ac3101</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>4.7K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060ac3a32</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>4.7K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060ac422c</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>4.7K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000622c747d</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>4.7K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000622c6ed9</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>4.7K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000622c63d6</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>4.7K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000622c55ce</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>4.7K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000626134ec</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000626b3190</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>4.7K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006280751d</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>4.7K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000629a7d7f</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006214822d</tstamps>
+    </comp>
+    <comp ref="R18">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000621496de</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062149bed</tstamps>
+    </comp>
+    <comp ref="R20">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006214a07c</tstamps>
+    </comp>
+    <comp ref="R21">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006214a580</tstamps>
+    </comp>
+    <comp ref="R22">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006214aa99</tstamps>
+    </comp>
+    <comp ref="R23">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006214b1bf</tstamps>
+    </comp>
+    <comp ref="R24">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006214d65e</tstamps>
+    </comp>
+    <comp ref="R25">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006216476c</tstamps>
+    </comp>
+    <comp ref="R26">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062164772</tstamps>
+    </comp>
+    <comp ref="R27">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062164778</tstamps>
+    </comp>
+    <comp ref="R28">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006216477e</tstamps>
+    </comp>
+    <comp ref="R29">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062164784</tstamps>
+    </comp>
+    <comp ref="R30">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006216478a</tstamps>
+    </comp>
+    <comp ref="R31">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062164790</tstamps>
+    </comp>
+    <comp ref="R32">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062164796</tstamps>
+    </comp>
+    <comp ref="R33">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062182fc8</tstamps>
+    </comp>
+    <comp ref="R34">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062182fce</tstamps>
+    </comp>
+    <comp ref="R35">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062182fd4</tstamps>
+    </comp>
+    <comp ref="R36">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062182fda</tstamps>
+    </comp>
+    <comp ref="R37">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062182fe0</tstamps>
+    </comp>
+    <comp ref="R38">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062182fe6</tstamps>
+    </comp>
+    <comp ref="R39">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062182fec</tstamps>
+    </comp>
+    <comp ref="R40">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062182ff2</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>IN</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000620cf287</tstamps>
+    </comp>
+    <comp ref="SW2">
+      <value>OUT</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000620cecc2</tstamps>
+    </comp>
+    <comp ref="SW3">
+      <value>READ</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000620ce552</tstamps>
+    </comp>
+    <comp ref="SW4">
+      <value>WR</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000620cd061</tstamps>
+    </comp>
+    <comp ref="SW5">
+      <value>MEM</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000061fff331</tstamps>
+    </comp>
+    <comp ref="SW6">
+      <value>A</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000620309d7</tstamps>
+    </comp>
+    <comp ref="SW7">
+      <value>7</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062045970</tstamps>
+    </comp>
+    <comp ref="SW8">
+      <value>4</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062045988</tstamps>
+    </comp>
+    <comp ref="SW9">
+      <value>1</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062054de5</tstamps>
+    </comp>
+    <comp ref="SW10">
+      <value>0</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062054dfd</tstamps>
+    </comp>
+    <comp ref="SW11">
+      <value>IO</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006201bc16</tstamps>
+    </comp>
+    <comp ref="SW12">
+      <value>B</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000620309dd</tstamps>
+    </comp>
+    <comp ref="SW13">
+      <value>8</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062045976</tstamps>
+    </comp>
+    <comp ref="SW14">
+      <value>5</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006204598e</tstamps>
+    </comp>
+    <comp ref="SW15">
+      <value>2</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062054deb</tstamps>
+    </comp>
+    <comp ref="SW16">
+      <value>PREV</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062054e03</tstamps>
+    </comp>
+    <comp ref="SW17">
+      <value>J/C</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006201c5f6</tstamps>
+    </comp>
+    <comp ref="SW18">
+      <value>C</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000620309e3</tstamps>
+    </comp>
+    <comp ref="SW19">
+      <value>9</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006204597c</tstamps>
+    </comp>
+    <comp ref="SW20">
+      <value>6</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062045994</tstamps>
+    </comp>
+    <comp ref="SW21">
+      <value>3</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062054df1</tstamps>
+    </comp>
+    <comp ref="SW22">
+      <value>NEXT</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062054e09</tstamps>
+    </comp>
+    <comp ref="SW23">
+      <value>REG</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006201d79d</tstamps>
+    </comp>
+    <comp ref="SW24">
+      <value>D</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000620309e9</tstamps>
+    </comp>
+    <comp ref="SW25">
+      <value>E</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062045982</tstamps>
+    </comp>
+    <comp ref="SW26">
+      <value>F</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006204599a</tstamps>
+    </comp>
+    <comp ref="SW27">
+      <value>READ</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062054df7</tstamps>
+    </comp>
+    <comp ref="SW28">
+      <value>EN</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062054e0f</tstamps>
+    </comp>
+    <comp ref="SW29">
+      <value>INT</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000626124df</tstamps>
+    </comp>
+    <comp ref="SW30">
+      <value>RESET</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006285a472</tstamps>
+    </comp>
+    <comp ref="SW31">
+      <value>NMI</value>
+      <footprint>wilson-z80:8.5x8.5-DPDT-SP</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062805e9a</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>74LS32</value>
+      <footprint>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS32</datasheet>
+      <libsource lib="74xx" part="74LS32" description="Quad 2-input OR"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060aab3e0 00000000-0000-0000-0000-000060aa8e7d 00000000-0000-0000-0000-000060aa75e6 00000000-0000-0000-0000-000060aa489d 00000000-0000-0000-0000-000060aa203b</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>74LS20</value>
+      <footprint>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS20</datasheet>
+      <libsource lib="74xx" part="74LS20" description="Dual 4-input NAND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060abd4d7 00000000-0000-0000-0000-000060abc18d 00000000-0000-0000-0000-000060aba45f</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>74LS374</value>
+      <footprint>Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS374</datasheet>
+      <libsource lib="74xx" part="74LS374" description="8-bit Register, 3-state outputs"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060af9de9</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>74LS374</value>
+      <footprint>Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS374</datasheet>
+      <libsource lib="74xx" part="74LS374" description="8-bit Register, 3-state outputs"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060a89e0d</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>74LS374</value>
+      <footprint>Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS374</datasheet>
+      <libsource lib="74xx" part="74LS374" description="8-bit Register, 3-state outputs"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000060ade3b2</tstamps>
+    </comp>
+    <comp ref="U6">
+      <value>74LS06</value>
+      <footprint>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS06</datasheet>
+      <libsource lib="74xx" part="74LS06" description="Inverter Open Collect"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006237096f 00000000-0000-0000-0000-00006236bd9d 00000000-0000-0000-0000-000062368f29 00000000-0000-0000-0000-00006236761f 00000000-0000-0000-0000-00006236acff 00000000-0000-0000-0000-00006236e7cc 00000000-0000-0000-0000-00006236453a</tstamps>
+    </comp>
+    <comp ref="U7">
+      <value>74HCT244</value>
+      <footprint>Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74ls244.pdf</datasheet>
+      <libsource lib="74xx" part="74LS244" description="Octal Buffer and Line Driver With 3-State Output, active-low enables, non-inverting outputs"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062488f82</tstamps>
+    </comp>
+    <comp ref="U8">
+      <value>74LS32</value>
+      <footprint>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS32</datasheet>
+      <libsource lib="74xx" part="74LS32" description="Quad 2-input OR"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000629abf09 00000000-0000-0000-0000-0000629977e6 00000000-0000-0000-0000-00006299c66d 00000000-0000-0000-0000-000062999a4c 00000000-0000-0000-0000-000062996369</tstamps>
+    </comp>
+    <comp ref="U9">
+      <value>HPDL1414</value>
+      <footprint>wilson-z80:DIP-24_W15.24mm_Socket</footprint>
+      <libsource lib="wilson-z80" part="HPDL1414" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062ce92f2</tstamps>
+    </comp>
+    <comp ref="U10">
+      <value>HPDL1414</value>
+      <footprint>wilson-z80:DIP-24_W15.24mm_Socket</footprint>
+      <libsource lib="wilson-z80" part="HPDL1414" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062d4ab5d</tstamps>
+    </comp>
+    <comp ref="U11">
+      <value>74LS138</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS138</datasheet>
+      <libsource lib="74xx" part="74LS138" description="Decoder 3 to 8 active low outputs"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062c0b8af</tstamps>
+    </comp>
+    <comp ref="U12">
+      <value>HPDL1414</value>
+      <footprint>wilson-z80:DIP-24_W15.24mm_Socket</footprint>
+      <libsource lib="wilson-z80" part="HPDL1414" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062d29e0a</tstamps>
+    </comp>
+    <comp ref="U13">
+      <value>HPDL1414</value>
+      <footprint>wilson-z80:DIP-24_W15.24mm_Socket</footprint>
+      <libsource lib="wilson-z80" part="HPDL1414" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/ledboard/main.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000062d4ab78</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="74xx" part="74LS06">
+      <description>Inverter Open Collect</description>
+      <docs>http://www.ti.com/lit/gpn/sn74LS06</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS06</field>
+        <field name="Datasheet">http://www.ti.com/lit/gpn/sn74LS06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="" type="open_collector"/>
+        <pin num="3" name="" type="input"/>
+        <pin num="4" name="" type="open_collector"/>
+        <pin num="5" name="" type="input"/>
+        <pin num="6" name="" type="open_collector"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="" type="open_collector"/>
+        <pin num="9" name="" type="input"/>
+        <pin num="10" name="" type="open_collector"/>
+        <pin num="11" name="" type="input"/>
+        <pin num="12" name="" type="open_collector"/>
+        <pin num="13" name="" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74LS138">
+      <description>Decoder 3 to 8 active low outputs</description>
+      <docs>http://www.ti.com/lit/gpn/sn74LS138</docs>
+      <footprints>
+        <fp>DIP?16*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS138</field>
+        <field name="Datasheet">http://www.ti.com/lit/gpn/sn74LS138</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A0" type="input"/>
+        <pin num="2" name="A1" type="input"/>
+        <pin num="3" name="A2" type="input"/>
+        <pin num="4" name="E1" type="input"/>
+        <pin num="5" name="E2" type="input"/>
+        <pin num="6" name="E3" type="input"/>
+        <pin num="7" name="O7" type="output"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="O6" type="output"/>
+        <pin num="10" name="O5" type="output"/>
+        <pin num="11" name="O4" type="output"/>
+        <pin num="12" name="O3" type="output"/>
+        <pin num="13" name="O2" type="output"/>
+        <pin num="14" name="O1" type="output"/>
+        <pin num="15" name="O0" type="output"/>
+        <pin num="16" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74LS20">
+      <description>Dual 4-input NAND</description>
+      <docs>http://www.ti.com/lit/gpn/sn74LS20</docs>
+      <footprints>
+        <fp>DIP?12*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS20</field>
+        <field name="Datasheet">http://www.ti.com/lit/gpn/sn74LS20</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="" type="input"/>
+        <pin num="4" name="" type="input"/>
+        <pin num="5" name="" type="input"/>
+        <pin num="6" name="" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="" type="output"/>
+        <pin num="9" name="" type="input"/>
+        <pin num="10" name="" type="input"/>
+        <pin num="12" name="" type="input"/>
+        <pin num="13" name="" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74LS244">
+      <description>Octal Buffer and Line Driver With 3-State Output, active-low enables, non-inverting outputs</description>
+      <docs>http://www.ti.com/lit/ds/symlink/sn74ls244.pdf</docs>
+      <footprints>
+        <fp>DIP?20*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS244</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/sn74ls244.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OEa" type="input"/>
+        <pin num="2" name="I0a" type="input"/>
+        <pin num="3" name="O3b" type="tri_state"/>
+        <pin num="4" name="I1a" type="input"/>
+        <pin num="5" name="O2b" type="tri_state"/>
+        <pin num="6" name="I2a" type="input"/>
+        <pin num="7" name="O1b" type="tri_state"/>
+        <pin num="8" name="I3a" type="input"/>
+        <pin num="9" name="O0b" type="tri_state"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="I0b" type="input"/>
+        <pin num="12" name="O3a" type="tri_state"/>
+        <pin num="13" name="I1b" type="input"/>
+        <pin num="14" name="O2a" type="tri_state"/>
+        <pin num="15" name="I2b" type="input"/>
+        <pin num="16" name="O1a" type="tri_state"/>
+        <pin num="17" name="I3b" type="input"/>
+        <pin num="18" name="O0a" type="tri_state"/>
+        <pin num="19" name="OEb" type="input"/>
+        <pin num="20" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74LS32">
+      <description>Quad 2-input OR</description>
+      <docs>http://www.ti.com/lit/gpn/sn74LS32</docs>
+      <footprints>
+        <fp>DIP?14*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS32</field>
+        <field name="Datasheet">http://www.ti.com/lit/gpn/sn74LS32</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="" type="input"/>
+        <pin num="3" name="" type="output"/>
+        <pin num="4" name="" type="input"/>
+        <pin num="5" name="" type="input"/>
+        <pin num="6" name="" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="" type="output"/>
+        <pin num="9" name="" type="input"/>
+        <pin num="10" name="" type="input"/>
+        <pin num="11" name="" type="output"/>
+        <pin num="12" name="" type="input"/>
+        <pin num="13" name="" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74LS374">
+      <description>8-bit Register, 3-state outputs</description>
+      <docs>http://www.ti.com/lit/gpn/sn74LS374</docs>
+      <footprints>
+        <fp>DIP?20*</fp>
+        <fp>SOIC?20*</fp>
+        <fp>SO?20*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS374</field>
+        <field name="Datasheet">http://www.ti.com/lit/gpn/sn74LS374</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OE" type="input"/>
+        <pin num="2" name="O0" type="tri_state"/>
+        <pin num="3" name="D0" type="input"/>
+        <pin num="4" name="D1" type="input"/>
+        <pin num="5" name="O1" type="tri_state"/>
+        <pin num="6" name="O2" type="tri_state"/>
+        <pin num="7" name="D2" type="input"/>
+        <pin num="8" name="D3" type="input"/>
+        <pin num="9" name="O3" type="tri_state"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="Cp" type="input"/>
+        <pin num="12" name="O4" type="tri_state"/>
+        <pin num="13" name="D4" type="input"/>
+        <pin num="14" name="D5" type="input"/>
+        <pin num="15" name="O5" type="tri_state"/>
+        <pin num="16" name="O6" type="tri_state"/>
+        <pin num="17" name="D6" type="input"/>
+        <pin num="18" name="D7" type="input"/>
+        <pin num="19" name="O7" type="tri_state"/>
+        <pin num="20" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x04_Odd_Even">
+      <description>Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x04_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Datasheet">~</field>
+      </fields>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="wilson-z80" part="HPDL1414">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">HPDL1414</field>
+        <field name="Footprint">wilson-z80:DIP-24_W15.24mm_Socket</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D5" type="input"/>
+        <pin num="2" name="D4" type="input"/>
+        <pin num="3" name="WR" type="input"/>
+        <pin num="4" name="A1" type="input"/>
+        <pin num="5" name="A0" type="input"/>
+        <pin num="6" name="VDD" type="power_in"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="D0" type="input"/>
+        <pin num="9" name="D1" type="input"/>
+        <pin num="10" name="D2" type="input"/>
+        <pin num="11" name="D3" type="input"/>
+        <pin num="12" name="D6" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="wilson-z80" part="TRS80W-header">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">TRS80W-header</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~{SYSRES}" type="passive"/>
+        <pin num="2" name="~{RAS}" type="passive"/>
+        <pin num="3" name="A10" type="passive"/>
+        <pin num="4" name="~{EXMEM}" type="passive"/>
+        <pin num="5" name="A13" type="passive"/>
+        <pin num="6" name="A12" type="passive"/>
+        <pin num="7" name="GND" type="passive"/>
+        <pin num="8" name="A15" type="passive"/>
+        <pin num="9" name="A14" type="passive"/>
+        <pin num="10" name="A11" type="passive"/>
+        <pin num="11" name="~{OUT}" type="passive"/>
+        <pin num="12" name="A8" type="passive"/>
+        <pin num="13" name="~{INTAK}" type="passive"/>
+        <pin num="14" name="~{WR}" type="passive"/>
+        <pin num="15" name="~{INUSE}" type="passive"/>
+        <pin num="16" name="~{RD}" type="passive"/>
+        <pin num="17" name="D4" type="passive"/>
+        <pin num="18" name="A9" type="passive"/>
+        <pin num="19" name="D7" type="passive"/>
+        <pin num="20" name="~{IN}" type="passive"/>
+        <pin num="21" name="D1" type="passive"/>
+        <pin num="22" name="~{INT}" type="passive"/>
+        <pin num="23" name="D6" type="passive"/>
+        <pin num="24" name="CLK" type="passive"/>
+        <pin num="25" name="D3" type="passive"/>
+        <pin num="26" name="A0" type="passive"/>
+        <pin num="27" name="D5" type="passive"/>
+        <pin num="28" name="A1" type="passive"/>
+        <pin num="29" name="D0" type="passive"/>
+        <pin num="30" name="GND" type="passive"/>
+        <pin num="31" name="D2" type="passive"/>
+        <pin num="32" name="A4" type="passive"/>
+        <pin num="33" name="A3" type="passive"/>
+        <pin num="34" name="~{WAIT}" type="passive"/>
+        <pin num="35" name="A7" type="passive"/>
+        <pin num="36" name="A5" type="passive"/>
+        <pin num="37" name="A6" type="passive"/>
+        <pin num="38" name="GND" type="passive"/>
+        <pin num="39" name="A2" type="passive"/>
+        <pin num="40" name="+5V" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="74xx">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/74xx.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Mechanical.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+    <library logical="wilson-z80">
+      <uri>C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/lib/wilson-z80.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+5V">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="J1" pin="40" pinfunction="+5V" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="SW29" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW30" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW31" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U10" pin="6" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U11" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U11" pin="6" pinfunction="E3" pintype="input"/>
+      <node ref="U12" pin="6" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U13" pin="6" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U2" pin="14" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U3" pin="20" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U4" pin="20" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U5" pin="20" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U6" pin="14" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U7" pin="20" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U8" pin="14" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U9" pin="6" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="2" name="6x_IN">
+      <node ref="U7" pin="1" pinfunction="OEa" pintype="input"/>
+      <node ref="U7" pin="19" pinfunction="OEb" pintype="input"/>
+      <node ref="U8" pin="11" pintype="output"/>
+    </net>
+    <net code="3" name="6x_OUT">
+      <node ref="U11" pin="5" pinfunction="E2" pintype="input"/>
+      <node ref="U8" pin="8" pintype="output"/>
+    </net>
+    <net code="4" name="F_A0">
+      <node ref="J1" pin="26" pinfunction="A0" pintype="passive"/>
+      <node ref="U10" pin="5" pinfunction="A0" pintype="input"/>
+      <node ref="U12" pin="5" pinfunction="A0" pintype="input"/>
+      <node ref="U13" pin="5" pinfunction="A0" pintype="input"/>
+      <node ref="U4" pin="3" pinfunction="D0" pintype="input"/>
+      <node ref="U6" pin="9" pintype="input"/>
+      <node ref="U9" pin="5" pinfunction="A0" pintype="input"/>
+    </net>
+    <net code="5" name="F_A1">
+      <node ref="J1" pin="28" pinfunction="A1" pintype="passive"/>
+      <node ref="U10" pin="4" pinfunction="A1" pintype="input"/>
+      <node ref="U12" pin="4" pinfunction="A1" pintype="input"/>
+      <node ref="U13" pin="4" pinfunction="A1" pintype="input"/>
+      <node ref="U4" pin="18" pinfunction="D7" pintype="input"/>
+      <node ref="U6" pin="5" pintype="input"/>
+      <node ref="U9" pin="4" pinfunction="A1" pintype="input"/>
+    </net>
+    <net code="6" name="F_A2">
+      <node ref="J1" pin="39" pinfunction="A2" pintype="passive"/>
+      <node ref="U11" pin="1" pinfunction="A0" pintype="input"/>
+      <node ref="U4" pin="4" pinfunction="D1" pintype="input"/>
+      <node ref="U6" pin="3" pintype="input"/>
+    </net>
+    <net code="7" name="F_A3">
+      <node ref="J1" pin="33" pinfunction="A3" pintype="passive"/>
+      <node ref="U11" pin="2" pinfunction="A1" pintype="input"/>
+      <node ref="U4" pin="17" pinfunction="D6" pintype="input"/>
+      <node ref="U6" pin="1" pintype="input"/>
+    </net>
+    <net code="8" name="F_A4">
+      <node ref="J1" pin="32" pinfunction="A4" pintype="passive"/>
+      <node ref="U4" pin="7" pinfunction="D2" pintype="input"/>
+    </net>
+    <net code="9" name="F_A5">
+      <node ref="J1" pin="36" pinfunction="A5" pintype="passive"/>
+      <node ref="U4" pin="14" pinfunction="D5" pintype="input"/>
+    </net>
+    <net code="10" name="F_A6">
+      <node ref="J1" pin="37" pinfunction="A6" pintype="passive"/>
+      <node ref="U4" pin="8" pinfunction="D3" pintype="input"/>
+    </net>
+    <net code="11" name="F_A7">
+      <node ref="J1" pin="35" pinfunction="A7" pintype="passive"/>
+      <node ref="U4" pin="13" pinfunction="D4" pintype="input"/>
+    </net>
+    <net code="12" name="F_A8">
+      <node ref="J1" pin="12" pinfunction="A8" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="D0" pintype="input"/>
+    </net>
+    <net code="13" name="F_A9">
+      <node ref="J1" pin="18" pinfunction="A9" pintype="passive"/>
+      <node ref="U5" pin="18" pinfunction="D7" pintype="input"/>
+    </net>
+    <net code="14" name="F_A10">
+      <node ref="J1" pin="3" pinfunction="A10" pintype="passive"/>
+      <node ref="U5" pin="4" pinfunction="D1" pintype="input"/>
+    </net>
+    <net code="15" name="F_A11">
+      <node ref="J1" pin="10" pinfunction="A11" pintype="passive"/>
+      <node ref="U5" pin="17" pinfunction="D6" pintype="input"/>
+    </net>
+    <net code="16" name="F_A12">
+      <node ref="J1" pin="6" pinfunction="A12" pintype="passive"/>
+      <node ref="U5" pin="7" pinfunction="D2" pintype="input"/>
+    </net>
+    <net code="17" name="F_A13">
+      <node ref="J1" pin="5" pinfunction="A13" pintype="passive"/>
+      <node ref="U5" pin="14" pinfunction="D5" pintype="input"/>
+    </net>
+    <net code="18" name="F_A14">
+      <node ref="J1" pin="9" pinfunction="A14" pintype="passive"/>
+      <node ref="U5" pin="8" pinfunction="D3" pintype="input"/>
+    </net>
+    <net code="19" name="F_A15">
+      <node ref="J1" pin="8" pinfunction="A15" pintype="passive"/>
+      <node ref="U5" pin="13" pinfunction="D4" pintype="input"/>
+    </net>
+    <net code="20" name="F_D0">
+      <node ref="J1" pin="29" pinfunction="D0" pintype="passive"/>
+      <node ref="U10" pin="8" pinfunction="D0" pintype="input"/>
+      <node ref="U12" pin="8" pinfunction="D0" pintype="input"/>
+      <node ref="U13" pin="8" pinfunction="D0" pintype="input"/>
+      <node ref="U3" pin="3" pinfunction="D0" pintype="input"/>
+      <node ref="U7" pin="3" pinfunction="O3b" pintype="tri_state"/>
+      <node ref="U9" pin="8" pinfunction="D0" pintype="input"/>
+    </net>
+    <net code="21" name="F_D1">
+      <node ref="J1" pin="21" pinfunction="D1" pintype="passive"/>
+      <node ref="U10" pin="9" pinfunction="D1" pintype="input"/>
+      <node ref="U12" pin="9" pinfunction="D1" pintype="input"/>
+      <node ref="U13" pin="9" pinfunction="D1" pintype="input"/>
+      <node ref="U3" pin="18" pinfunction="D7" pintype="input"/>
+      <node ref="U7" pin="5" pinfunction="O2b" pintype="tri_state"/>
+      <node ref="U9" pin="9" pinfunction="D1" pintype="input"/>
+    </net>
+    <net code="22" name="F_D2">
+      <node ref="J1" pin="31" pinfunction="D2" pintype="passive"/>
+      <node ref="U10" pin="10" pinfunction="D2" pintype="input"/>
+      <node ref="U12" pin="10" pinfunction="D2" pintype="input"/>
+      <node ref="U13" pin="10" pinfunction="D2" pintype="input"/>
+      <node ref="U3" pin="4" pinfunction="D1" pintype="input"/>
+      <node ref="U7" pin="7" pinfunction="O1b" pintype="tri_state"/>
+      <node ref="U9" pin="10" pinfunction="D2" pintype="input"/>
+    </net>
+    <net code="23" name="F_D3">
+      <node ref="J1" pin="25" pinfunction="D3" pintype="passive"/>
+      <node ref="U10" pin="11" pinfunction="D3" pintype="input"/>
+      <node ref="U12" pin="11" pinfunction="D3" pintype="input"/>
+      <node ref="U13" pin="11" pinfunction="D3" pintype="input"/>
+      <node ref="U3" pin="17" pinfunction="D6" pintype="input"/>
+      <node ref="U7" pin="9" pinfunction="O0b" pintype="tri_state"/>
+      <node ref="U9" pin="11" pinfunction="D3" pintype="input"/>
+    </net>
+    <net code="24" name="F_D4">
+      <node ref="J1" pin="17" pinfunction="D4" pintype="passive"/>
+      <node ref="U10" pin="2" pinfunction="D4" pintype="input"/>
+      <node ref="U12" pin="2" pinfunction="D4" pintype="input"/>
+      <node ref="U13" pin="2" pinfunction="D4" pintype="input"/>
+      <node ref="U3" pin="7" pinfunction="D2" pintype="input"/>
+      <node ref="U7" pin="12" pinfunction="O3a" pintype="tri_state"/>
+      <node ref="U8" pin="1" pintype="input"/>
+      <node ref="U9" pin="2" pinfunction="D4" pintype="input"/>
+    </net>
+    <net code="25" name="F_D5">
+      <node ref="J1" pin="27" pinfunction="D5" pintype="passive"/>
+      <node ref="U10" pin="1" pinfunction="D5" pintype="input"/>
+      <node ref="U12" pin="1" pinfunction="D5" pintype="input"/>
+      <node ref="U13" pin="1" pinfunction="D5" pintype="input"/>
+      <node ref="U2" pin="10" pintype="input"/>
+      <node ref="U2" pin="9" pintype="input"/>
+      <node ref="U3" pin="14" pinfunction="D5" pintype="input"/>
+      <node ref="U7" pin="14" pinfunction="O2a" pintype="tri_state"/>
+      <node ref="U9" pin="1" pinfunction="D5" pintype="input"/>
+    </net>
+    <net code="26" name="F_D6">
+      <node ref="J1" pin="23" pinfunction="D6" pintype="passive"/>
+      <node ref="U10" pin="12" pinfunction="D6" pintype="input"/>
+      <node ref="U12" pin="12" pinfunction="D6" pintype="input"/>
+      <node ref="U13" pin="12" pinfunction="D6" pintype="input"/>
+      <node ref="U2" pin="12" pintype="input"/>
+      <node ref="U2" pin="13" pintype="input"/>
+      <node ref="U3" pin="8" pinfunction="D3" pintype="input"/>
+      <node ref="U7" pin="16" pinfunction="O1a" pintype="tri_state"/>
+      <node ref="U9" pin="12" pinfunction="D6" pintype="input"/>
+    </net>
+    <net code="27" name="F_D7">
+      <node ref="J1" pin="19" pinfunction="D7" pintype="passive"/>
+      <node ref="U3" pin="13" pinfunction="D4" pintype="input"/>
+      <node ref="U7" pin="18" pinfunction="O0a" pintype="tri_state"/>
+      <node ref="U8" pin="2" pintype="input"/>
+    </net>
+    <net code="28" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="J1" pin="30" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="38" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="7" pinfunction="GND" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J3" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J3" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+      <node ref="R22" pin="1" pintype="passive"/>
+      <node ref="R23" pin="1" pintype="passive"/>
+      <node ref="R24" pin="1" pintype="passive"/>
+      <node ref="R25" pin="1" pintype="passive"/>
+      <node ref="R26" pin="1" pintype="passive"/>
+      <node ref="R27" pin="1" pintype="passive"/>
+      <node ref="R28" pin="1" pintype="passive"/>
+      <node ref="R29" pin="1" pintype="passive"/>
+      <node ref="R30" pin="1" pintype="passive"/>
+      <node ref="R31" pin="1" pintype="passive"/>
+      <node ref="R32" pin="1" pintype="passive"/>
+      <node ref="R33" pin="1" pintype="passive"/>
+      <node ref="R34" pin="1" pintype="passive"/>
+      <node ref="R35" pin="1" pintype="passive"/>
+      <node ref="R36" pin="1" pintype="passive"/>
+      <node ref="R37" pin="1" pintype="passive"/>
+      <node ref="R38" pin="1" pintype="passive"/>
+      <node ref="R39" pin="1" pintype="passive"/>
+      <node ref="R40" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U10" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U11" pin="3" pinfunction="A2" pintype="input"/>
+      <node ref="U11" pin="4" pinfunction="E1" pintype="input"/>
+      <node ref="U11" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U12" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U13" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="OE" pintype="input"/>
+      <node ref="U3" pin="10" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="1" pinfunction="OE" pintype="input"/>
+      <node ref="U4" pin="10" pinfunction="GND" pintype="power_in"/>
+      <node ref="U5" pin="1" pinfunction="OE" pintype="input"/>
+      <node ref="U5" pin="10" pinfunction="GND" pintype="power_in"/>
+      <node ref="U6" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="10" pinfunction="GND" pintype="power_in"/>
+      <node ref="U8" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U9" pin="7" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="29" name="Net-(C7-Pad1)">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="U6" pin="13" pintype="input"/>
+      <node ref="U7" pin="2" pinfunction="I0a" pintype="input"/>
+    </net>
+    <net code="30" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U3" pin="2" pinfunction="O0" pintype="tri_state"/>
+    </net>
+    <net code="32" name="Net-(D2-Pad1)">
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+    </net>
+    <net code="33" name="Net-(D2-Pad2)">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U3" pin="5" pinfunction="O1" pintype="tri_state"/>
+    </net>
+    <net code="34" name="Net-(D3-Pad1)">
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+    </net>
+    <net code="35" name="Net-(D3-Pad2)">
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U3" pin="6" pinfunction="O2" pintype="tri_state"/>
+    </net>
+    <net code="36" name="Net-(D4-Pad1)">
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+    </net>
+    <net code="37" name="Net-(D4-Pad2)">
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U3" pin="9" pinfunction="O3" pintype="tri_state"/>
+    </net>
+    <net code="38" name="Net-(D5-Pad1)">
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+    </net>
+    <net code="39" name="Net-(D5-Pad2)">
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U3" pin="12" pinfunction="O4" pintype="tri_state"/>
+    </net>
+    <net code="40" name="Net-(D6-Pad1)">
+      <node ref="D6" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R22" pin="2" pintype="passive"/>
+    </net>
+    <net code="41" name="Net-(D6-Pad2)">
+      <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U3" pin="15" pinfunction="O5" pintype="tri_state"/>
+    </net>
+    <net code="42" name="Net-(D7-Pad1)">
+      <node ref="D7" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R23" pin="2" pintype="passive"/>
+    </net>
+    <net code="43" name="Net-(D7-Pad2)">
+      <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U3" pin="16" pinfunction="O6" pintype="tri_state"/>
+    </net>
+    <net code="44" name="Net-(D8-Pad1)">
+      <node ref="D8" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R24" pin="2" pintype="passive"/>
+    </net>
+    <net code="45" name="Net-(D8-Pad2)">
+      <node ref="D8" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U3" pin="19" pinfunction="O7" pintype="tri_state"/>
+    </net>
+    <net code="46" name="Net-(D9-Pad1)">
+      <node ref="D9" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R25" pin="2" pintype="passive"/>
+    </net>
+    <net code="47" name="Net-(D9-Pad2)">
+      <node ref="D9" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="O0" pintype="tri_state"/>
+    </net>
+    <net code="48" name="Net-(D10-Pad1)">
+      <node ref="D10" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R26" pin="2" pintype="passive"/>
+    </net>
+    <net code="49" name="Net-(D10-Pad2)">
+      <node ref="D10" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U4" pin="5" pinfunction="O1" pintype="tri_state"/>
+    </net>
+    <net code="50" name="Net-(D11-Pad1)">
+      <node ref="D11" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R27" pin="2" pintype="passive"/>
+    </net>
+    <net code="51" name="Net-(D11-Pad2)">
+      <node ref="D11" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U4" pin="6" pinfunction="O2" pintype="tri_state"/>
+    </net>
+    <net code="52" name="Net-(D12-Pad1)">
+      <node ref="D12" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R28" pin="2" pintype="passive"/>
+    </net>
+    <net code="53" name="Net-(D12-Pad2)">
+      <node ref="D12" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U4" pin="9" pinfunction="O3" pintype="tri_state"/>
+    </net>
+    <net code="54" name="Net-(D13-Pad1)">
+      <node ref="D13" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R29" pin="2" pintype="passive"/>
+    </net>
+    <net code="55" name="Net-(D13-Pad2)">
+      <node ref="D13" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U4" pin="12" pinfunction="O4" pintype="tri_state"/>
+    </net>
+    <net code="56" name="Net-(D14-Pad1)">
+      <node ref="D14" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R30" pin="2" pintype="passive"/>
+    </net>
+    <net code="57" name="Net-(D14-Pad2)">
+      <node ref="D14" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U4" pin="15" pinfunction="O5" pintype="tri_state"/>
+    </net>
+    <net code="58" name="Net-(D15-Pad1)">
+      <node ref="D15" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R31" pin="2" pintype="passive"/>
+    </net>
+    <net code="59" name="Net-(D15-Pad2)">
+      <node ref="D15" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U4" pin="16" pinfunction="O6" pintype="tri_state"/>
+    </net>
+    <net code="60" name="Net-(D16-Pad1)">
+      <node ref="D16" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R32" pin="2" pintype="passive"/>
+    </net>
+    <net code="61" name="Net-(D16-Pad2)">
+      <node ref="D16" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U4" pin="19" pinfunction="O7" pintype="tri_state"/>
+    </net>
+    <net code="62" name="Net-(D17-Pad1)">
+      <node ref="D17" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R33" pin="2" pintype="passive"/>
+    </net>
+    <net code="63" name="Net-(D17-Pad2)">
+      <node ref="D17" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="2" pinfunction="O0" pintype="tri_state"/>
+    </net>
+    <net code="64" name="Net-(D18-Pad1)">
+      <node ref="D18" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R34" pin="2" pintype="passive"/>
+    </net>
+    <net code="65" name="Net-(D18-Pad2)">
+      <node ref="D18" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="5" pinfunction="O1" pintype="tri_state"/>
+    </net>
+    <net code="66" name="Net-(D19-Pad1)">
+      <node ref="D19" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R35" pin="2" pintype="passive"/>
+    </net>
+    <net code="67" name="Net-(D19-Pad2)">
+      <node ref="D19" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="6" pinfunction="O2" pintype="tri_state"/>
+    </net>
+    <net code="68" name="Net-(D20-Pad1)">
+      <node ref="D20" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R36" pin="2" pintype="passive"/>
+    </net>
+    <net code="69" name="Net-(D20-Pad2)">
+      <node ref="D20" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="9" pinfunction="O3" pintype="tri_state"/>
+    </net>
+    <net code="70" name="Net-(D21-Pad1)">
+      <node ref="D21" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R37" pin="2" pintype="passive"/>
+    </net>
+    <net code="71" name="Net-(D21-Pad2)">
+      <node ref="D21" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="12" pinfunction="O4" pintype="tri_state"/>
+    </net>
+    <net code="72" name="Net-(D22-Pad1)">
+      <node ref="D22" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R38" pin="2" pintype="passive"/>
+    </net>
+    <net code="73" name="Net-(D22-Pad2)">
+      <node ref="D22" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="15" pinfunction="O5" pintype="tri_state"/>
+    </net>
+    <net code="74" name="Net-(D23-Pad1)">
+      <node ref="D23" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R39" pin="2" pintype="passive"/>
+    </net>
+    <net code="75" name="Net-(D23-Pad2)">
+      <node ref="D23" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="16" pinfunction="O6" pintype="tri_state"/>
+    </net>
+    <net code="76" name="Net-(D24-Pad1)">
+      <node ref="D24" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R40" pin="2" pintype="passive"/>
+    </net>
+    <net code="77" name="Net-(D24-Pad2)">
+      <node ref="D24" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="19" pinfunction="O7" pintype="tri_state"/>
+    </net>
+    <net code="78" name="Net-(J4-Pad1)">
+      <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="SW30" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="79" name="Net-(J4-Pad3)">
+      <node ref="J4" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="SW31" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U7" pin="4" pinfunction="I1a" pintype="input"/>
+    </net>
+    <net code="80" name="Net-(R1-Pad2)">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="2" pintype="input"/>
+    </net>
+    <net code="81" name="Net-(R2-Pad2)">
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="SW2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="5" pintype="input"/>
+    </net>
+    <net code="82" name="Net-(R3-Pad2)">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="SW3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="10" pintype="input"/>
+    </net>
+    <net code="83" name="Net-(R4-Pad2)">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="SW4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="13" pintype="input"/>
+    </net>
+    <net code="84" name="Net-(R9-Pad1)">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="SW10" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW5" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW6" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW7" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW8" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW9" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U6" pin="8" pintype="open_collector"/>
+    </net>
+    <net code="85" name="Net-(R10-Pad1)">
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="SW11" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW12" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW13" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW14" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW15" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW16" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U6" pin="6" pintype="open_collector"/>
+    </net>
+    <net code="86" name="Net-(R11-Pad1)">
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="SW17" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW18" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW19" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW20" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW21" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW22" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U6" pin="4" pintype="open_collector"/>
+    </net>
+    <net code="87" name="Net-(R12-Pad1)">
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="SW23" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW24" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW25" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW26" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW27" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW28" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U6" pin="2" pintype="open_collector"/>
+    </net>
+    <net code="88" name="Net-(R14-Pad1)">
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="SW29" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="89" name="Net-(R16-Pad1)">
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="U3" pin="11" pinfunction="Cp" pintype="input"/>
+      <node ref="U4" pin="11" pinfunction="Cp" pintype="input"/>
+      <node ref="U5" pin="11" pinfunction="Cp" pintype="input"/>
+      <node ref="U6" pin="10" pintype="open_collector"/>
+    </net>
+    <net code="90" name="Net-(SW10-Pad1)">
+      <node ref="SW10" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW16" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW22" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW28" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U7" pin="17" pinfunction="I3b" pintype="input"/>
+    </net>
+    <net code="91" name="Net-(SW11-Pad1)">
+      <node ref="SW11" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW17" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW23" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U7" pin="6" pinfunction="I2a" pintype="input"/>
+    </net>
+    <net code="92" name="Net-(SW12-Pad1)">
+      <node ref="SW12" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW18" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW24" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW6" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U7" pin="8" pinfunction="I3a" pintype="input"/>
+    </net>
+    <net code="93" name="Net-(SW13-Pad1)">
+      <node ref="SW13" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW19" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW25" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW7" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U7" pin="11" pinfunction="I0b" pintype="input"/>
+    </net>
+    <net code="94" name="Net-(SW14-Pad1)">
+      <node ref="SW14" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW20" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW26" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW8" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U7" pin="13" pinfunction="I1b" pintype="input"/>
+    </net>
+    <net code="95" name="Net-(SW15-Pad1)">
+      <node ref="SW15" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW21" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW27" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW9" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U7" pin="15" pinfunction="I2b" pintype="input"/>
+    </net>
+    <net code="96" name="Net-(U1-Pad3)">
+      <node ref="U1" pin="3" pintype="output"/>
+      <node ref="U2" pin="1" pintype="input"/>
+    </net>
+    <net code="97" name="Net-(U1-Pad6)">
+      <node ref="U1" pin="6" pintype="output"/>
+      <node ref="U2" pin="2" pintype="input"/>
+    </net>
+    <net code="98" name="Net-(U1-Pad8)">
+      <node ref="U1" pin="8" pintype="output"/>
+      <node ref="U2" pin="4" pintype="input"/>
+    </net>
+    <net code="99" name="Net-(U1-Pad11)">
+      <node ref="U1" pin="11" pintype="output"/>
+      <node ref="U2" pin="5" pintype="input"/>
+    </net>
+    <net code="100" name="Net-(U2-Pad6)">
+      <node ref="U2" pin="6" pintype="output"/>
+      <node ref="U6" pin="11" pintype="input"/>
+    </net>
+    <net code="101" name="Net-(U2-Pad8)">
+      <node ref="U2" pin="8" pintype="output"/>
+      <node ref="U8" pin="5" pintype="input"/>
+    </net>
+    <net code="102" name="Net-(U8-Pad3)">
+      <node ref="U8" pin="3" pintype="output"/>
+      <node ref="U8" pin="4" pintype="input"/>
+    </net>
+    <net code="103" name="Net-(U8-Pad12)">
+      <node ref="U8" pin="12" pintype="input"/>
+      <node ref="U8" pin="6" pintype="output"/>
+      <node ref="U8" pin="9" pintype="input"/>
+    </net>
+    <net code="104" name="Net-(U10-Pad3)">
+      <node ref="U10" pin="3" pinfunction="WR" pintype="input"/>
+      <node ref="U11" pin="14" pinfunction="O1" pintype="output"/>
+    </net>
+    <net code="105" name="Net-(U11-Pad12)">
+      <node ref="U11" pin="12" pinfunction="O3" pintype="output"/>
+      <node ref="U13" pin="3" pinfunction="WR" pintype="input"/>
+    </net>
+    <net code="106" name="Net-(U11-Pad13)">
+      <node ref="U11" pin="13" pinfunction="O2" pintype="output"/>
+      <node ref="U12" pin="3" pinfunction="WR" pintype="input"/>
+    </net>
+    <net code="107" name="Net-(U11-Pad15)">
+      <node ref="U11" pin="15" pinfunction="O0" pintype="output"/>
+      <node ref="U9" pin="3" pinfunction="WR" pintype="input"/>
+    </net>
+    <net code="108" name="unconnected-(J1-Pad1)">
+      <node ref="J1" pin="1" pinfunction="~{SYSRES}" pintype="passive+no_connect"/>
+    </net>
+    <net code="109" name="unconnected-(J1-Pad2)">
+      <node ref="J1" pin="2" pinfunction="~{RAS}" pintype="passive+no_connect"/>
+    </net>
+    <net code="110" name="unconnected-(J1-Pad4)">
+      <node ref="J1" pin="4" pinfunction="~{EXMEM}" pintype="passive+no_connect"/>
+    </net>
+    <net code="111" name="unconnected-(J1-Pad13)">
+      <node ref="J1" pin="13" pinfunction="~{INTAK}" pintype="passive+no_connect"/>
+    </net>
+    <net code="112" name="unconnected-(J1-Pad15)">
+      <node ref="J1" pin="15" pinfunction="~{INUSE}" pintype="passive+no_connect"/>
+    </net>
+    <net code="113" name="unconnected-(J1-Pad24)">
+      <node ref="J1" pin="24" pinfunction="CLK" pintype="passive+no_connect"/>
+    </net>
+    <net code="114" name="unconnected-(J1-Pad34)">
+      <node ref="J1" pin="34" pinfunction="~{WAIT}" pintype="passive+no_connect"/>
+    </net>
+    <net code="115" name="unconnected-(J3-Pad5)">
+      <node ref="J3" pin="5" pinfunction="Pin_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="116" name="unconnected-(J3-Pad7)">
+      <node ref="J3" pin="7" pinfunction="Pin_7" pintype="passive+no_connect"/>
+    </net>
+    <net code="117" name="unconnected-(J4-Pad2)">
+      <node ref="J4" pin="2" pinfunction="Pin_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="118" name="unconnected-(J4-Pad4)">
+      <node ref="J4" pin="4" pinfunction="Pin_4" pintype="passive+no_connect"/>
+    </net>
+    <net code="119" name="unconnected-(J4-Pad5)">
+      <node ref="J4" pin="5" pinfunction="Pin_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="120" name="unconnected-(J4-Pad6)">
+      <node ref="J4" pin="6" pinfunction="Pin_6" pintype="passive+no_connect"/>
+    </net>
+    <net code="121" name="unconnected-(J4-Pad7)">
+      <node ref="J4" pin="7" pinfunction="Pin_7" pintype="passive+no_connect"/>
+    </net>
+    <net code="122" name="unconnected-(J4-Pad8)">
+      <node ref="J4" pin="8" pinfunction="Pin_8" pintype="passive+no_connect"/>
+    </net>
+    <net code="123" name="unconnected-(U11-Pad7)">
+      <node ref="U11" pin="7" pinfunction="O7" pintype="output+no_connect"/>
+    </net>
+    <net code="124" name="unconnected-(U11-Pad9)">
+      <node ref="U11" pin="9" pinfunction="O6" pintype="output+no_connect"/>
+    </net>
+    <net code="125" name="unconnected-(U11-Pad10)">
+      <node ref="U11" pin="10" pinfunction="O5" pintype="output+no_connect"/>
+    </net>
+    <net code="126" name="unconnected-(U11-Pad11)">
+      <node ref="U11" pin="11" pinfunction="O4" pintype="output+no_connect"/>
+    </net>
+    <net code="127" name="~{F_INT}">
+      <node ref="J1" pin="22" pinfunction="~{INT}" pintype="passive"/>
+      <node ref="U6" pin="12" pintype="open_collector"/>
+    </net>
+    <net code="128" name="~{F_IN}">
+      <node ref="J1" pin="20" pinfunction="~{IN}" pintype="passive"/>
+      <node ref="U1" pin="1" pintype="input"/>
+      <node ref="U8" pin="13" pintype="input"/>
+    </net>
+    <net code="129" name="~{F_OUT}">
+      <node ref="J1" pin="11" pinfunction="~{OUT}" pintype="passive"/>
+      <node ref="U1" pin="4" pintype="input"/>
+      <node ref="U8" pin="10" pintype="input"/>
+    </net>
+    <net code="130" name="~{F_READ}">
+      <node ref="J1" pin="16" pinfunction="~{RD}" pintype="passive"/>
+      <node ref="U1" pin="9" pintype="input"/>
+    </net>
+    <net code="131" name="~{F_WRITE}">
+      <node ref="J1" pin="14" pinfunction="~{WR}" pintype="passive"/>
+      <node ref="U1" pin="12" pintype="input"/>
+    </net>
+  </nets>
+</export>

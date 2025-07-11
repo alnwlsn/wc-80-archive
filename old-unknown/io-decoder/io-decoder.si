@@ -1,0 +1,16 @@
+Name     io-decoder;
+PartNo   ;
+Date     06/13/2020;
+Revision 1;
+Designer ;
+Company  alnwlsn;
+Assembly None;
+Location ;
+Device   g22v10;
+
+
+ORDER: A0, A1, A2, A3, A4, A5, A6, A7, IORQ, VCRT; 
+
+
+VECTORS:
+000100010*

@@ -1,0 +1,2 @@
+yaza clocktest.asm
+pause

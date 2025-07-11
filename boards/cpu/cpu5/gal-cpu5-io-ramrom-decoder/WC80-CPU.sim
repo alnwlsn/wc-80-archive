@@ -1,0 +1,80 @@
+%SIGNAL
+PIN  10 =  A0 
+PIN   9 =  A1 
+PIN   8 =  A2 
+PIN   7 =  A3 
+PIN   6 =  A4 
+PIN   5 =  A5 
+PIN   4 =  A6 
+PIN   3 =  A7 
+PIN  15 =  MEMCHIP 
+PIN  14 =  RAMROM 
+PIN  16 =  nBANKSEL 
+PIN  22 =  nBUSBUF 
+PIN  21 =  nDISP 
+PIN  13 =  nINUSE 
+PIN  23 =  nIORQ 
+PIN   2 =  nMEMRQ 
+PIN   1 =  nOUT 
+PIN  18 =  nRAM0 
+PIN  11 =  nRD 
+PIN  17 =  nROM0 
+PIN  19 =  nSPARE0 
+PIN  20 =  nSPARE1 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+!nBANKSEL =>
+    !A2 & !A3 & A4 & A5 & A6 & !A7 & !nOUT
+
+nBUSBUF =>
+    nINUSE & nIORQ
+  # nIORQ & nMEMRQ
+  # nRD
+
+!nDISP =>
+    A2 & !A3 & A4 & A5 & A6 & !A7 & !nOUT
+
+!nRAM0 =>
+    RAMROM & nINUSE & !nMEMRQ
+
+!nROM0 =>
+    !RAMROM & nINUSE & !nMEMRQ
+
+!nSPARE0 =>
+    !A2 & !A3 & !A4 & A5 & A6 & !A7 & !nOUT
+
+!nSPARE1 =>
+    A2 & !A3 & !A4 & A5 & A6 & !A7 & !nOUT
+
+RAMROM.oe  =>
+    0 
+
+nBANKSEL.oe  =>
+    1 
+
+nBUSBUF.oe  =>
+    1 
+
+nDISP.oe  =>
+    1 
+
+nIORQ.oe  =>
+    0 
+
+nRAM0.oe  =>
+    1 
+
+nROM0.oe  =>
+    1 
+
+nSPARE0.oe  =>
+    1 
+
+nSPARE1.oe  =>
+    1 
+
+%END

@@ -1,0 +1,50 @@
+Name        wc80-rs232           ;
+Partno                           ;
+Revision    1                    ;
+Date        11/23/2021           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+
+/** rs232 and joystick board IO decoder **/
+
+/** Inputs  **/
+Pin 1   =  nOUT; 
+Pin 2   =  nIN;
+Pin 3   =  A0;
+Pin 4   =  A1;
+Pin 5   =  A2;
+Pin 6   =  A3;
+Pin 7   =  A4; 
+Pin 8   =  A5;
+Pin 9   =  A6; 
+Pin 10  =  A7; 
+Pin 11  =  NC1;
+Pin 13  =  NC2; 
+   
+/** Outputs **/
+Pin 14  =  E8OUT;
+Pin 15  =  nE8IN;  
+Pin 16  =  BRG;
+Pin 17  =  EAOUT;   
+Pin 18  =  nEAIN; 
+Pin 19  =  nEBIN;
+Pin 20  =  nEBOUT;    
+Pin 21  =  NC3;
+Pin 22  =  nPADTRG;  
+Pin 23  =  nJSTK;
+
+/** Logic Equations **/
+	
+	E8OUT   = !nOUT & A7 & A6 & A5 & !A4 & A3 & !A2 & !A1 & !A0;
+	!nE8IN  = !nIN  & A7 & A6 & A5 & !A4 & A3 & !A2 & !A1 & !A0;
+	BRG     = !nOUT & A7 & A6 & A5 & !A4 & A3 & !A2 & !A1 & A0;
+	EAOUT = !nOUT & A7 & A6 & A5 & !A4 & A3 & !A2 & A1 & !A0;
+	!nEAIN  = !nIN  & A7 & A6 & A5 & !A4 & A3 & !A2 & A1 & !A0;
+	!nEBIN  = !nIN  & A7 & A6 & A5 & !A4 & A3 & !A2 & A1 & A0;
+	!nEBOUT = !nOUT & A7 & A6 & A5 & !A4 & A3 & !A2 & A1 & A0;
+	!nPADTRG = !nOUT & !A7 & !A6 & !A5 & !A4 & !A3 & !A2 & !A1 & !A0;
+	!nJSTK  = !nIN  & !A7 & !A6 & !A5 & !A4 & !A3 & !A2 & !A1 & !A0;

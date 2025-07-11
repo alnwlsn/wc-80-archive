@@ -1,0 +1,43 @@
+Name        gal-video-MEM-decoder;
+Partno                           ;
+Revision    1                    ;
+Date        08/23/2020           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+/**
+This is for 1 GAL22V10 chip to do address decoding and some glue logic for the video controller
+**/
+/** ---------------------------------- PIN Declarations --------------- **/
+
+PIN 1 = nMEMREQ;
+PIN 2 = A8;
+PIN 3 = A9;
+PIN 4 = A10;
+PIN 5 = A11;
+PIN 6 = A12;
+PIN 7 = A13;
+PIN 8 = A14; 
+PIN 9 = A15;
+PIN 10 = nLOCAL; /** when low, disable chip selects **/
+PIN 14 = TRSMODE;  /** change address to 0x3C00 instead of 0xf000 **/
+PIN 11 = VIDCHAR; /** when high, use character RAM instead **/
+
+/** outputs **/   
+PIN 19 = nCHARRAM;  /** chip select for RAM chips **/   
+PIN 20 = nVIDRAM; 
+
+PIN 23 = nINHIB;   /** feedback to local GAL for override of local RAM **/
+
+/** ----------------------------------- Boolean Equation Segment ------ **/
+
+/** EQUATIONS **/
+
+!nCHARRAM = nLOCAL & !nMEMREQ & VIDCHAR & ((A15 & A14 & A13 & A12 & !TRSMODE)#(!A15 & !A14 & A13 & A12 & A11 & A10 & TRSMODE));
+
+!nVIDRAM = nLOCAL & !nMEMREQ & !VIDCHAR & ((A15 & A14 & A13 & A12 & !TRSMODE)#(!A15 & !A14 & A13 & A12 & A11 & A10 & TRSMODE));
+
+!nINHIB = !nCHARRAM # !nVIDRAM;

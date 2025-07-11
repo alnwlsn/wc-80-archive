@@ -1,0 +1,1716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\alnwlsn\lizard-sync\projects\computers\trs-80\wc-80\boards\keyboard-matrix\keyboard-matrix.sch</source>
+    <date>6/6/2021 4:04:56 PM</date>
+    <tool>Eeschema (5.1.9)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>keyboard-matrix.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="SW1">
+      <value>@</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6098B950</tstamp>
+    </comp>
+    <comp ref="SW9">
+      <value>H</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6099EC85</tstamp>
+    </comp>
+    <comp ref="SW17">
+      <value>P</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A1365</tstamp>
+    </comp>
+    <comp ref="SW25">
+      <value>X</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A1A2A</tstamp>
+    </comp>
+    <comp ref="SW33">
+      <value>0</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A1DF7</tstamp>
+    </comp>
+    <comp ref="SW41">
+      <value>8</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A213F</tstamp>
+    </comp>
+    <comp ref="SW49">
+      <value>Enter</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_2.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A2612</tstamp>
+    </comp>
+    <comp ref="SW2">
+      <value>A</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A6293</tstamp>
+    </comp>
+    <comp ref="SW10">
+      <value>I</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A6299</tstamp>
+    </comp>
+    <comp ref="SW18">
+      <value>Q</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A629F</tstamp>
+    </comp>
+    <comp ref="SW26">
+      <value>Y</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A62A5</tstamp>
+    </comp>
+    <comp ref="SW34">
+      <value>1</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A62AB</tstamp>
+    </comp>
+    <comp ref="SW42">
+      <value>9</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A62B1</tstamp>
+    </comp>
+    <comp ref="SW50">
+      <value>Clear</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A62B7</tstamp>
+    </comp>
+    <comp ref="SW58">
+      <value>R Shift</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.50u_Plate</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A62BD</tstamp>
+    </comp>
+    <comp ref="SW3">
+      <value>B</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB661</tstamp>
+    </comp>
+    <comp ref="SW11">
+      <value>J</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB667</tstamp>
+    </comp>
+    <comp ref="SW35">
+      <value>2</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB679</tstamp>
+    </comp>
+    <comp ref="SW43">
+      <value>*</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB67F</tstamp>
+    </comp>
+    <comp ref="SW51">
+      <value>Break</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB685</tstamp>
+    </comp>
+    <comp ref="SW4">
+      <value>C</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB691</tstamp>
+    </comp>
+    <comp ref="SW12">
+      <value>K</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB697</tstamp>
+    </comp>
+    <comp ref="SW20">
+      <value>S</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB69D</tstamp>
+    </comp>
+    <comp ref="SW28">
+      <value>Z1</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB6A3</tstamp>
+    </comp>
+    <comp ref="SW44">
+      <value>+</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB6AF</tstamp>
+    </comp>
+    <comp ref="SW52">
+      <value>Up</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB6B5</tstamp>
+    </comp>
+    <comp ref="SW5">
+      <value>D</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE6D7</tstamp>
+    </comp>
+    <comp ref="SW13">
+      <value>L</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE6DD</tstamp>
+    </comp>
+    <comp ref="SW21">
+      <value>T</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE6E3</tstamp>
+    </comp>
+    <comp ref="SW29">
+      <value>Z2</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE6E9</tstamp>
+    </comp>
+    <comp ref="SW45">
+      <value>&lt;</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE6F5</tstamp>
+    </comp>
+    <comp ref="SW53">
+      <value>Down</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE6FB</tstamp>
+    </comp>
+    <comp ref="SW59">
+      <value>Control</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE701</tstamp>
+    </comp>
+    <comp ref="SW6">
+      <value>E</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE707</tstamp>
+    </comp>
+    <comp ref="SW14">
+      <value>M</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE70D</tstamp>
+    </comp>
+    <comp ref="SW22">
+      <value>U</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE713</tstamp>
+    </comp>
+    <comp ref="SW30">
+      <value>Z3</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE719</tstamp>
+    </comp>
+    <comp ref="SW46">
+      <value>=</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE725</tstamp>
+    </comp>
+    <comp ref="SW54">
+      <value>Left</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE72B</tstamp>
+    </comp>
+    <comp ref="SW7">
+      <value>F</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE737</tstamp>
+    </comp>
+    <comp ref="SW15">
+      <value>N</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE73D</tstamp>
+    </comp>
+    <comp ref="SW31">
+      <value>Z4</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE749</tstamp>
+    </comp>
+    <comp ref="SW39">
+      <value>6</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE74F</tstamp>
+    </comp>
+    <comp ref="SW47">
+      <value>&gt;</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE755</tstamp>
+    </comp>
+    <comp ref="SW55">
+      <value>Right</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE75B</tstamp>
+    </comp>
+    <comp ref="SW8">
+      <value>G</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE767</tstamp>
+    </comp>
+    <comp ref="SW16">
+      <value>O</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE76D</tstamp>
+    </comp>
+    <comp ref="SW24">
+      <value>W</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE773</tstamp>
+    </comp>
+    <comp ref="SW32">
+      <value>Z5</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE779</tstamp>
+    </comp>
+    <comp ref="SW40">
+      <value>7</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE77F</tstamp>
+    </comp>
+    <comp ref="SW48">
+      <value>?</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE785</tstamp>
+    </comp>
+    <comp ref="SW56">
+      <value>Space</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_6.25u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE78B</tstamp>
+    </comp>
+    <comp ref="SW19">
+      <value>R</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB66D</tstamp>
+    </comp>
+    <comp ref="SW38">
+      <value>5</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE71F</tstamp>
+    </comp>
+    <comp ref="SW37">
+      <value>4</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE6EF</tstamp>
+    </comp>
+    <comp ref="SW36">
+      <value>3</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB6A9</tstamp>
+    </comp>
+    <comp ref="SW23">
+      <value>V</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BE743</tstamp>
+    </comp>
+    <comp ref="SW27">
+      <value>Z</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609AB673</tstamp>
+    </comp>
+    <comp ref="SW61">
+      <value>NMI</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609CEAA0</tstamp>
+    </comp>
+    <comp ref="SW62">
+      <value>RESET</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609D02EF</tstamp>
+    </comp>
+    <comp ref="SW60">
+      <value>Z0</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609D1E85</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>TRS80W-header</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical</footprint>
+      <libsource lib="wilson-z80" part="TRS80W-header" description="40 Pin male header for Wilson Z80 / TRS-80 computer"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A35911</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_02x04_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A365BF</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A3EC58</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A3F4BB</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>4k7</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60AA3A0A</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>4k7</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60AA430B</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>4k7</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60AA48F1</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>4k7</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60AA4E1B</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>4k7</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60AA52DC</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>4k7</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60AA57A0</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>4k7</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60AA5D8D</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>4k7</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60AA6301</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>74LS05</value>
+      <footprint>Package_DIP:DIP-14_W7.62mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS05</datasheet>
+      <libsource lib="74xx" part="74LS05" description="Inverter Open Collect"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60B0EEC3</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>74LS05</value>
+      <footprint>Package_DIP:DIP-14_W7.62mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS05</datasheet>
+      <libsource lib="74xx" part="74LS05" description="Inverter Open Collect"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60B2491C</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>74LS240</value>
+      <footprint>Package_DIP:DIP-20_W7.62mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74ls240.pdf</datasheet>
+      <libsource lib="74xx" part="74LS240" description="Octal Buffer and Line Driver With 3-State Output, active-low enables, inverting outputs"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60B4FDB9</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_01x03_Female</value>
+      <footprint>Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x03_Female" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C65E8C</tstamp>
+    </comp>
+    <comp ref="SW57">
+      <value>Shift</value>
+      <footprint>Button_Switch_Keyboard:SW_Cherry_MX_1.50u_PCB</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609A2D62</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>ATF22V10C</value>
+      <footprint>Package_DIP:DIP-24_W7.62mm</footprint>
+      <datasheet>https://ww1.microchip.com/downloads/en/DeviceDoc/doc0735.pdf</datasheet>
+      <libsource lib="wilson-z80" part="ATF22V10C" description="CMOS programmable logic device"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CCDED8</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>4k7</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D8869F</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>4k7</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60DB2AC8</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>74LS374</value>
+      <footprint>Package_DIP:DIP-20_W7.62mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS374</datasheet>
+      <libsource lib="74xx" part="74LS374" description="8-bit Register, 3-state outputs"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60ECC143</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F3D1A6</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F3D1AC</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F66420</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F66426</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F7BB54</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F7BB5A</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F7BB66</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F7BB6C</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F90676</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F9067C</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F90688</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F9068E</tstamp>
+    </comp>
+    <comp ref="H6">
+      <value>3.2mm</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A46996</tstamp>
+    </comp>
+    <comp ref="H8">
+      <value>3.2mm</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A476DB</tstamp>
+    </comp>
+    <comp ref="H4">
+      <value>3.2mm</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A47959</tstamp>
+    </comp>
+    <comp ref="H2">
+      <value>3.2mm</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A47C78</tstamp>
+    </comp>
+    <comp ref="H10">
+      <value>3.2mm</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A47F5D</tstamp>
+    </comp>
+    <comp ref="H5">
+      <value>3.2mm</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A4ADDD</tstamp>
+    </comp>
+    <comp ref="H7">
+      <value>3.2mm</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A4ADE3</tstamp>
+    </comp>
+    <comp ref="H3">
+      <value>3.2mm</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A4ADE9</tstamp>
+    </comp>
+    <comp ref="H1">
+      <value>3.2mm</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A4ADEF</tstamp>
+    </comp>
+    <comp ref="H9">
+      <value>3.2mm</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A4ADF5</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>CAP</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="CAP" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C43007</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>CAP</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="CAP" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C45BCA</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>CAP</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="CAP" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C58BEE</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>CAP</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="CAP" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C6C27B</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>CAP</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="CAP" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C7FE5F</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>CAP</value>
+      <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="pspice" part="CAP" description="Capacitor symbol for simulation only"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CA9107</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="74xx" part="74LS05">
+      <aliases>
+        <alias>74LS06</alias>
+        <alias>74LS06N</alias>
+      </aliases>
+      <description>Inverter Open Collect</description>
+      <docs>http://www.ti.com/lit/gpn/sn74LS05</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS05</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="openCol"/>
+        <pin num="3" name="~" type="input"/>
+        <pin num="4" name="~" type="openCol"/>
+        <pin num="5" name="~" type="input"/>
+        <pin num="6" name="~" type="openCol"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="~" type="openCol"/>
+        <pin num="9" name="~" type="input"/>
+        <pin num="10" name="~" type="openCol"/>
+        <pin num="11" name="~" type="input"/>
+        <pin num="12" name="~" type="openCol"/>
+        <pin num="13" name="~" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74LS240">
+      <description>Octal Buffer and Line Driver With 3-State Output, active-low enables, inverting outputs</description>
+      <docs>http://www.ti.com/lit/ds/symlink/sn74ls240.pdf</docs>
+      <footprints>
+        <fp>DIP?20*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS240</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OEa" type="input"/>
+        <pin num="2" name="I0a" type="input"/>
+        <pin num="3" name="O3b" type="3state"/>
+        <pin num="4" name="I1a" type="input"/>
+        <pin num="5" name="O2b" type="3state"/>
+        <pin num="6" name="I2a" type="input"/>
+        <pin num="7" name="O1b" type="3state"/>
+        <pin num="8" name="I3a" type="input"/>
+        <pin num="9" name="O0b" type="3state"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="I0b" type="input"/>
+        <pin num="12" name="O3a" type="3state"/>
+        <pin num="13" name="I1b" type="input"/>
+        <pin num="14" name="O2a" type="3state"/>
+        <pin num="15" name="I2b" type="input"/>
+        <pin num="16" name="O1a" type="3state"/>
+        <pin num="17" name="I3b" type="input"/>
+        <pin num="18" name="O0a" type="3state"/>
+        <pin num="19" name="OEb" type="input"/>
+        <pin num="20" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74LS374">
+      <aliases>
+        <alias>74HC374</alias>
+        <alias>74HCT374</alias>
+        <alias>74AHC374</alias>
+        <alias>74AHCT374</alias>
+      </aliases>
+      <description>8-bit Register, 3-state outputs</description>
+      <docs>http://www.ti.com/lit/gpn/sn74LS374</docs>
+      <footprints>
+        <fp>DIP?20*</fp>
+        <fp>SOIC?20*</fp>
+        <fp>SO?20*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS374</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OE" type="input"/>
+        <pin num="2" name="O0" type="3state"/>
+        <pin num="3" name="D0" type="input"/>
+        <pin num="4" name="D1" type="input"/>
+        <pin num="5" name="O1" type="3state"/>
+        <pin num="6" name="O2" type="3state"/>
+        <pin num="7" name="D2" type="input"/>
+        <pin num="8" name="D3" type="input"/>
+        <pin num="9" name="O3" type="3state"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="Cp" type="input"/>
+        <pin num="12" name="O4" type="3state"/>
+        <pin num="13" name="D4" type="input"/>
+        <pin num="14" name="D5" type="input"/>
+        <pin num="15" name="O5" type="3state"/>
+        <pin num="16" name="O6" type="3state"/>
+        <pin num="17" name="D6" type="input"/>
+        <pin num="18" name="D7" type="input"/>
+        <pin num="19" name="O7" type="3state"/>
+        <pin num="20" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x03_Female">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03_Female</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x04_Odd_Even">
+      <description>Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x04_Odd_Even</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+      </fields>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pspice" part="CAP">
+      <aliases>
+        <alias>C</alias>
+      </aliases>
+      <description>Capacitor symbol for simulation only</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CAP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="wilson-z80" part="ATF22V10C">
+      <description>CMOS programmable logic device</description>
+      <docs>https://ww1.microchip.com/downloads/en/DeviceDoc/doc0735.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ATF22V10C</field>
+        <field name="Footprint">Package_DIP:DIP-24_W7.62mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+        <pin num="3" name="3" type="input"/>
+        <pin num="4" name="4" type="input"/>
+        <pin num="5" name="5" type="input"/>
+        <pin num="6" name="6" type="input"/>
+        <pin num="7" name="7" type="input"/>
+        <pin num="8" name="8" type="input"/>
+        <pin num="9" name="9" type="input"/>
+        <pin num="10" name="10" type="input"/>
+        <pin num="11" name="11" type="input"/>
+        <pin num="12" name="GND" type="power_in"/>
+        <pin num="13" name="13" type="input"/>
+        <pin num="14" name="14" type="BiDi"/>
+        <pin num="15" name="15" type="BiDi"/>
+        <pin num="16" name="16" type="BiDi"/>
+        <pin num="17" name="17" type="BiDi"/>
+        <pin num="18" name="18" type="BiDi"/>
+        <pin num="19" name="19" type="BiDi"/>
+        <pin num="20" name="20" type="BiDi"/>
+        <pin num="21" name="21" type="BiDi"/>
+        <pin num="22" name="22" type="BiDi"/>
+        <pin num="23" name="23" type="BiDi"/>
+        <pin num="24" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="wilson-z80" part="TRS80W-header">
+      <description>40 Pin male header for Wilson Z80 / TRS-80 computer</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">TRS80W-header</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~SYSRES~" type="passive"/>
+        <pin num="2" name="~RAS~" type="passive"/>
+        <pin num="3" name="A10" type="passive"/>
+        <pin num="4" name="~EXMEM~" type="passive"/>
+        <pin num="5" name="A13" type="passive"/>
+        <pin num="6" name="A12" type="passive"/>
+        <pin num="7" name="GND" type="passive"/>
+        <pin num="8" name="A15" type="passive"/>
+        <pin num="9" name="A14" type="passive"/>
+        <pin num="10" name="A11" type="passive"/>
+        <pin num="11" name="~OUT~" type="passive"/>
+        <pin num="12" name="A8" type="passive"/>
+        <pin num="13" name="~INTAK~" type="passive"/>
+        <pin num="14" name="~WR~" type="passive"/>
+        <pin num="15" name="~INUSE~" type="passive"/>
+        <pin num="16" name="~RD~" type="passive"/>
+        <pin num="17" name="D4" type="passive"/>
+        <pin num="18" name="A9" type="passive"/>
+        <pin num="19" name="D7" type="passive"/>
+        <pin num="20" name="~IN~" type="passive"/>
+        <pin num="21" name="D1" type="passive"/>
+        <pin num="22" name="~INT~" type="passive"/>
+        <pin num="23" name="D6" type="passive"/>
+        <pin num="24" name="CLK" type="passive"/>
+        <pin num="25" name="D3" type="passive"/>
+        <pin num="26" name="A0" type="passive"/>
+        <pin num="27" name="D5" type="passive"/>
+        <pin num="28" name="A1" type="passive"/>
+        <pin num="29" name="D0" type="passive"/>
+        <pin num="30" name="GND" type="passive"/>
+        <pin num="31" name="D2" type="passive"/>
+        <pin num="32" name="A4" type="passive"/>
+        <pin num="33" name="A3" type="passive"/>
+        <pin num="34" name="~WAIT~" type="passive"/>
+        <pin num="35" name="A7" type="passive"/>
+        <pin num="36" name="A5" type="passive"/>
+        <pin num="37" name="A6" type="passive"/>
+        <pin num="38" name="GND" type="passive"/>
+        <pin num="39" name="A2" type="passive"/>
+        <pin num="40" name="+5V" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="74xx">
+      <uri>C:\Program Files\KiCad\share\kicad\library/74xx.lib</uri>
+    </library>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Mechanical.lib</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Switch.lib</uri>
+    </library>
+    <library logical="pspice">
+      <uri>C:\Program Files\KiCad\share\kicad\library/pspice.lib</uri>
+    </library>
+    <library logical="wilson-z80">
+      <uri>C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/cpu5/cpu2/wilson-z80.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(R6-Pad1)">
+      <node ref="SW38" pin="2"/>
+      <node ref="R6" pin="1"/>
+      <node ref="U3" pin="6"/>
+      <node ref="SW6" pin="2"/>
+      <node ref="SW14" pin="2"/>
+      <node ref="SW22" pin="2"/>
+      <node ref="SW30" pin="2"/>
+      <node ref="SW46" pin="2"/>
+      <node ref="SW54" pin="2"/>
+    </net>
+    <net code="2" name="Net-(R3-Pad1)">
+      <node ref="SW19" pin="2"/>
+      <node ref="SW3" pin="2"/>
+      <node ref="SW11" pin="2"/>
+      <node ref="SW35" pin="2"/>
+      <node ref="SW43" pin="2"/>
+      <node ref="SW51" pin="2"/>
+      <node ref="R3" pin="1"/>
+      <node ref="SW27" pin="2"/>
+      <node ref="U3" pin="13"/>
+    </net>
+    <net code="3" name="D2">
+      <node ref="J2" pin="31"/>
+      <node ref="U4" pin="7"/>
+      <node ref="U3" pin="7"/>
+    </net>
+    <net code="4" name="D5">
+      <node ref="U4" pin="14"/>
+      <node ref="U3" pin="14"/>
+      <node ref="J2" pin="27"/>
+    </net>
+    <net code="5" name="D6">
+      <node ref="U3" pin="16"/>
+      <node ref="J2" pin="23"/>
+      <node ref="U4" pin="17"/>
+    </net>
+    <net code="6" name="D7">
+      <node ref="U3" pin="18"/>
+      <node ref="J2" pin="19"/>
+      <node ref="U4" pin="18"/>
+    </net>
+    <net code="7" name="+5V">
+      <node ref="R1" pin="2"/>
+      <node ref="C1" pin="1"/>
+      <node ref="C5" pin="1"/>
+      <node ref="J2" pin="40"/>
+      <node ref="U2" pin="14"/>
+      <node ref="R7" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="R5" pin="2"/>
+      <node ref="R4" pin="2"/>
+      <node ref="R3" pin="2"/>
+      <node ref="C3" pin="1"/>
+      <node ref="R2" pin="2"/>
+      <node ref="U1" pin="14"/>
+      <node ref="C4" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="J1" pin="2"/>
+      <node ref="SW61" pin="2"/>
+      <node ref="SW62" pin="2"/>
+      <node ref="U5" pin="24"/>
+      <node ref="R9" pin="1"/>
+      <node ref="U4" pin="20"/>
+      <node ref="C2" pin="1"/>
+      <node ref="R16" pin="2"/>
+      <node ref="R8" pin="2"/>
+      <node ref="R17" pin="2"/>
+      <node ref="U3" pin="20"/>
+    </net>
+    <net code="8" name="D0">
+      <node ref="U3" pin="3"/>
+      <node ref="J2" pin="29"/>
+      <node ref="U4" pin="3"/>
+    </net>
+    <net code="9" name="D1">
+      <node ref="J2" pin="21"/>
+      <node ref="U3" pin="5"/>
+      <node ref="U4" pin="4"/>
+    </net>
+    <net code="10" name="D3">
+      <node ref="U3" pin="9"/>
+      <node ref="J2" pin="25"/>
+      <node ref="U4" pin="8"/>
+    </net>
+    <net code="11" name="GND">
+      <node ref="C4" pin="2"/>
+      <node ref="D3" pin="1"/>
+      <node ref="D4" pin="1"/>
+      <node ref="D5" pin="1"/>
+      <node ref="D7" pin="1"/>
+      <node ref="J2" pin="7"/>
+      <node ref="U1" pin="7"/>
+      <node ref="J2" pin="38"/>
+      <node ref="J2" pin="30"/>
+      <node ref="D6" pin="1"/>
+      <node ref="U3" pin="10"/>
+      <node ref="D1" pin="1"/>
+      <node ref="J1" pin="4"/>
+      <node ref="U5" pin="12"/>
+      <node ref="U4" pin="10"/>
+      <node ref="U4" pin="1"/>
+      <node ref="U2" pin="7"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="D2" pin="1"/>
+      <node ref="C1" pin="2"/>
+    </net>
+    <net code="12" name="Net-(J3-Pad2)">
+      <node ref="SW58" pin="2"/>
+      <node ref="J3" pin="2"/>
+    </net>
+    <net code="13" name="Net-(R17-Pad1)">
+      <node ref="U5" pin="13"/>
+      <node ref="U2" pin="10"/>
+      <node ref="U2" pin="8"/>
+      <node ref="U2" pin="6"/>
+      <node ref="R17" pin="1"/>
+    </net>
+    <net code="14" name="Net-(U3-Pad1)">
+      <node ref="U5" pin="18"/>
+      <node ref="U3" pin="1"/>
+      <node ref="U3" pin="19"/>
+    </net>
+    <net code="15" name="Net-(U4-Pad16)">
+      <node ref="U5" pin="22"/>
+      <node ref="U4" pin="16"/>
+    </net>
+    <net code="16" name="Net-(U4-Pad11)">
+      <node ref="U5" pin="23"/>
+      <node ref="U4" pin="11"/>
+    </net>
+    <net code="17" name="Net-(J3-Pad1)">
+      <node ref="U3" pin="17"/>
+      <node ref="J3" pin="1"/>
+      <node ref="SW57" pin="2"/>
+      <node ref="R1" pin="1"/>
+      <node ref="SW49" pin="2"/>
+      <node ref="SW41" pin="2"/>
+      <node ref="SW33" pin="2"/>
+      <node ref="SW25" pin="2"/>
+      <node ref="SW17" pin="2"/>
+      <node ref="SW9" pin="2"/>
+      <node ref="SW1" pin="2"/>
+    </net>
+    <net code="18" name="D4">
+      <node ref="U4" pin="13"/>
+      <node ref="J2" pin="17"/>
+      <node ref="U3" pin="12"/>
+    </net>
+    <net code="19" name="Net-(J3-Pad3)">
+      <node ref="SW2" pin="2"/>
+      <node ref="U3" pin="15"/>
+      <node ref="J3" pin="3"/>
+      <node ref="SW50" pin="2"/>
+      <node ref="SW42" pin="2"/>
+      <node ref="R2" pin="1"/>
+      <node ref="SW34" pin="2"/>
+      <node ref="SW26" pin="2"/>
+      <node ref="SW18" pin="2"/>
+      <node ref="SW10" pin="2"/>
+    </net>
+    <net code="20" name="Net-(R7-Pad1)">
+      <node ref="SW55" pin="2"/>
+      <node ref="SW47" pin="2"/>
+      <node ref="U3" pin="4"/>
+      <node ref="SW39" pin="2"/>
+      <node ref="R7" pin="1"/>
+      <node ref="SW7" pin="2"/>
+      <node ref="SW15" pin="2"/>
+      <node ref="SW31" pin="2"/>
+      <node ref="SW23" pin="2"/>
+    </net>
+    <net code="21" name="Net-(R5-Pad1)">
+      <node ref="SW45" pin="2"/>
+      <node ref="SW53" pin="2"/>
+      <node ref="SW59" pin="2"/>
+      <node ref="SW29" pin="2"/>
+      <node ref="SW21" pin="2"/>
+      <node ref="SW37" pin="2"/>
+      <node ref="SW13" pin="2"/>
+      <node ref="SW5" pin="2"/>
+      <node ref="R5" pin="1"/>
+      <node ref="U3" pin="8"/>
+    </net>
+    <net code="22" name="Net-(R4-Pad1)">
+      <node ref="SW20" pin="2"/>
+      <node ref="SW12" pin="2"/>
+      <node ref="SW4" pin="2"/>
+      <node ref="R4" pin="1"/>
+      <node ref="SW36" pin="2"/>
+      <node ref="U3" pin="11"/>
+      <node ref="SW28" pin="2"/>
+      <node ref="SW52" pin="2"/>
+      <node ref="SW44" pin="2"/>
+    </net>
+    <net code="23" name="Net-(J1-Pad3)">
+      <node ref="J1" pin="3"/>
+      <node ref="SW61" pin="1"/>
+    </net>
+    <net code="24" name="Net-(J1-Pad1)">
+      <node ref="J1" pin="1"/>
+      <node ref="SW62" pin="1"/>
+    </net>
+    <net code="25" name="A7">
+      <node ref="U2" pin="3"/>
+      <node ref="J2" pin="35"/>
+      <node ref="U5" pin="20"/>
+    </net>
+    <net code="26" name="Net-(U2-Pad13)">
+      <node ref="U2" pin="13"/>
+      <node ref="U5" pin="19"/>
+    </net>
+    <net code="27" name="A3">
+      <node ref="U2" pin="1"/>
+      <node ref="J2" pin="33"/>
+      <node ref="U5" pin="14"/>
+    </net>
+    <net code="28" name="A1">
+      <node ref="U2" pin="9"/>
+      <node ref="U1" pin="1"/>
+      <node ref="J2" pin="28"/>
+    </net>
+    <net code="29" name="A5">
+      <node ref="U1" pin="3"/>
+      <node ref="U5" pin="16"/>
+      <node ref="J2" pin="36"/>
+    </net>
+    <net code="30" name="A4">
+      <node ref="U5" pin="15"/>
+      <node ref="U1" pin="5"/>
+      <node ref="J2" pin="32"/>
+    </net>
+    <net code="31" name="A0">
+      <node ref="J2" pin="26"/>
+      <node ref="U2" pin="5"/>
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="32" name="A2">
+      <node ref="U2" pin="11"/>
+      <node ref="U1" pin="11"/>
+      <node ref="J2" pin="39"/>
+    </net>
+    <net code="33" name="A6">
+      <node ref="U5" pin="17"/>
+      <node ref="U1" pin="13"/>
+      <node ref="J2" pin="37"/>
+    </net>
+    <net code="34" name="Net-(R10-Pad1)">
+      <node ref="R10" pin="1"/>
+      <node ref="U4" pin="2"/>
+    </net>
+    <net code="35" name="Net-(D7-Pad2)">
+      <node ref="D7" pin="2"/>
+      <node ref="R15" pin="2"/>
+    </net>
+    <net code="36" name="Net-(R15-Pad1)">
+      <node ref="U4" pin="15"/>
+      <node ref="R15" pin="1"/>
+    </net>
+    <net code="37" name="Net-(R14-Pad1)">
+      <node ref="U4" pin="12"/>
+      <node ref="R14" pin="1"/>
+    </net>
+    <net code="38" name="Net-(R13-Pad1)">
+      <node ref="R13" pin="1"/>
+      <node ref="U4" pin="9"/>
+    </net>
+    <net code="39" name="Net-(R12-Pad1)">
+      <node ref="U4" pin="6"/>
+      <node ref="R12" pin="1"/>
+    </net>
+    <net code="40" name="Net-(R11-Pad1)">
+      <node ref="U4" pin="5"/>
+      <node ref="R11" pin="1"/>
+    </net>
+    <net code="41" name="Net-(D6-Pad2)">
+      <node ref="R14" pin="2"/>
+      <node ref="D6" pin="2"/>
+    </net>
+    <net code="42" name="~OUT~">
+      <node ref="U5" pin="3"/>
+      <node ref="J2" pin="11"/>
+    </net>
+    <net code="43" name="~READ~">
+      <node ref="J2" pin="16"/>
+      <node ref="U5" pin="2"/>
+    </net>
+    <net code="44" name="Net-(D2-Pad2)">
+      <node ref="R10" pin="2"/>
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="45" name="Net-(D3-Pad2)">
+      <node ref="R11" pin="2"/>
+      <node ref="D3" pin="2"/>
+    </net>
+    <net code="46" name="Net-(D4-Pad2)">
+      <node ref="R12" pin="2"/>
+      <node ref="D4" pin="2"/>
+    </net>
+    <net code="47" name="Net-(D5-Pad2)">
+      <node ref="D5" pin="2"/>
+      <node ref="R13" pin="2"/>
+    </net>
+    <net code="48" name="Net-(U4-Pad19)">
+      <node ref="U4" pin="19"/>
+      <node ref="U5" pin="21"/>
+    </net>
+    <net code="49" name="Net-(R8-Pad1)">
+      <node ref="SW32" pin="2"/>
+      <node ref="SW40" pin="2"/>
+      <node ref="SW48" pin="2"/>
+      <node ref="SW56" pin="2"/>
+      <node ref="R8" pin="1"/>
+      <node ref="SW16" pin="2"/>
+      <node ref="SW8" pin="2"/>
+      <node ref="SW24" pin="2"/>
+      <node ref="SW60" pin="2"/>
+      <node ref="U3" pin="2"/>
+    </net>
+    <net code="50" name="Net-(SW1-Pad1)">
+      <node ref="SW1" pin="1"/>
+      <node ref="SW6" pin="1"/>
+      <node ref="SW8" pin="1"/>
+      <node ref="SW7" pin="1"/>
+      <node ref="SW3" pin="1"/>
+      <node ref="SW2" pin="1"/>
+      <node ref="U1" pin="8"/>
+      <node ref="SW5" pin="1"/>
+      <node ref="SW4" pin="1"/>
+    </net>
+    <net code="51" name="Net-(SW10-Pad1)">
+      <node ref="U1" pin="2"/>
+      <node ref="SW12" pin="1"/>
+      <node ref="SW11" pin="1"/>
+      <node ref="SW15" pin="1"/>
+      <node ref="SW9" pin="1"/>
+      <node ref="SW10" pin="1"/>
+      <node ref="SW13" pin="1"/>
+      <node ref="SW16" pin="1"/>
+      <node ref="SW14" pin="1"/>
+    </net>
+    <net code="52" name="Net-(SW17-Pad1)">
+      <node ref="SW17" pin="1"/>
+      <node ref="SW24" pin="1"/>
+      <node ref="U1" pin="10"/>
+      <node ref="SW18" pin="1"/>
+      <node ref="SW23" pin="1"/>
+      <node ref="SW19" pin="1"/>
+      <node ref="SW20" pin="1"/>
+      <node ref="SW21" pin="1"/>
+      <node ref="SW22" pin="1"/>
+    </net>
+    <net code="53" name="Net-(SW25-Pad1)">
+      <node ref="SW27" pin="1"/>
+      <node ref="U2" pin="2"/>
+      <node ref="SW28" pin="1"/>
+      <node ref="SW29" pin="1"/>
+      <node ref="SW25" pin="1"/>
+      <node ref="SW32" pin="1"/>
+      <node ref="SW30" pin="1"/>
+      <node ref="SW26" pin="1"/>
+      <node ref="SW31" pin="1"/>
+    </net>
+    <net code="54" name="Net-(SW33-Pad1)">
+      <node ref="SW34" pin="1"/>
+      <node ref="SW36" pin="1"/>
+      <node ref="SW35" pin="1"/>
+      <node ref="SW39" pin="1"/>
+      <node ref="U1" pin="6"/>
+      <node ref="SW37" pin="1"/>
+      <node ref="SW33" pin="1"/>
+      <node ref="SW40" pin="1"/>
+      <node ref="SW38" pin="1"/>
+    </net>
+    <net code="55" name="Net-(SW41-Pad1)">
+      <node ref="SW46" pin="1"/>
+      <node ref="SW42" pin="1"/>
+      <node ref="U1" pin="4"/>
+      <node ref="SW47" pin="1"/>
+      <node ref="SW41" pin="1"/>
+      <node ref="SW48" pin="1"/>
+      <node ref="SW45" pin="1"/>
+      <node ref="SW44" pin="1"/>
+      <node ref="SW43" pin="1"/>
+    </net>
+    <net code="56" name="Net-(SW49-Pad1)">
+      <node ref="U1" pin="12"/>
+      <node ref="SW54" pin="1"/>
+      <node ref="SW53" pin="1"/>
+      <node ref="SW52" pin="1"/>
+      <node ref="SW56" pin="1"/>
+      <node ref="SW49" pin="1"/>
+      <node ref="SW55" pin="1"/>
+      <node ref="SW50" pin="1"/>
+      <node ref="SW51" pin="1"/>
+    </net>
+    <net code="57" name="Net-(SW57-Pad1)">
+      <node ref="U2" pin="4"/>
+      <node ref="SW60" pin="1"/>
+      <node ref="SW58" pin="1"/>
+      <node ref="SW59" pin="1"/>
+      <node ref="SW57" pin="1"/>
+    </net>
+    <net code="58" name="Net-(J2-Pad1)">
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="59" name="A11">
+      <node ref="J2" pin="10"/>
+      <node ref="U5" pin="7"/>
+    </net>
+    <net code="60" name="A8">
+      <node ref="J2" pin="12"/>
+      <node ref="U5" pin="4"/>
+    </net>
+    <net code="61" name="Net-(J2-Pad13)">
+      <node ref="J2" pin="13"/>
+    </net>
+    <net code="62" name="Net-(J2-Pad14)">
+      <node ref="J2" pin="14"/>
+    </net>
+    <net code="63" name="~INUSE~">
+      <node ref="J2" pin="15"/>
+      <node ref="U2" pin="12"/>
+      <node ref="R16" pin="1"/>
+    </net>
+    <net code="64" name="A9">
+      <node ref="U5" pin="5"/>
+      <node ref="J2" pin="18"/>
+    </net>
+    <net code="65" name="Net-(J2-Pad2)">
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="66" name="A14">
+      <node ref="U5" pin="10"/>
+      <node ref="J2" pin="9"/>
+    </net>
+    <net code="67" name="Net-(J1-Pad5)">
+      <node ref="J1" pin="5"/>
+    </net>
+    <net code="68" name="Net-(J1-Pad6)">
+      <node ref="J1" pin="6"/>
+    </net>
+    <net code="69" name="Net-(J1-Pad7)">
+      <node ref="J1" pin="7"/>
+    </net>
+    <net code="70" name="Net-(J1-Pad8)">
+      <node ref="J1" pin="8"/>
+    </net>
+    <net code="71" name="A15">
+      <node ref="U5" pin="11"/>
+      <node ref="J2" pin="8"/>
+    </net>
+    <net code="72" name="Net-(D1-Pad2)">
+      <node ref="R9" pin="2"/>
+      <node ref="D1" pin="2"/>
+    </net>
+    <net code="73" name="Net-(J2-Pad20)">
+      <node ref="J2" pin="20"/>
+    </net>
+    <net code="74" name="Net-(J2-Pad22)">
+      <node ref="J2" pin="22"/>
+    </net>
+    <net code="75" name="Net-(J2-Pad24)">
+      <node ref="J2" pin="24"/>
+    </net>
+    <net code="76" name="A10">
+      <node ref="U5" pin="6"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="77" name="Net-(J2-Pad34)">
+      <node ref="J2" pin="34"/>
+    </net>
+    <net code="78" name="~EXMEM~">
+      <node ref="U5" pin="1"/>
+      <node ref="J2" pin="4"/>
+    </net>
+    <net code="79" name="A13">
+      <node ref="J2" pin="5"/>
+      <node ref="U5" pin="9"/>
+    </net>
+    <net code="80" name="A12">
+      <node ref="J2" pin="6"/>
+      <node ref="U5" pin="8"/>
+    </net>
+  </nets>
+</export>

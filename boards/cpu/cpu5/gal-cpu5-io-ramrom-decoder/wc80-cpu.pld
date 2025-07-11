@@ -1,0 +1,53 @@
+Name        wc80-cpu             ;
+Partno                           ;
+Revision    1                    ;
+Date        06/23/2021           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+
+/** cpu5 board io decoder and glue logic **/
+
+/** decodes IO addresses for Mem bank selector and LED Display **/
+/** also operates the Direction signal for the bus buffer **/
+
+/** Inputs  **/
+Pin 1   =  nOUT; /** io write from or gate (TRS80 *OUT) **/
+Pin 2   =  nMEMRQ; /** z80 memrq pin (or TRS80 *RAS) **/
+Pin 3   =  A7;
+Pin 4   =  A6;
+Pin 5   =  A5;
+Pin 6   =  A4;
+Pin 7   =  A3;
+Pin 8   =  A2;
+Pin 9   =  A1; 
+Pin 10  =  A0; 
+Pin 11  =  nRD;
+Pin 13  =  nINUSE; /** from external mem space use: when low, disables RAM and ROM from the bus **/
+Pin 14  =  RAMROM; /** select RAM/ROM **/
+Pin 15  =  MEMCHIP; /** was meant to select between 2 sets of roms/rams; currently unused  **/
+
+/** Outputs **/
+Pin 16  =  nBANKSEL; /** to /WE strobe on bank select chips **/
+Pin 17  =  nROM0;    /** to chip select on RAM **/
+Pin 18  =  nRAM0;   /** to chip select on ROM **/
+Pin 19  =  nSPARE0;  
+Pin 20  =  nSPARE1;
+Pin 21  =  nDISP;    /** to /WE strobe on LED dsiplay **/
+Pin 22  =  nBUSBUF;   /** to DIR pin on Data transeiver **/
+Pin 23  =  nIORQ; 
+
+/** Logic Equations **/
+!nBANKSEL = (!nOUT & !A7 & A6 & A5 & A4 & !A3 & !A2); /** IO write to 0x70 - 0x73 (register file selectors)**/
+!nDISP    = (!nOUT & !A7 & A6 & A5 & A4 & !A3 &  A2); /** IO write to 0x74 - 0x77 **/
+
+!nSPARE0 = (!nOUT & !A7 & A6 & A5 & !A4 & !A3 &  !A2); 
+!nSPARE1 = (!nOUT & !A7 & A6 & A5 & !A4 & !A3 &  A2); 
+
+!nRAM0 = nINUSE & !nMEMRQ & RAMROM;
+!nROM0 = nINUSE & !nMEMRQ & !RAMROM;
+
+nBUSBUF = (nRD # nIORQ) & (nINUSE # nMEMRQ # nRD); /** read from the bus when: io reads happen, and when off board ram is being read **/

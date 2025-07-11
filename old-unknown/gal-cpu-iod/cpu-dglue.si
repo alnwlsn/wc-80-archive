@@ -1,0 +1,16 @@
+Name     		cpu-dglue;
+PartNo   							;
+Date     		04/24/2021			;
+Revision 	1					;
+Designer 						;
+Company  		alnwlsn				;
+Assembly None;
+Location 						;
+Device   		g22v10				;
+
+
+ORDER: A0, A1, A2, A3, A4, A5, A6, A7, MEMCHIP, ROMRAM, nBANKSEL, nBUSBUF, nDISP, nINUSE, nIORQ, nMEMRQ, nOUT, nRAM0, nRAM1, nRD, nROM0, nROM1; 
+
+
+VECTORS:
+*************110***0**

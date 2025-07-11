@@ -1,0 +1,99 @@
+%SIGNAL
+PIN   3 =  A0 
+PIN   4 =  A1 
+PIN   5 =  A2 
+PIN   6 =  A3 
+PIN   7 =  A4 
+PIN   8 =  A5 
+PIN   9 =  A6 
+PIN  10 =  A7 
+PIN  20 =  CASS 
+PIN  11 =  D7 
+PIN  23 =  D7C 
+PIN  13 =  NC2 
+PIN  15 =  OPT 
+PIN  18 =  n2413 
+PIN  17 =  n2612 
+PIN  22 =  nCFCARD 
+PIN  21 =  nDAC 
+PIN   2 =  nIN 
+PIN  14 =  nINTREAD 
+PIN  16 =  nOPL3 
+PIN   1 =  nOUT 
+PIN  19 =  nPSG 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+CASS =>
+    A0 & A1 & A2 & A3 & A4 & A5 & A6 & A7 & !nOUT
+
+D7C =>
+    A0 & !A1 & A2 & !A3 & A4 & A5 & !A6 & A7 & !D7
+  # A0 & !A1 & !A2 & A3 & A4 & A5 & !A6 & A7 & !D7
+  # !A0 & !A1 & !A2 & !A3 & A4 & A5 & !A6 & A7 & D7
+  # A0 & !A1 & A2 & A3 & A4 & A5 & !A6 & A7 & D7
+
+OPT =>
+    A0 & A1 & A2 & A3 & A4 & A5 & !A6 & A7 & !nOUT
+
+!n2413 =>
+    A1 & !A2 & !A3 & !A4 & A5 & !A6 & A7 & !nIN
+  # A1 & !A2 & !A3 & !A4 & A5 & !A6 & A7 & !nOUT
+
+!n2612 =>
+    A2 & !A3 & !A4 & A5 & !A6 & A7 & !nIN
+  # A2 & !A3 & !A4 & A5 & !A6 & A7 & !nOUT
+
+!nCFCARD =>
+    !A3 & A4 & !A5 & A6 & !A7 & !nIN
+  # !A3 & A4 & !A5 & A6 & !A7 & !nOUT
+
+!nDAC =>
+    A0 & !A1 & A2 & A4 & A5 & !A6 & A7 & !nOUT
+  # A0 & !A1 & !A2 & A3 & A4 & A5 & !A6 & A7 & !nOUT
+  # !A0 & !A1 & !A2 & !A3 & A4 & A5 & !A6 & A7 & !nOUT
+
+!nINTREAD =>
+    !A0 & !A1 & !A2 & !A3 & !A4 & A5 & !A6 & A7 & !nIN
+
+!nOPL3 =>
+    !A2 & A3 & !A4 & A5 & !A6 & A7 & !nIN
+  # !A2 & A3 & !A4 & A5 & !A6 & A7 & !nOUT
+
+!nPSG =>
+    !A0 & !A1 & !A2 & !A3 & !A4 & A5 & !A6 & A7 & !nOUT
+
+CASS.oe  =>
+    1 
+
+D7C.oe  =>
+    1 
+
+OPT.oe  =>
+    1 
+
+n2413.oe  =>
+    1 
+
+n2612.oe  =>
+    1 
+
+nCFCARD.oe  =>
+    1 
+
+nDAC.oe  =>
+    1 
+
+nINTREAD.oe  =>
+    1 
+
+nOPL3.oe  =>
+    1 
+
+nPSG.oe  =>
+    1 
+
+%END

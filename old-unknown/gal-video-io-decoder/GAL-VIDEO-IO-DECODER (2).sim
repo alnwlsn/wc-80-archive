@@ -1,0 +1,39 @@
+%SIGNAL
+PIN   2 =  A0 
+PIN   3 =  A1 
+PIN   4 =  A2 
+PIN   5 =  A3 
+PIN   6 =  A4 
+PIN   7 =  A5 
+PIN   8 =  A6 
+PIN   9 =  A7 
+PIN  23 =  VLATCH 
+PIN   1 =  nIOREQ 
+PIN  22 =  nMC6845 
+PIN  10 =  nWR 
+PIN  21 =  pMC6845 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+VLATCH =>
+    A0 & A1 & !A2 & !A3 & A4 & A5 & A6 & !A7 & !nIOREQ & !nWR
+
+!nMC6845 =>
+    !A1 & !A2 & !A3 & A4 & A5 & A6 & !A7 & !nIOREQ
+
+pMC6845 =>
+    !nMC6845
+
+VLATCH.oe  =>
+    1 
+
+nMC6845.oe  =>
+    1 
+
+pMC6845.oe  =>
+    1 
+
+%END

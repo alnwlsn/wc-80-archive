@@ -1,0 +1,52 @@
+Name        wc80-videoA          ;
+Partno                           ;
+Revision    1                    ;
+Date        11/20/2021           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+
+/** address decoder for video RAM areas **/
+/** select 1 of 16 locations along the 64K of ram, in increments of 4K, using ADR pins **/
+/** enable or disable each of 4x 1K blocks using MSK bits **/
+/** select Character Ram or Screen Ram using CHIP bit **/
+
+/** Inputs  **/
+Pin 1   =  nEXMEM; 
+Pin 2   =  nMEMRQ;
+Pin 3   =  A10;
+Pin 4   =  A12;
+Pin 5   =  A13;
+Pin 6   =  A15;
+Pin 7   =  A14; 
+Pin 8   =  A11;
+Pin 9   =  MSK2; 
+Pin 10  =  ADR0; 
+Pin 11  =  ADR2;
+Pin 13  =  ADR3; 
+Pin 14  =  ADR1; 
+Pin 15  =  MSK3; 
+Pin 16  =  CHIP;  
+Pin 21  =  MSK1;
+Pin 22  =  MSK0; 
+
+/** Outputs **/
+Pin 17  =  I1;   
+Pin 18  =  nCRMEM; 
+Pin 19  =  nSCMEM;
+Pin 20  =  I2;      
+Pin 23  =  INUSE;
+
+/** Logic Equations **/
+
+/** Binary Compare between address and A12-A15  **/ 
+    !I1 = (A15 $ ADR3)#(A14 $ ADR2)#(A13 $ ADR1)#(A12 $ ADR0);
+/** Bank enable selector, using mask bits **/
+    I2 = (MSK0 & !A10 & !A11) # (MSK1 & A10 & !A11) # (MSK2 & !A10 & A11) # (MSK3 & A10 & A11);
+
+    !nSCMEM = !nMEMRQ & !nEXMEM & I2 & I1 & !CHIP;
+    !nCRMEM = !nMEMRQ & !nEXMEM & I2 & I1 & CHIP;
+    INUSE = !nSCMEM # !nSCMEM;

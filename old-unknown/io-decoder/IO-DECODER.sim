@@ -1,0 +1,31 @@
+%SIGNAL
+PIN   2 =  A0 
+PIN   3 =  A1 
+PIN   4 =  A2 
+PIN   5 =  A3 
+PIN   6 =  A4 
+PIN   7 =  A5 
+PIN   8 =  A6 
+PIN   9 =  A7 
+PIN   1 =  IORQ 
+PIN  23 =  VCRT 
+PIN  22 =  nVCRT 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+!VCRT =>
+    !A1 & !A2 & A3 & !A4 & !A5 & !A6 & A7 & !IORQ
+
+nVCRT =>
+    !VCRT
+
+VCRT.oe  =>
+    1 
+
+nVCRT.oe  =>
+    1 
+
+%END

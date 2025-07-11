@@ -1,0 +1,90 @@
+%SIGNAL
+PIN   1 =  A4 
+PIN   2 =  A5 
+PIN   3 =  A6 
+PIN   4 =  A7 
+PIN  21 =  DDIR 
+PIN   8 =  G1 
+PIN   9 =  G2 
+PIN  10 =  G3 
+PIN  11 =  G4 
+PIN  13 =  G5 
+PIN  22 =  INUSE 
+PIN  20 =  KEYBOARD 
+PIN  19 =  LED 
+PIN  14 =  O1 
+PIN  15 =  O2 
+PIN  16 =  O3 
+PIN  17 =  O4 
+PIN  18 =  O5 
+PIN  23 =  O6 
+PIN   7 =  nEXMEM 
+PIN   5 =  nIN 
+PIN   6 =  nOUT 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+!DDIR =>
+    !KEYBOARD
+
+INUSE =>
+    G1
+
+!KEYBOARD =>
+    !A4 & A5 & A6 & !A7 & !nIN
+
+!LED =>
+    !A4 & A5 & A6 & !A7 & !nOUT
+
+O1 =>
+    G2
+
+O2 =>
+    G3
+
+O3 =>
+    G4
+
+O4 =>
+    G5
+
+O5 =>
+    nEXMEM
+
+O6 =>
+    G1
+
+DDIR.oe  =>
+    1 
+
+INUSE.oe  =>
+    1 
+
+KEYBOARD.oe  =>
+    1 
+
+LED.oe  =>
+    1 
+
+O1.oe  =>
+    1 
+
+O2.oe  =>
+    1 
+
+O3.oe  =>
+    1 
+
+O4.oe  =>
+    1 
+
+O5.oe  =>
+    1 
+
+O6.oe  =>
+    1 
+
+%END

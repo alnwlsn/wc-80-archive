@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--*****************************************-->
+<!--   File    : main.fsproj                 -->
+<!--   Format  : TopoR Project file          -->
+<!--   Version : 2                           -->
+<!--   Program : TopoR Lite 7.0.18508        -->
+<!--   Date    : Saturday, February 05, 2022 -->
+<!--   Time    : 16:14                       -->
+<!--*****************************************-->
+
+<Project>
+   <Version current="2"/>
+   <GUID>{1857B4F6-D271-4535-86AF-3E4CF5AEFD89}</GUID>
+   <Documents>
+      <Section name="PCB" isExpanded="true">
+         <File path=".\main.fsx" isopened="0" dateChange="2022-02-05 00:43:05"/>
+         <File path=".\main_8098-70sa.fsx" isopened="1" dateChange="2022-02-05 10:45:13"/>
+      </Section>
+      <Section name="AutoRouting" isExpanded="true">
+         <File path=".\autoroute_220205004325\main_7645-104s.fsb" isopened="0" dateChange="2022-02-05 00:43:38"/>
+         <File path=".\autoroute_220205004427\main_8094-87sa.fsb" isopened="0" dateChange="2022-02-05 00:44:43"/>
+         <File path=".\autoroute_220205004547\main_8098-70sa.fsb" isopened="0" dateChange="2022-02-05 09:07:49"/>
+         <File path=".\autoroute_220205004547\main_8431-65sa.fsb" isopened="0" dateChange="2022-02-05 09:09:26"/>
+      </Section>
+   </Documents>
+</Project>

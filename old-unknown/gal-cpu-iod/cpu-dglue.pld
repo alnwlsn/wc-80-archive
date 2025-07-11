@@ -1,0 +1,52 @@
+Name		cpu-dglue;
+Partno							 ;
+Revision	1					 ;
+Date		04/24/2021			 ;
+Designer						 ;
+Company		alnwlsn				 ;
+Assembly	None				 ;
+Location						 ;
+Device		g22v10				 ;
+Format		jedec				 ;
+
+/** cpu board io decoder and glue logic **/
+
+/** decodes IO addresses for Mem bank selector and LED Display **/
+/** also operates the Direction signal for the bus buffer **/
+
+/** Inputs	**/
+Pin 1	=  nOUT; /** io write from or gate (TRS80 *OUT) **/
+Pin 2	=  nMEMRQ; /** z80 memrq pin (or TRS80 *RAS) **/
+Pin 3	=  A7;
+Pin 4	=  A6;
+Pin 5	=  A5;
+Pin 6	=  A4;
+Pin 7	=  A3;
+Pin 8	=  A2;
+Pin 9	=  A1; 
+Pin 10	=  A0; 
+Pin 11	=  nRD;
+Pin 13	=  nINUSE; /** from external mem space use: when low, disables RAM and ROM from the bus **/
+Pin 14  =  MEMCHIP; /** select either chip 0 or 1 of RAM/ROM **/
+Pin 15	=  ROMRAM; /** select either RAM or ROM **/
+
+/** Outputs **/
+Pin 16	=  nBANKSEL; /** to /WE strobe on bank select chips **/
+Pin 17	=  nRAM0;	 /** to chip select on RAM **/
+Pin 18	=  nRAM1;
+Pin 19	=  nROM0;	 /** to chip select on ROM **/
+Pin 20	=  nROM1;
+Pin 21	=  nDISP;	 /** to /WE strobe on LED dsiplay **/
+Pin 22	=  nBUSBUF;   /** to DIR pin on Data transeiver **/
+Pin 23  =  nIORQ; 
+
+/** Logic Equations **/
+!nBANKSEL = (!nOUT & !A7 & A6 & A5 & A4 & !A3 & !A2); /** IO write to 0x70 - 0x73 **/
+!nDISP	  = (!nOUT & !A7 & A6 & A5 & A4 & !A3 &  A2); /** IO write to 0x74 - 0x77 **/
+
+!nRAM0 = !MEMCHIP & nINUSE & !nMEMRQ & ROMRAM;
+!nROM0 = !MEMCHIP & nINUSE & !nMEMRQ & !ROMRAM;
+!nRAM1 = MEMCHIP & nINUSE & !nMEMRQ & ROMRAM;
+!nROM1 = MEMCHIP & nINUSE & !nMEMRQ & !ROMRAM;
+
+!nBUSBUF = (!nRD & !nMEMRQ & !nINUSE) # (!nIORQ & !nRD);

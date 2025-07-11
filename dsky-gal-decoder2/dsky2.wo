@@ -1,0 +1,18 @@
+#WAVEFORM
+#H Name     dsky;
+#H PartNo   ;
+#H Date     01/16/2021;
+#H Revision 1;
+#H Designer ;
+#H Company  alnwlsn;
+#H Assembly None;
+#H Location ;
+#H Device   g22v10;
+#H 
+#H 
+#H ORDER: A4, A5, A6, A7, DDIR, INUSE, KEYBOARD, LED, nEXMEM, nIN, nOUT; 
+#H 
+#H 
+#V 0001 0110LXLH*01
+#E 0021 *
+

@@ -1,0 +1,219 @@
+{COMPONENT C:\USERS\ALNWLSN\DROPBOX\PROJECTS\COMPUTERS\TRS-80\WC-80\MEM-DECODER-DSKY\DSKY.SYM
+
+ {ENVIRONMENT
+  {PDIFvrev 3.00}
+  {Program "CUPL(WM) Version 5.0a"}
+  {DBtype "Schematic"}
+  {DBvrev 1.01}
+  {DBtime "Sat Aug 29 15:01:19 2020 "}
+  {DBunit "MIL"}
+  {DBgrid 10}
+  {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
+          "PINNAM" 6 "PINCON" 4 "REFDES" 2 "ATTR" 6 "SDOT" 1 
+          "DEVICE" 5 "OUTLIN" 5 "ATTR2" 6 "NOTES" 6 "NETNAM" 4 
+          "CMPNAM" 5 "BORDER" 5}
+ }
+
+ {USER
+  {VIEW
+   {Mode SYMB}
+   {Nlst OPEN}
+   {Vw 0 0 2}
+   {Lv 12 2 2 2 0 0 2 2 2 2 0 0 2 1 2 0 0 0 0}
+   {Gs 10 10}
+  }
+ }
+
+ {DISPLAY
+  [Ly "PINNUM"]
+  [Ls "SOLID"][Wd 0]
+  [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+ }
+
+ {SYMBOL
+  {PIN_DEF
+   [Ly "PINCON"]
+   {P NMEMREQ {Pt "INPUT"}{Lq 0}{Ploc 100 380}}
+   {P NWR {Pt "INPUT"}{Lq 0}{Ploc 100 340}}
+   {P NRD {Pt "INPUT"}{Lq 0}{Ploc 100 320}}
+   {P A15 {Pt "INPUT"}{Lq 0}{Ploc 100 300}}
+   {P A14 {Pt "INPUT"}{Lq 0}{Ploc 100 280}}
+   {P A13 {Pt "INPUT"}{Lq 0}{Ploc 100 260}}
+   {P A12 {Pt "INPUT"}{Lq 0}{Ploc 100 240}}
+   {P A11 {Pt "INPUT"}{Lq 0}{Ploc 100 220}}
+   {P A10 {Pt "INPUT"}{Lq 0}{Ploc 100 200}}
+   {P A9 {Pt "INPUT"}{Lq 0}{Ploc 100 180}}
+   {P A8 {Pt "INPUT"}{Lq 0}{Ploc 100 160}}
+   {P A7 {Pt "INPUT"}{Lq 0}{Ploc 100 140}}
+   {P A6 {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
+   {P A5 {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
+   {P A4 {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
+   {P NIOREQ {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
+   {P NC {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
+   {P NDISABLE {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
+   {P LED {Pt "I/O"}{Lq 0}{Ploc 360 20}}
+   {P KEYBOARD {Pt "I/O"}{Lq 0}{Ploc 360 40}}
+   {P DDIR {Pt "I/O"}{Lq 0}{Ploc 360 60}}
+   {P INUSE {Pt "I/O"}{Lq 0}{Ploc 360 80}}
+  }
+
+  {PKG
+   [Ly "REFDES"]
+   [Ts 25][Tj "CB"][Tr 0][Tm "N"]
+   {Rdl 230 410}
+
+   [Ly "PINNUM"]
+   [Ts 15][Tj "RC"]
+   {Pnl 120 390}
+   [Ts 15][Tj "RC"]
+   {Pnl 120 350}
+   {Pnl 120 330}
+   {Pnl 120 310}
+   {Pnl 120 290}
+   {Pnl 120 270}
+   {Pnl 120 250}
+   {Pnl 120 230}
+   {Pnl 120 210}
+   {Pnl 120 190}
+   {Pnl 120 170}
+   {Pnl 120 150}
+   {Pnl 120 130}
+   {Pnl 120 110}
+   {Pnl 120 90}
+   {Pnl 120 70}
+   {Pnl 120 50}
+   {Pnl 120 30}
+   [Ts 15][Tj "LC"]
+   {Pnl 340 30}
+   {Pnl 340 50}
+   {Pnl 340 70}
+   {Pnl 340 90}
+
+   {Sd A 1 2 3 4 5 6 7 8 9 10 11 13 14 15 16 17 18 23 19 20 21 22}
+  }
+
+  {PIC
+   [Ly "GATE"]
+   [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+   {R 130 400 330 0}
+   {L 130 380 100 380}
+   {L 130 390 140 380 130 370}
+   {L 130 340 100 340}
+   {L 130 320 100 320}
+   {L 130 300 100 300}
+   {L 130 280 100 280}
+   {L 130 260 100 260}
+   {L 130 240 100 240}
+   {L 130 220 100 220}
+   {L 130 200 100 200}
+   {L 130 180 100 180}
+   {L 130 160 100 160}
+   {L 130 140 100 140}
+   {L 130 120 100 120}
+   {L 130 100 100 100}
+   {L 130 80 100 80}
+   {L 130 60 100 60}
+   {L 130 40 100 40}
+   {L 130 20 100 20}
+   {L 330 20 360 20}
+   {L 330 40 360 40}
+   {L 330 60 360 60}
+   {L 330 80 360 80}
+   [Ly "PINNAM"]
+   [Tj "LC"]
+   {T "NMEMREQ" 140 380}
+   {T "NWR" 140 340}
+   {T "NRD" 140 320}
+   {T "A15" 140 300}
+   {T "A14" 140 280}
+   {T "A13" 140 260}
+   {T "A12" 140 240}
+   {T "A11" 140 220}
+   {T "A10" 140 200}
+   {T "A9" 140 180}
+   {T "A8" 140 160}
+   {T "A7" 140 140}
+   {T "A6" 140 120}
+   {T "A5" 140 100}
+   {T "A4" 140 80}
+   {T "NIOREQ" 140 60}
+   {T "NC" 140 40}
+   {T "NDISABLE" 140 20}
+   [Tj "RC"]
+   {T "LED" 320 20}
+   {T "KEYBOARD" 320 40}
+   {T "DDIR" 320 60}
+   {T "INUSE" 320 80}
+   [Ly "DEVICE"]
+   [Tj "CT"]
+   {T "G22V10" 230 -10}
+  }
+
+  {ATR
+   {IN
+    {Org 100 20}
+    {Ty 255}
+   }
+   {EX
+    [Ly "ATTR2"]
+    [Ts 12][Tj "CT"][Tr 0][Tm "N"]
+    {At PLD C:\USERS\ALNWLSN\DROPBOX\PROJECTS\COMPUTERS\TRS-80\WC-80\MEM-DECODER-DSKY\DSKY 230 400}
+   }
+  }
+ }
+
+ {DETAIL
+  {ANNOTATE
+  }
+
+  {NET_DEF
+   {N NMEMREQ
+   }
+   {N NWR
+   }
+   {N NRD
+   }
+   {N A15
+   }
+   {N A14
+   }
+   {N A13
+   }
+   {N A12
+   }
+   {N A11
+   }
+   {N A10
+   }
+   {N A9
+   }
+   {N A8
+   }
+   {N A7
+   }
+   {N A6
+   }
+   {N A5
+   }
+   {N A4
+   }
+   {N NIOREQ
+   }
+   {N NC
+   }
+   {N NDISABLE
+   }
+   {N LED
+   }
+   {N KEYBOARD
+   }
+   {N DDIR
+   }
+   {N INUSE
+   }
+  }
+
+  {SUBCOMP
+  }
+ }
+}

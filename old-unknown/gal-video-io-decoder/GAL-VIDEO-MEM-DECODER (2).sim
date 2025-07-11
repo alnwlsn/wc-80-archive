@@ -1,0 +1,47 @@
+%SIGNAL
+PIN   2 =  A8 
+PIN   3 =  A9 
+PIN   4 =  A10 
+PIN   5 =  A11 
+PIN   6 =  A12 
+PIN   7 =  A13 
+PIN   8 =  A14 
+PIN   9 =  A15 
+PIN  14 =  TRSMODE 
+PIN  11 =  VIDCHAR 
+PIN  19 =  nCHARRAM 
+PIN  23 =  nINHIB 
+PIN  10 =  nLOCAL 
+PIN   1 =  nMEMREQ 
+PIN  20 =  nVIDRAM 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+!nCHARRAM =>
+    A10 & A11 & A12 & A13 & !A14 & !A15 & TRSMODE & VIDCHAR & nLOCAL & !nMEMREQ
+  # A12 & A13 & A14 & A15 & !TRSMODE & VIDCHAR & nLOCAL & !nMEMREQ
+
+!nINHIB =>
+    !nCHARRAM
+  # !nVIDRAM
+
+!nVIDRAM =>
+    A10 & A11 & A12 & A13 & !A14 & !A15 & TRSMODE & !VIDCHAR & nLOCAL & !nMEMREQ
+  # A12 & A13 & A14 & A15 & !TRSMODE & !VIDCHAR & nLOCAL & !nMEMREQ
+
+TRSMODE.oe  =>
+    0 
+
+nCHARRAM.oe  =>
+    1 
+
+nINHIB.oe  =>
+    1 
+
+nVIDRAM.oe  =>
+    1 
+
+%END

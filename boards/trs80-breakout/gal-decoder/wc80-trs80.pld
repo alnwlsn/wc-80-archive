@@ -1,0 +1,50 @@
+Name        wc80-trs80           ;
+Partno                           ;
+Revision    1                    ;
+Date        12/04/2021           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+
+/** Allowed IO for TRS-80 buffer board **/
+
+/** Inputs  **/
+Pin 1   =  nOUT; 
+Pin 2   =  nREAD;
+Pin 3   =  nIN;
+Pin 4   =  nWRITE;
+Pin 5   =  A15;
+Pin 6   =  A4;
+Pin 7   =  A3; 
+Pin 8   =  A7;
+Pin 9   =  A5; 
+Pin 10  =  A6; 
+Pin 11  =  A2;
+Pin 13  =  A1;
+Pin 14  =  A0;
+Pin 15  =  A14;
+Pin 21  =  A11;
+Pin 22  =  A12;  
+Pin 23  =  A13; 
+   
+/** Outputs **/
+Pin 16  =  nIWRITE;
+Pin 17  =  nIIN;   
+Pin 18  =  DATABUSREAD; 
+Pin 19  =  nIREAD;
+Pin 20  =  nIOUT;    
+
+/** Logic Equations **/
+
+	!nIREAD = !nREAD  & ( A15 # ( !A15 & !A14 & A13 & A12 & !A11 ));
+
+	!nIIN   = !nIN    & !( A7 & A6 & A5 & A4 & A3 & A2 & A1 & A0 );
+	
+	DATABUSREAD = !nIREAD # !nIIN;
+	
+	nIOUT = nOUT;
+	
+	nIWRITE = nWRITE;

@@ -1,0 +1,57 @@
+Name        cpu-board-io-decoder;
+Partno                           ;
+Revision    1                    ;
+Date        08/16/2020           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+/**
+This is for 1 GAL22V10 chip which sits on the CPU board and does the address decoding for the memory bank select latch, and some glue logic
+**/
+/** ---------------------------------- PIN Declarations --------------- **/
+
+PIN 1 = nMEMRQ;
+PIN 2 = A7;
+PIN 3 = A6;
+PIN 4 = A5;
+PIN 5 = A4;
+PIN 6 = A3;
+PIN 7 = A2;
+PIN 8 = A1; 
+PIN 9 = A0;
+PIN 10 = nWR;
+PIN 11 = nIORQ;
+PIN 13 = nINHIBIT; /** [low] disable pin for both rom and ram (leaves open bus) **/
+PIN 14 = nRAMROM;  /** [low] selects ROM for non writes **/ 
+PIN 15 = AHIGH;    /** [high] use alt bank when A15=1 **/
+PIN 16 = ALOW;     /** [high] use alt bank when A15=0 **/
+PIN 17 = A15;      /** CPU address 15 **/
+
+PIN 18 = RAMA15;   /** ram address lines output **/    
+PIN 19 = RAMA16;   
+PIN 23 = BIOL;     /** memory bank IO latch line (clocked on rising edge)**/
+PIN 22 = n4CDW;    /** /WR pin for 4 character hdpl-1414 **/
+PIN 20 = nROMCS;   /** chip selects for rom and ram **/
+PIN 21 = nRAMCS;
+
+/** ----------------------------------- Boolean Equation Segment ------ **/
+
+/** EQUATIONS **/
+
+BIOL = !nIORQ & !nWR & !A7 & A6 & A5 & A4 & A3 & !A2 & !A1 & !A0; /**address 0x78 write**/
+
+!n4CDW = !nIORQ & !nWR & !A7 & A6 & A5 & A4 & !A3 & A2; /** 0x74-0x77 **/ 
+
+!nROMCS = !nRAMROM & nINHIBIT & !nMEMRQ & nWR & !A15; 
+
+!nRAMCS = nINHIBIT & ((nRAMROM & !nMEMRQ)#(!nRAMROM & !nMEMRQ & !nWR)#(A15&!nRAMROM&!nMEMRQ));
+
+RAMA15 = (A15 & !ALOW & AHIGH)#(!A15 & ALOW & !AHIGH)#(!A15 & ALOW & AHIGH)#(A15 & ALOW & AHIGH);
+
+RAMA16 = (A15 & !ALOW & !AHIGH)#(A15 & !ALOW & AHIGH)#(A15 & ALOW & !AHIGH)#(A15 & ALOW & AHIGH);
+
+
+ 

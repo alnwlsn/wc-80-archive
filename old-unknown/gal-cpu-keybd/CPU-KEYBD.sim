@@ -1,0 +1,102 @@
+%SIGNAL
+PIN  10 =  A8 
+PIN   9 =  A9 
+PIN   8 =  A10 
+PIN   7 =  A11 
+PIN   6 =  A12 
+PIN   5 =  A13 
+PIN   4 =  A14 
+PIN   3 =  A15 
+PIN  13 =  D0 
+PIN  17 =  D0L 
+PIN  14 =  D1 
+PIN  18 =  D1L 
+PIN  15 =  D2 
+PIN  20 =  D2L 
+PIN  16 =  D3 
+PIN  21 =  D3L 
+PIN  11 =  EXMEM 
+PIN   1 =  WRCLK 
+PIN  22 =  X 
+PIN  23 =  nINUSE 
+PIN  19 =  nKBD 
+PIN   2 =  nMEMRD 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+D0L.d  =>
+    D0
+
+D0L.ar D1L.ar D2L.ar D3L.ar  =>
+    0 
+
+D0L.sp D1L.sp D2L.sp D3L.sp  =>
+    0 
+
+D1L.d  =>
+    D1
+
+D1L.ar  =>
+    
+D1L.sp  =>
+    
+D2L.d  =>
+    D2
+
+D2L.ar  =>
+    
+D2L.sp  =>
+    
+D3L.d  =>
+    D3
+
+D3L.ar  =>
+    
+D3L.sp  =>
+    
+X =>
+    nKBD
+
+nINUSE =>
+    nKBD
+
+!nKBD =>
+    !A8 & !A9 & !A10 & A11 & A12 & A13 & !A14 & !A15 & D0L & D1L & !D3L & EXMEM & !nMEMRD
+  # !A8 & !A9 & A10 & !A11 & A12 & A13 & A14 & A15 & !D0L & D1L & !D3L & EXMEM & !nMEMRD
+  # A8 & A9 & A10 & A11 & !A12 & A13 & A14 & A15 & D0L & !D1L & !D3L & EXMEM & !nMEMRD
+  # A8 & A9 & A10 & !A11 & A12 & A13 & A14 & A15 & !D0L & !D1L & !D3L & EXMEM & !nMEMRD
+
+D0L.oe  =>
+    1 
+
+D1.oe  =>
+    0 
+
+D1L.oe  =>
+    1 
+
+D2.oe  =>
+    0 
+
+D2L.oe  =>
+    1 
+
+D3.oe  =>
+    0 
+
+D3L.oe  =>
+    1 
+
+X.oe  =>
+    1 
+
+nINUSE.oe  =>
+    1 
+
+nKBD.oe  =>
+    1 
+
+%END

@@ -1,0 +1,43 @@
+Name        trs80-ei-sel;
+Partno                           ;
+Revision    1                    ;
+Date        05/17/2020           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10                ;
+Format      jedec                ;
+/** ---------------------------------- PIN Declarations --------------- **/
+
+PIN 1 = A15;
+PIN 2 = A14;
+PIN 3 = A13;
+PIN 4 = A12;
+PIN 5 = A11;
+PIN 6 = A10;
+PIN 7 = A9;
+PIN 8 = A8;
+
+PIN 9 = MREQ;
+PIN 10 = IOREQ;
+PIN 11 = ZRD;
+PIN 13 = ZWR;
+
+PIN 14 = TRD;
+PIN 15 = TWR;
+PIN 16 = TIN;
+PIN 17 = TOUT;
+
+PIN 23 = RAMCS;
+
+/** ----------------------------------- Boolean Equation Segment ------ **/
+
+/** EQUATIONS **/
+
+RAMCS =  A15 # (!A15 & !A14 & A13 & A12 & !A11);
+
+!TRD = !MREQ & !ZRD;
+!TIN = !IOREQ & !ZRD;
+!TWR = !MREQ & !ZWR;
+!TOUT = !IOREQ & !ZWR;

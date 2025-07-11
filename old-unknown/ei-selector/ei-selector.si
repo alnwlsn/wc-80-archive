@@ -1,0 +1,16 @@
+Name     trs80-ei-sel;
+PartNo   ;
+Date     05/17/2020;
+Revision 1;
+Designer ;
+Company  alnwlsn;
+Assembly None;
+Location ;
+Device   g22v10;
+
+
+ORDER: A8, A9, A10, A11, A12, A13, A14, A15, RAMCS; 
+
+
+VECTORS:
+00011101*

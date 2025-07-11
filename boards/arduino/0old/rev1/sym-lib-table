@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name wilson-z80)(type Legacy)(uri C:/Users/alnwlsn/lizard-sync/projects/computers/trs-80/wc-80/boards/lib/wilson-z80.lib)(options "")(descr ""))
+)

@@ -1,0 +1,16 @@
+Name     dsky;
+PartNo   ;
+Date     01/16/2021;
+Revision 1;
+Designer ;
+Company  alnwlsn;
+Assembly None;
+Location ;
+Device   g22v10;
+
+
+ORDER: A4, A5, A6, A7, DDIR, INUSE, KEYBOARD, LED, nEXMEM, nIN, nOUT; 
+
+
+VECTORS:
+0110*****01

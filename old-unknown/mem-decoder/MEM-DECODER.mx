@@ -1,0 +1,47 @@
+Name        mem-decoder;
+Partno                           ;
+Revision    1                    ;
+Date        06/13/2020           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+/** ---------------------------------- PIN Declarations --------------- **/
+
+PIN 1 = MEMRQ;
+PIN 2 = A15;
+PIN 3 = A14;
+PIN 4 = A13;
+PIN 5 = A12;
+PIN 6 = A11;
+PIN 7 = A10;
+PIN 8 = IORQ;
+PIN 9 = RD;
+PIN 10 = WR;
+PIN 11 = INTIN;
+
+PIN 23 = MRAM;
+PIN 22 = VRAM;
+PIN 21 = ZIN;
+PIN 20 = ZOUT;
+PIN 19 = ZRD;
+PIN 18 = ZWR;
+PIN 17 = INTOUT;
+PIN 16 = RAS;
+
+/** ----------------------------------- Boolean Equation Segment ------ **/
+
+/** EQUATIONS **/
+
+!VRAM = !MEMRQ & (!A15 & !A14 & A13 & A12 & A11 & A10);
+!MRAM = !MEMRQ & !(!A15 & !A14 & A13 & A12 & A11 & A10) & !(!A15 & !A14 & A13 & A12 & !A11) & !(A15);
+
+ZIN = RD # IORQ;
+ZOUT = WR # IORQ;
+ZRD = RD # MEMRQ;
+ZWR =  WR # MEMRQ;
+
+INTOUT = INTIN;
+RAS = MEMRQ;

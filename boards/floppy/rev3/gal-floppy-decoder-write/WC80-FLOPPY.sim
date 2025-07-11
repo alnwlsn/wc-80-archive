@@ -1,0 +1,105 @@
+%SIGNAL
+PIN   4 =  37XX 
+PIN  15 =  58SEL 
+PIN   7 =  A0 
+PIN   8 =  A1 
+PIN  11 =  A2 
+PIN  10 =  A3 
+PIN   9 =  A4 
+PIN   5 =  EFX 
+PIN  19 =  FLOP 
+PIN  23 =  INUSE 
+PIN  22 =  OPT 
+PIN  14 =  n37E0 
+PIN  18 =  nDENSEL 
+PIN  21 =  nDFH 
+PIN  16 =  nDFL 
+PIN  13 =  nEXMEM 
+PIN   6 =  nIN 
+PIN   1 =  nOUT 
+PIN  20 =  nPRINTREAD 
+PIN  17 =  nPRINTWRITE 
+PIN   3 =  nREAD 
+PIN   2 =  nWRITE 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+58SEL =>
+    !A0 & A1 & !A2 & !A3 & A4 & EFX & !nOUT
+  # 37XX & !A0 & A1 & A2 & A3 & !A4 & EFX & !nEXMEM & !nWRITE
+
+FLOP =>
+    !A2 & !A3 & A4 & EFX & !nOUT
+  # !A2 & !A3 & A4 & EFX & !nIN
+  # 37XX & A2 & A3 & !A4 & EFX & !nEXMEM & !nWRITE
+  # 37XX & A2 & A3 & !A4 & EFX & !nEXMEM & !nREAD
+
+INUSE =>
+    !n37E0
+  # FLOP
+  # !nPRINTWRITE
+  # !nPRINTREAD
+  # !nDENSEL
+  # 58SEL
+  # !nDFL
+
+OPT =>
+    !A0 & A1 & A2 & !A3 & A4 & EFX & !nOUT
+
+!n37E0 =>
+    !A0 & A1 & A2 & !A3 & A4 & EFX & !nIN
+  # 37XX & !A0 & !A1 & !A2 & !A3 & !A4 & EFX & !nEXMEM & !nREAD
+
+!nDENSEL =>
+    !A0 & !A1 & !A2 & !A3 & A4 & EFX & !nOUT
+  # 37XX & !A0 & !A1 & A2 & A3 & !A4 & EFX & !nEXMEM & !nWRITE
+
+!nDFH =>
+    !A0 & !A1 & A2 & !A3 & A4 & EFX & !nOUT
+
+!nDFL =>
+    !A1 & A2 & !A3 & A4 & EFX & !nOUT
+  # 37XX & A0 & !A1 & !A2 & !A3 & !A4 & EFX & !nEXMEM & !nWRITE
+
+!nPRINTREAD =>
+    !A0 & !A1 & !A2 & A3 & A4 & EFX & !nIN
+  # 37XX & !A0 & !A1 & !A2 & A3 & !A4 & EFX & !nEXMEM & !nREAD
+
+!nPRINTWRITE =>
+    !A0 & !A1 & !A2 & A3 & A4 & EFX & !nOUT
+  # 37XX & !A0 & !A1 & !A2 & A3 & !A4 & EFX & !nEXMEM & !nWRITE
+
+58SEL.oe  =>
+    1 
+
+FLOP.oe  =>
+    1 
+
+INUSE.oe  =>
+    1 
+
+OPT.oe  =>
+    1 
+
+n37E0.oe  =>
+    1 
+
+nDENSEL.oe  =>
+    1 
+
+nDFH.oe  =>
+    1 
+
+nDFL.oe  =>
+    1 
+
+nPRINTREAD.oe  =>
+    1 
+
+nPRINTWRITE.oe  =>
+    1 
+
+%END

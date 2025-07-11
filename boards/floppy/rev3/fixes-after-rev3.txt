@@ -1,0 +1,1 @@
+diode on charge pump should be a better package

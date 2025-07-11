@@ -1,0 +1,390 @@
+delayA:
+push bc
+push af
+ld a,255
+ld b,255
+delayA_loop2:
+nop
+djnz delayA_loop2
+dec a
+jr nz, delayA_loop2
+pop af
+pop bc
+ret
+
+;space for some variables for dskymon
+;             : DB "0123456789abcdef",0
+dskyMonDatMAddr:  DB 0,0
+dskyMonDatIOAddr: DB 0
+dskyMonDatCall:   DB 0,0
+dskyMonMsgRegs2:DB "AFBCDEHL"
+dskyMonDatRegs: DB 0,0,0,0,0,0,0,0
+dskyMonDatRegP: DB 0
+dskyMonMsgMemA: DB "MEM   *A     D  ",0
+dskyMonMsgMemD: DB "MEM    A    *D  ",0
+dskyMonMsgIOA:  DB "IO    *A     D  ",0
+dskyMonMsgIOD:  DB "IO     A    *D  ",0
+dskyMonMsgJump: DB "JUMP   A        ",0
+dskyMonMsgCall: DB "CALL   A        ",0
+dskyMonMsgRegs: DB "REGS            ",0
+dskyMonStart:
+	ld hl,0x5000;
+	ld (dskyMonDatMAddr),hl
+jp dskyMonMemMode
+
+dskyMonMemModeAddr: 
+	ld hl,dskyMonMsgMemA
+	ld c,0x6f
+	call ioStringPrint
+	ld hl,(dskyMonDatMAddr)
+	ld c,0x67
+	call inputKey16 
+	ld (dskyMonDatMAddr),hl
+	;any enter key moves to data mode
+dskyMonMemMode:
+	ld hl,dskyMonMsgMemD
+	ld c,0x6f
+	call ioStringPrint
+	ld hl,(dskyMonDatMAddr)
+	ld c,0x67
+	call ioPrintHex16
+	ld c,0x61
+	ld a,(hl) ;read data and display
+	call inputKey8
+	cp "X"
+	jp z,dskyMonMemMode_Write ;write memory 
+	cp "("
+	jp z,dskyMonMemMode_Dec ;dec RAM address
+	cp ")"
+	jp z,dskyMonMemMode_Inc ;inc RAM address
+	cp "M"
+	jp z,dskyMonMemModeAddr ;enter new ram address
+	cp "I"
+	jp z,dskyMonIOModeAddr ;enter new io address
+	cp "V"
+	jp z,dskyMonMemMode_Read ;read value (ok, but make it obvious)
+	cp "J"
+	jp z,dskyMonCallMode
+	cp "K"
+	jp z,dskyMonRegMode
+	jp dskyMonMemMode
+
+dskyMonMemMode_Write:
+	ld a,b
+	ld (hl),a
+	ld a,"W"
+	out (0x6a),a
+	call dskyMonBlinkDelay
+	ld a," "
+	out (0x6a),a
+	jp dskyMonMemMode
+dskyMonMemMode_Dec:
+	dec hl
+	ld (dskyMonDatMAddr),hl
+	jp dskyMonMemMode
+dskyMonMemMode_Inc:
+	inc hl
+	ld (dskyMonDatMAddr),hl
+	jp dskyMonMemMode
+dskyMonMemMode_Read:
+	ld a,"R"
+	out (0x6b),a
+	call dskyMonBlinkDelay
+	ld a," "
+	out (0x6b),a
+	jp dskyMonMemMode
+	
+dskyMonBlinkDelay:
+	push af
+	push bc
+	ld b,255
+	ld a,16
+	dskyMonBlinkDelay_loop1:
+	nop
+	djnz dskyMonBlinkDelay_loop1
+	dec a
+	cp 0
+	jr nz, dskyMonBlinkDelay_loop1
+	pop bc
+	pop af
+	ret
+	
+dskyMonIOModeAddr:
+	ld hl,dskyMonMsgIOA
+	ld c,0x6f
+	call ioStringPrint
+	ld a,(dskyMonDatIOAddr)
+	ld c,0x67
+	call inputKey8
+	ld a,b
+	ld (dskyMonDatIOAddr),a
+	;any enter key moves to data mode
+dskyMonIOMode:
+	ld hl,dskyMonMsgIOD
+	ld c,0x6f
+	call ioStringPrint
+	ld a,(dskyMonDatIOAddr)
+	ld c,0x67
+	call ioPrintHex8
+	ld c,a
+	in a,(c) ;read data from io address and display
+	ld c,0x61
+	call inputKey8
+	cp "X"
+	jp z,dskyMonIOMode_Write ;write 
+	cp "("
+	jp z,dskyMonIOMode_Dec ;dec RAM address
+	cp ")"
+	jp z,dskyMonIOMode_Inc ;inc RAM address
+	cp "I"
+	jp z,dskyMonIOModeAddr ;enter new ram address
+	cp "M"
+	jp z,dskyMonMemModeAddr ;enter new io address
+	cp "V"
+	jp z,dskyMonIOMode_Read ;read value (ok, but make it obvious)
+	cp "J"
+	jp z,dskyMonCallMode
+	cp "K"
+	jp z,dskyMonRegMode
+	jp dskyMonIOMode
+
+dskyMonIOMode_Write:
+	ld a,(dskyMonDatIOAddr)
+	ld c,a
+	ld a,b
+	out (c),a
+	ld a,"W"
+	out (0x6a),a
+	call dskyMonBlinkDelay
+	ld a," "
+	out (0x6a),a
+	jp dskyMonIOMode
+dskyMonIOMode_Dec:
+	ld a,(dskyMonDatIOAddr)
+	dec a
+	ld (dskyMonDatIOAddr),a
+	jp dskyMonIOMode
+dskyMonIOMode_Inc:
+	ld a,(dskyMonDatIOAddr)
+	inc a
+	ld (dskyMonDatIOAddr),a
+	jp dskyMonIOMode
+dskyMonIOMode_Read:
+	ld a,"R"
+	out (0x6b),a
+	call dskyMonBlinkDelay
+	ld a," "
+	out (0x6b),a
+	jp dskyMonIOMode
+
+dskyMonCallMode:
+	ld hl,dskyMonMsgCall
+	ld c,0x6f
+	call ioStringPrint
+	ld hl,(dskyMonDatCall)
+	ld c,0x67
+	call inputKey16 
+	ld (dskyMonDatCall),hl
+	cp "X"
+	jp z,dskyMonCallMode_Call
+	cp "M"
+	jp z,dskyMonMemModeAddr ;enter new ram address
+	cp "I"
+	jp z,dskyMonIOModeAddr ;enter new io address
+	cp "J"
+	jp z,dskyMonJumpMode
+	cp "K"
+	jp z,dskyMonRegMode
+	dskyMonCallMode_ret:
+	jp dskyMonMemMode
+	
+dskyMonJumpMode:
+	ld hl,dskyMonMsgJump
+	ld c,0x6f
+	call ioStringPrint
+	ld hl,(dskyMonDatCall)
+	ld c,0x67
+	call inputKey16 
+	ld (dskyMonDatCall),hl
+	cp "X"
+	jp z,dskyMonJumpMode_Jump
+	cp "M"
+	jp z,dskyMonMemModeAddr ;enter new ram address
+	cp "I"
+	jp z,dskyMonIOModeAddr ;enter new io address
+	cp "J"
+	jp z,dskyMonCallMode
+	cp "K"
+	jp z,dskyMonRegMode
+	dskyMonJumpMode_ret:
+	jp dskyMonMemMode
+	
+dskyMonJumpMode_Jump:
+	push hl
+	pop iy
+	call dskyMon_loadregs
+	jp (iy)
+	
+dskyMonCallMode_Call:
+	ld de,dskyMonCallMode_Call2
+	push de
+	push hl
+	call dskyMon_loadregs
+	ret ;jumps to hl
+	dskyMonCallMode_Call2: ;returns here
+	call dskyMon_saveregs
+	jp dskyMonRegMode
+	
+	
+dskyMon_loadregs:
+	ld hl,dskyMonDatRegs
+	ld a,(hl)
+	ld b,a
+	inc hl
+	ld a,(hl)
+	ld c,a
+	push bc
+	inc hl
+	ld a,(hl)
+	ld b,a
+	inc hl
+	ld a,(hl)
+	ld c,a
+	push bc
+	inc hl
+	ld a,(hl)
+	ld b,a
+	inc hl
+	ld a,(hl)
+	ld c,a
+	push bc
+	inc hl
+	ld a,(hl)
+	ld b,a
+	inc hl
+	ld a,(hl)
+	ld c,a
+	push bc
+	pop hl
+	pop de
+	pop bc
+	pop af
+	ret
+
+dskyMon_saveregs:
+	push hl
+	push de
+	push bc
+	push af
+	ld hl,dskyMonDatRegs
+	pop bc
+	ld a,b
+	ld (hl),a
+	ld a,c
+	inc hl
+	ld (hl),a
+	pop bc
+	ld a,b
+	inc hl
+	ld (hl),a
+	ld a,c
+	inc hl
+	ld (hl),a
+	pop bc
+	ld a,b
+	inc hl
+	ld (hl),a
+	ld a,c
+	inc hl
+	ld (hl),a
+	pop bc
+	ld a,b
+	inc hl
+	ld (hl),a
+	ld a,c
+	inc hl
+	ld (hl),a
+	ret
+	
+dskyMonRegMode:
+	ld hl,dskyMonMsgRegs
+	ld c,0x6f
+	call ioStringPrint
+	ld hl,dskyMonMsgRegs2
+	ld a,(dskyMonDatRegP)
+	ld b,0
+	ld c,a
+	add hl,bc
+	ld a,(hl) ;contains register with name (ex "A")
+	out (0x63),a
+	ld hl,dskyMonDatRegs
+	add hl,bc
+	ld a,(hl) ;contains "register" contents
+	ld c,0x61
+	call inputKey8
+	cp "X"
+	jp z,dskyMonRegMode_Write ;write 
+	cp "("
+	jp z,dskyMonRegMode_Dec ;dec RAM address
+	cp ")"
+	jp z,dskyMonRegMode_Inc ;inc RAM address
+	cp "I"
+	jp z,dskyMonIOModeAddr ;enter new ram address
+	cp "M"
+	jp z,dskyMonMemModeAddr ;enter new io address
+	cp "V"
+	jp z,dskyMonRegMode_Read ;read value (ok, but make it obvious)
+	cp "J"
+	jp z,dskyMonCallMode
+
+	jp dskyMonRegMode
+	
+dskyMonRegMode_Write:
+	ld a,b
+	ld (hl),a
+	ld a,"W"
+	out (0x6a),a
+	call dskyMonBlinkDelay
+	ld a," "
+	out (0x6a),a
+	jp dskyMonRegMode
+dskyMonRegMode_Dec:
+	ld a,(dskyMonDatRegP)
+	dec a
+	cp 255
+	jp nz, dskyMonRegMode_Dec2
+	ld a,7
+	dskyMonRegMode_Dec2:
+	ld (dskyMonDatRegP),a
+	jp dskyMonRegMode
+dskyMonRegMode_Inc:
+	ld a,(dskyMonDatRegP)
+	inc a
+	cp 8
+	jp nz, dskyMonRegMode_Inc2
+	ld a,0
+	dskyMonRegMode_Inc2:
+	ld (dskyMonDatRegP),a
+	jp dskyMonRegMode
+dskyMonRegMode_Read:
+	ld a,"R"
+	out (0x6b),a
+	call dskyMonBlinkDelay
+	ld a," "
+	out (0x6b),a
+	jp dskyMonRegMode
+	
+dskyMonBlinkDelay:
+	push af
+	push bc
+	ld b,255
+	ld a,16
+	dskyMonBlinkDelay_loop1:
+	nop
+	djnz dskyMonBlinkDelay_loop1
+	dec a
+	cp 0
+	jr nz, dskyMonBlinkDelay_loop1
+	pop bc
+	pop af
+	ret

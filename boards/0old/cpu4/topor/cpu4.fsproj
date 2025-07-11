@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--**********************************-->
+<!--   File    : cpu4.fsproj          -->
+<!--   Format  : TopoR Project file   -->
+<!--   Version : 2                    -->
+<!--   Program : TopoR Lite 7.0.18508 -->
+<!--   Date    : Friday, May 07, 2021 -->
+<!--   Time    : 22:15                -->
+<!--**********************************-->
+
+<Project>
+   <Version current="2"/>
+   <GUID>{37DAD814-997E-4629-8454-CD79DFD95A42}</GUID>
+   <Documents>
+      <Section name="PCB" isExpanded="true">
+         <File path=".\cpu4.fsx" isopened="0" dateChange="2021-05-01 00:03:47"/>
+         <File path=".\cpu4_10950-54s-lines.fsx" isopened="0" dateChange="2021-05-02 22:44:01"/>
+         <File path=".\cpu4_11413-50sa-arcs.fsx" isopened="1" dateChange="2021-05-03 10:48:05"/>
+      </Section>
+      <Section name="AutoRouting" isExpanded="true">
+         <File path=".\autoroute_210501092730\cpu4_9666-217sa.fsb" isopened="0" dateChange="2021-05-02 00:42:39"/>
+         <File path=".\autoroute_210501000818\cpu4_10193-110s.fsb" isopened="0" dateChange="2021-05-01 00:14:27"/>
+         <File path=".\autoroute_210501092730\cpu4_10309-95sa.fsb" isopened="0" dateChange="2021-05-02 00:51:49"/>
+         <File path=".\autoroute_210501003556\cpu4_10569-68s.fsb" isopened="0" dateChange="2021-05-01 07:48:55"/>
+         <File path=".\autoroute_210501092730\cpu4_10696-62sa.fsb" isopened="0" dateChange="2021-05-02 00:23:45"/>
+         <File path=".\autoroute_210501000415\cpu4_10771-96s.fsb" isopened="0" dateChange="2021-05-01 00:06:15"/>
+         <File path=".\autoroute_210501002226\cpu4_10830-65s.fsb" isopened="0" dateChange="2021-05-01 00:26:35"/>
+         <File path=".\autoroute_210501092730\cpu4_10872-57sa.fsb" isopened="0" dateChange="2021-05-01 23:47:46"/>
+         <File path=".\autoroute_210501082644\cpu4_10897-86sa.fsb" isopened="0" dateChange="2021-05-01 09:21:48"/>
+         <File path=".\autoroute_210501003556\cpu4_10950-54s.fsb" isopened="0" dateChange="2021-05-01 07:43:28"/>
+         <File path=".\autoroute_210501003556\cpu4_11074-51s.fsb" isopened="0" dateChange="2021-05-01 07:47:13"/>
+         <File path=".\autoroute_210501003556\cpu4_11152-50s.fsb" isopened="0" dateChange="2021-05-01 07:54:33"/>
+         <File path=".\autoroute_210501092730\cpu4_11217-52sa.fsb" isopened="0" dateChange="2021-05-02 01:16:18"/>
+         <File path=".\autoroute_210501092730\cpu4_11294-51sa.fsb" isopened="0" dateChange="2021-05-02 01:14:07"/>
+         <File path=".\autoroute_210501092730\cpu4_11413-50sa.fsb" isopened="0" dateChange="2021-05-02 01:14:22"/>
+      </Section>
+   </Documents>
+</Project>

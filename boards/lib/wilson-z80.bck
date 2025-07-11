@@ -1,0 +1,17 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CF-CARD
+D Generic connector, double row, 02x26, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
+$CMP COM8136
+F https://datasheetspdf.com/pdf-file/1412068/SMSC/COM8136/1
+$ENDCMP
+#
+$CMP MAX214
+F https://datasheets.maximintegrated.com/en/ds/MAX214.pdf
+$ENDCMP
+#
+#End Doc Library

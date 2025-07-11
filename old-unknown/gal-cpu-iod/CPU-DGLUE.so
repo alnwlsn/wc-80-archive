@@ -1,0 +1,33 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Fri Jan 22 21:53:17 2021
+
+LISTING FOR SIMULATION FILE: CPU-DGLUE.si
+
+   1: Name     cpu-dglue;
+   2: PartNo   ;
+   3: Date     01/21/2021;
+   4: Revision 1;
+   5: Designer ;
+   6: Company  alnwlsn;
+   7: Assembly None;
+   8: Location ;
+   9: Device   g22v10;
+  10: 
+  11: 
+  12: ORDER: A0, A1, A2, A3, A4, A5, A6, A7, F, G, H, I, J, S5, nBANKSEL, nDISP, nEXRAM, nMEMRQ, nOUT, nRAM, nROM; 
+  13: 
+  14: 
+
+==============================
+                    n         
+                    B         
+                    A nn      
+                    NnEM      
+                    KDXEnnn   
+                    SIRMORR   
+      AAAAAAAA     SESARUAO   
+      01234567FGHIJ5LPMQTMM   
+==============================
+0001: 00101110HHHHH1HL110HH

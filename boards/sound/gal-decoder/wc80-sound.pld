@@ -1,0 +1,65 @@
+Name        wc80-sound           ;
+Partno                           ;
+Revision    1                    ;
+Date        11/28/2021           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+
+/** sound board IO decoder **/
+
+/** Inputs  **/
+Pin 1   =  nOUT; 
+Pin 2   =  nIN;
+Pin 3   =  A0;
+Pin 4   =  A1;
+Pin 5   =  A2;
+Pin 6   =  A3;
+Pin 7   =  A4; 
+Pin 8   =  A5;
+Pin 9   =  A6; 
+Pin 10  =  A7; 
+Pin 11  =  D7;
+Pin 13  =  NC2; 
+   
+/** Outputs **/
+Pin 14  =  nINTREAD;
+Pin 15  =  OPT;  
+Pin 16  =  nOPL3;
+Pin 17  =  n2612;   
+Pin 18  =  n2413; 
+Pin 19  =  nPSG;
+Pin 20  =  CASS;    
+Pin 21  =  nDAC;
+Pin 22  =  nCFCARD;  
+Pin 23  =  D7C;
+
+/** Logic Equations **/
+
+	OPT = !nOUT & A7 & !A6 & A5 & A4 & A3 & A2 & A1 & A0;
+	
+	!nCFCARD = (!nIN # !nOUT) & !A7 & A6 & !A5 & A4 & !A3;
+	
+	!nINTREAD   = !nIN  & A7 & !A6 & A5 & !A4 & !A3 & !A2 & !A1 & !A0;
+	!nPSG       = !nOUT & A7 & !A6 & A5 & !A4 & !A3 & !A2 & !A1 & !A0;
+
+	!nOPL3 = (!nIN # !nOUT) & A7 & !A6 & A5 & !A4 & A3 & !A2;
+	
+	!n2612 = (!nIN # !nOUT) & A7 & !A6 & A5 & !A4 & !A3 & A2;
+
+	CASS = !nOUT & A7 & A6 & A5 & A4 & A3 & A2 & A1 & A0;
+	!n2413 = (!nIN # !nOUT) & A7 & !A6 & A5 & !A4 & !A3 & !A2 & A1;
+
+/** writes to B5 or B9 or B0 or BD triggers DAC /WR pin**/
+D7C =     (!D7 & A7 & !A6 & A5 & A4 & !A3 & A2 & !A1 & A0) 
+        # (!D7 & A7 & !A6 & A5 & A4 & A3 & !A2 & !A1 & A0)
+        # (D7  & A7 & !A6 & A5 & A4 &!A3 & !A2 & !A1 & !A0) 
+        # (D7  & A7 & !A6 & A5 & A4 & A3 &  A2 & !A1 & A0);
+
+!nDAC =   (!nOUT & A7 & !A6 & A5 & A4 & !A3 & A2 & !A1 & A0)
+        # (!nOUT & A7 & !A6 & A5 & A4 & A3 & !A2 & !A1 & A0) 
+        # (!nOUT & A7 & !A6 & A5 & A4 &!A3 & !A2 & !A1 & !A0)
+        # (!nOUT & A7 & !A6 & A5 & A4 & A3 &  A2 & !A1 & A0);

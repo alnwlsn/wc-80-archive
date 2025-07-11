@@ -1,0 +1,84 @@
+%SIGNAL
+PIN  14 =  A0 
+PIN  13 =  A1 
+PIN  11 =  A2 
+PIN   7 =  A3 
+PIN   6 =  A4 
+PIN   9 =  A5 
+PIN  10 =  A6 
+PIN   8 =  A7 
+PIN  21 =  A11 
+PIN  22 =  A12 
+PIN  23 =  A13 
+PIN  15 =  A14 
+PIN   5 =  A15 
+PIN  18 =  DATABUSREAD 
+PIN  17 =  nIIN 
+PIN   3 =  nIN 
+PIN  20 =  nIOUT 
+PIN  19 =  nIREAD 
+PIN  16 =  nIWRITE 
+PIN   1 =  nOUT 
+PIN   2 =  nREAD 
+PIN   4 =  nWRITE 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+DATABUSREAD =>
+    !nIREAD
+  # !nIIN
+
+!nIIN =>
+    !A7 & !nIN
+  # !A6 & !nIN
+  # !A5 & !nIN
+  # !A4 & !nIN
+  # !A3 & !nIN
+  # !A2 & !nIN
+  # !A1 & !nIN
+  # !A0 & !nIN
+
+nIOUT =>
+    nOUT
+
+!nIREAD =>
+    !A11 & A12 & A13 & !A14 & !A15 & !nREAD
+  # A15 & !nREAD
+
+nIWRITE =>
+    nWRITE
+
+A0.oe  =>
+    0 
+
+A11.oe  =>
+    0 
+
+A12.oe  =>
+    0 
+
+A13.oe  =>
+    0 
+
+A14.oe  =>
+    0 
+
+DATABUSREAD.oe  =>
+    1 
+
+nIIN.oe  =>
+    1 
+
+nIOUT.oe  =>
+    1 
+
+nIREAD.oe  =>
+    1 
+
+nIWRITE.oe  =>
+    1 
+
+%END

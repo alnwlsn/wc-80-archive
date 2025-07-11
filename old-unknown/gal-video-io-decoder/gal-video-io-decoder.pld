@@ -1,0 +1,40 @@
+Name        gal-video-io-decoder;
+Partno                           ;
+Revision    1                    ;
+Date        08/23/2020           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+/**
+This is for 1 GAL22V10 chip to do address decoding and some glue logic for the video controller
+**/
+/** ---------------------------------- PIN Declarations --------------- **/
+
+PIN 1 = nIOREQ;
+PIN 2 = A0;
+PIN 3 = A1;
+PIN 4 = A2;
+PIN 5 = A3;
+PIN 6 = A4;
+PIN 7 = A5;
+PIN 8 = A6; 
+PIN 9 = A7;
+PIN 10 = nWR;
+
+/** outputs **/   
+PIN 21 = pMC6845;
+PIN 22 = nMC6845;  /** chip select for display controller **/   
+PIN 23 = VLATCH;   /** write strobe for Video IO latch **/
+
+/** ----------------------------------- Boolean Equation Segment ------ **/
+
+/** EQUATIONS **/
+
+VLATCH = !nIOREQ & !nWR & !A7 & A6 & A5 & A4 & !A3 & !A2 & A1 & A0; /**address 0x73 write**/
+
+!nMC6845 = !nIOREQ & !A7 & A6 & A5 & A4 & !A3 & !A2 & !A1; /**address 0x70-0x71 read/write**/
+
+pMC6845 = !nMC6845;

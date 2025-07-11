@@ -1,0 +1,51 @@
+Name        dsky;
+Partno                           ;
+Revision    1                    ;
+Date        08/28/2020           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+/**
+This is for 1 GAL22V10 chip to do address decoding and some glue logic for the dsky unit
+**/
+/** ---------------------------------- PIN Declarations --------------- **/
+
+/** inputs **/
+PIN 1 = nMEMREQ;
+PIN 2 = nWR;
+PIN 3 = nRD;
+PIN 4 = A15;
+PIN 5 = A14;
+PIN 6 = A13;
+PIN 7 = A12;
+PIN 8 = A11; 
+PIN 9 = A10;
+PIN 10 = A9;
+PIN 11 = A8;
+PIN 13 = A7;
+PIN 14 = A6;
+PIN 15 = A5;
+PIN 16 = A4;
+PIN 17 = nIOREQ;
+PIN 23 = nDISABLE; 
+
+/** outputs **/
+PIN 22 = INUSE;
+PIN 21 = DDIR;
+PIN 20 = KEYBOARD;
+PIN 19 = LED;
+PIN 18 = NC;
+
+/** ----------------------------------- Boolean Equation Segment ------ **/
+
+/** EQUATIONS **/
+
+!KEYBOARD = !nIOREQ & !nRD & !A7 & A6 & A5 & !A4; /** 0x60 - 0x6F **/
+!DDIR = !KEYBOARD;
+
+!LED      = !nIOREQ & !nWR & !A7 & A6 & A5 & !A4; /** 0x60 - 0x6F **/
+
+!INUSE = !nMEMREQ # nMEMREQ; /** keep the inuse low since we arent using it at all **/

@@ -1,0 +1,929 @@
+                                ;WC-80 COMPUTER BOOTLOADER - alnwlsn 2021
+                                ;to be stored at address 0x0000 in rom bank 0 (loads on boot)
+                                org 0x00
+0000: 3E 80                     ld a,0x80    ;rom 0 -> slot 0 THIS SHOULD BE THE FIRST THING YOU DO WHEN SYSTEM BOOTS
+0002: D3 70                     out (0x70),a 
+                                
+                                bootWait: ;a short delay while we wait for stuff to settle
+0004: 11 00 10                  	ld de,0x1000
+                                	bootWaitLoop:
+0007: 00                        	nop
+0008: 1B                        	dec de
+0009: 7A                        	ld a,d
+000A: B3                        	or e
+000B: 20 FA                     	jr nz,bootWaitLoop
+                                	
+000D: 3E 20                     ld a,0x20    ;ram 0 -> slot 1
+000F: D3 71                     out (0x71),a
+                                
+0011: 01 00 10                  ld bc,0x1000   ;copy to RAM 
+0014: 11 00 40                  ld de,0x4000
+0017: 21 00 00                  ld hl,0x0000
+001A: ED B0                     ldir
+                                
+001C: 3E 20                     ld a,0x20 ;ram 0 -> slot 0
+001E: D3 70                     out (0x70),a
+                                
+                                ;running from ram now *************************************************
+0020: 3E 21                     ld a,0x21 ;ram 1 -> slot 1
+0022: D3 71                     out (0x71),a
+0024: 3E 22                     ld a,0x22 ;ram 2 -> slot 2
+0026: D3 72                     out (0x72),a
+0028: 3E 23                     ld a,0x23 ;ram 3 -> slot 3
+002A: D3 73                     out (0x73),a
+002C: 31 8B 05                  ld sp,dmonStack ;just use the same stack as we will later
+                                
+002F: 3E 2A                     ld a,0x2a    ;debug display "****"
+0031: D3 74                     out (0x74),a
+0033: D3 75                     out (0x75),a
+0035: D3 76                     out (0x76),a ;finish debug display
+0037: D3 77                     out (0x77),a
+                                
+                                
+                                ;BOOT MENU ************************************************************
+0039: 53 45 4C 43 54 20 42 4F   bootMenuText: DB "SELCT BOOT?",0
+0041: 4F 54 3F 00 
+0045: CD B0 03                  call clear
+0048: 21 39 00                  ld hl,bootMenuText
+004B: CD BD 03                  call ioStringPrintL
+                                bootMenuSelectLoop: ;read the keyboard
+004E: CD 26 04                  	call getDskyKey
+0051: FE 4D                     	cp "M"
+0053: CA D6 00                  	jp z,dskyMonStartPoint ;DSKYMON
+0056: FE 4B                     	cp "K"
+0058: CA F5 04                  	jp z,clockdisp8 ;Clock Demo
+005B: FE 49                     	cp "I"
+005D: CA 00 30                  	jp z,0x3000
+0060: FE 4A                     	cp "J"
+0062: CA 00 80                  	jp z,0x8000
+0065: FE 10                     	cp 0x10 ;c is set for keys 0-f
+0067: DA 6C 00                  	jp c,bootBank ;bootBank
+006A: 18 E2                     	jr bootMenuSelectLoop
+                                	
+                                
+                                bootBank: ;fill address space with RAM, clear it, copy a rom bank into ram at Slot 0, and jump to 0x0000
+                                	;a contains rom bank to use
+006C: F5                        	push af
+006D: 08                        	ex af,af'
+006E: 3E 61                     	ld a,0x61
+0070: 4F                        	ld c,a
+0071: 08                        	ex af,af'
+0072: CD 95 04                  	call ioPrintHex8 ;print the selected ram bank to the debug screen
+                                	;in the TRS-80 extended ram card, select the first for banks
+0075: 3E 00                     	ld a,0
+0077: D3 78                     	out (0x78),a
+0079: 3E 01                     	ld a,1
+007B: D3 79                     	out (0x79),a
+007D: 3E 02                     	ld a,2
+007F: D3 7A                     	out (0x7a),a
+0081: 3E 03                     	ld a,3
+0083: D3 7B                     	out (0x7b),a
+                                	;load in some ram banks (on board ram)
+0085: 3E 25                     	ld a,0x25; ram bank 5 -> slot 1
+0087: D3 71                     	out (0x71),a
+0089: 3E 26                     	ld a,0x26; ram bank 6 -> slot 2
+008B: D3 72                     	out (0x72),a
+008D: 3E 27                     	ld a,0x27; ram bank 7 -> slot 3
+008F: D3 73                     	out (0x73),a
+                                	;and clear them
+0091: 21 00 40                  	ld hl,0x4000
+0094: 01 00 C0                  	ld bc,0xC000
+0097: CD CB 00                  	call clearRam
+009A: F1                        	pop af
+                                	;load in ram and rom bank to copy
+009B: F6 80                     	or 0x80 ;no exram
+009D: D3 71                     	out (0x71),a ;rom bank -> slot 1
+009F: 3E A4                     	ld a,0xa4
+00A1: D3 72                     	out (0x72),a ;ram bank 4 -> slot 2, no exram
+00A3: 01 00 40                  	ld bc,0x4000 ;copy 16k
+00A6: 11 00 80                  	ld de,0x8000 ;copy to
+00A9: 21 00 40                  	ld hl,0x4000 ;copy from
+00AC: ED B0                     	ldir
+                                	;slots 1 and 2 back to ram
+00AE: 3E 25                     	ld a,0x25; ram bank 5 -> slot 1, no exram
+00B0: D3 71                     	out (0x71),a
+00B2: 3E 26                     	ld a,0x26; ram bank 6 -> slot 2
+00B4: D3 72                     	out (0x72),a
+                                	;copy jump code to slot 1
+00B6: 01 06 00                  	ld bc,0x0006 ;copy 6
+00B9: 11 00 40                  	ld de,0x4000 ;copy to
+00BC: 21 C6 00                  	ld hl,jump0code ;copy from
+00BF: ED B0                     	ldir
+00C1: 3E 24                     	ld a,0x24 ;ram bank 4
+00C3: C3 00 40                  	jp 0x4000 ;jump to jump code in slot 1
+00C6: D3 70 C3 00 00            	jump0code: db 0xD3, 0x70, 0xC3, 0x00, 0x00
+                                	
+                                
+                                clearRam: ;zeros BC bytes starting at HL address
+00CB: 78                        	ld a,b
+00CC: B1                        	or c
+00CD: C8                        	ret z
+00CE: 3E 00                     	ld a,0x00
+00D0: 77                        	ld (hl),a
+00D1: 0B                        	dec bc
+00D2: 23                        	inc hl
+00D3: 18 F6                     	jr clearRam
+00D5: C9                        	ret
+                                
+                                
+                                ;WC-80 - Alnwlsn's Z80 computer ***********************************************
+                                ;DSKYMON - Display Keyboard Monitor
+                                ;for use with the external keypad/display
+                                ;on IO ports 60-6f
+                                ;also added functions to read and write to DS1513 Phantom Time Chip (RTC)
+                                
+                                dskyMonStartPoint:
+                                orgAddress equ dskyMonStartPoint ;origin address 
+                                org orgAddress
+                                dmonStack equ dskyMonProgramEnd ;stack at the end of the program
+00D6: 31 8B 05                  ld sp,dmonStack 
+                                
+00D9: CD A4 02                  call dskyMon_saveregs
+00DC: CD B0 03                  call clear
+00DF: C3 68 01                  jp dskyMonMemMode ;jump to start of monitor program
+                                
+                                ;space for some variables for dskymon
+                                ;             :			DB "fedc ba98 7654 3210",0
+00E2: 00 40                     dskyMonDatMAddr:  		DB 0x00,0x40
+00E4: 00                        dskyMonDatIOAddr: 		DB 0
+00E5: 20 41 20 20 46 20 20 42   dskyMonMsgRegs3:        DB " A  F  B  C  D  E  H  L X0 X1 Y0 Y1 'A 'F 'B 'C 'D 'E 'H 'L  I "
+00ED: 20 20 43 20 20 44 20 20 
+00F5: 45 20 20 48 20 20 4C 20 
+00FD: 58 30 20 58 31 20 59 30 
+0105: 20 59 31 20 27 41 20 27 
+010D: 46 20 27 42 20 27 43 20 
+0115: 27 44 20 27 45 20 27 48 
+011D: 20 27 4C 20 20 49 20 
+0124: 00                        dskyMonDatRegP: 		DB 0
+0125: 4D 45 4D 20 20 41 00      dskyMonMsgMemA:			DB "MEM  A",0
+012C: 4D 45 4D 20 20 44 00      dskyMonMsgMemD:			DB "MEM  D",0
+0133: 49 4F 20 20 20 41 00      dskyMonMsgIOA:			DB "IO   A",0
+013A: 49 4F 20 20 20 44 00      dskyMonMsgIOD:			DB "IO   D",0
+0141: 4A 55 4D 50 20 41 00      dskyMonMsgJump:			DB "JUMP A",0
+0148: 43 41 4C 4C 20 41 00      dskyMonMsgCall:			DB "CALL A",0
+014F: 52 45 47 53 00            dskyMonMsgRegs:			DB "REGS",0
+                                
+                                dskyMonMemModeAddr: ;enter and edit address for mem data
+0154: CD B0 03                  	call clear
+0157: 21 25 01                  	ld hl,dskyMonMsgMemA
+015A: CD BD 03                  	call ioStringPrintL
+015D: 2A E2 00                  	ld hl,(dskyMonDatMAddr)
+0160: 0E 67                     	ld c,0x67
+0162: CD F7 03                  	call inputKey16 
+0165: 22 E2 00                  	ld (dskyMonDatMAddr),hl
+                                	;any enter key moves to data mode
+                                dskyMonMemMode: ;mem data edit mode
+0168: 21 2C 01                  	ld hl,dskyMonMsgMemD
+016B: CD BD 03                  	call ioStringPrintL
+016E: 2A E2 00                  	ld hl,(dskyMonDatMAddr)
+0171: 0E 67                     	ld c,0x67
+0173: CD 86 04                  	call ioPrintHex16
+0176: 0E 62                     	ld c,0x62
+0178: 7E                        	ld a,(hl) ;read data and display
+0179: CD D3 03                  	call inputKey8
+017C: FE 58                     	cp "X"
+017E: 28 21                     	jr z,dskyMonMemMode_Write ;write memory 
+0180: FE 28                     	cp "("
+0182: 28 26                     	jr z,dskyMonMemMode_Dec ;dec RAM address
+0184: FE 29                     	cp ")"
+0186: 28 28                     	jr z,dskyMonMemMode_Inc ;inc RAM address
+0188: FE 4D                     	cp "M"
+018A: 28 C8                     	jr z,dskyMonMemModeAddr ;enter new ram address
+018C: FE 49                     	cp "I"
+018E: CA BD 01                  	jp z,dskyMonIOModeAddr  ;enter new io address
+0191: FE 56                     	cp "V"
+0193: 28 21                     	jr z,dskyMonMemMode_Read ;read value (ok, but make it obvious)
+0195: FE 4A                     	cp "J"
+0197: CA 34 02                  	jp z,dskyMonCallMode
+019A: FE 4B                     	cp "K"
+019C: CA 3E 03                  	jp z,dskyMonRegMode
+019F: 18 C7                     	jr dskyMonMemMode
+                                dskyMonMemMode_Write:
+01A1: 78                        	ld a,b
+01A2: 77                        	ld (hl),a
+01A3: 3E 57                     	ld a,"W"
+01A5: CD A6 03                  	call dskyMonStatIndicator
+01A8: 18 BE                     	jr dskyMonMemMode
+                                dskyMonMemMode_Dec:
+01AA: 2B                        	dec hl
+01AB: 22 E2 00                  	ld (dskyMonDatMAddr),hl
+01AE: 18 B8                     	jr dskyMonMemMode
+                                dskyMonMemMode_Inc:
+01B0: 23                        	inc hl
+01B1: 22 E2 00                  	ld (dskyMonDatMAddr),hl
+01B4: 18 B2                     	jr dskyMonMemMode
+                                dskyMonMemMode_Read:
+01B6: 3E 52                     	ld a,"R"
+01B8: CD A6 03                  	call dskyMonStatIndicator
+01BB: 18 AB                     	jr dskyMonMemMode
+                                	
+                                dskyMonIOModeAddr: ;enter and edit address for io
+01BD: CD B0 03                  	call clear
+01C0: 21 33 01                  	ld hl,dskyMonMsgIOA
+01C3: CD BD 03                  	call ioStringPrintL
+01C6: 3A E4 00                  	ld a,(dskyMonDatIOAddr)
+01C9: 0E 66                     	ld c,0x66
+01CB: CD D3 03                  	call inputKey8
+01CE: 78                        	ld a,b
+01CF: 32 E4 00                  	ld (dskyMonDatIOAddr),a
+                                dskyMonIOMode: ;any enter key moves to data mode
+01D2: 21 3A 01                  	ld hl,dskyMonMsgIOD
+01D5: CD BD 03                  	call ioStringPrintL
+01D8: 3A E4 00                  	ld a,(dskyMonDatIOAddr)
+01DB: 0E 66                     	ld c,0x66
+01DD: CD C0 04                  	call ioPrintHexAsc8
+01E0: 4F                        	ld c,a
+01E1: ED 78                     	in a,(c) ;read data from io address and display
+01E3: 0E 62                     	ld c,0x62
+01E5: CD D3 03                  	call inputKey8
+01E8: FE 58                     	cp "X"
+01EA: 28 21                     	jr z,dskyMonIOMode_Write ;write 
+01EC: FE 28                     	cp "("
+01EE: 28 2B                     	jr z,dskyMonIOMode_Dec ;dec RAM address
+01F0: FE 29                     	cp ")"
+01F2: 28 30                     	jr z,dskyMonIOMode_Inc ;inc RAM address
+01F4: FE 49                     	cp "I"
+01F6: 28 C5                     	jr z,dskyMonIOModeAddr ;enter new ram address
+01F8: FE 4D                     	cp "M"
+01FA: CA 54 01                  	jp z,dskyMonMemModeAddr ;enter new io address
+01FD: FE 56                     	cp "V"
+01FF: 28 2C                     	jr z,dskyMonIOMode_Read ;read value (ok, but make it obvious)
+0201: FE 4A                     	cp "J"
+0203: CA 34 02                  	jp z,dskyMonCallMode
+0206: FE 4B                     	cp "K"
+0208: CA 3E 03                  	jp z,dskyMonRegMode
+020B: 18 C5                     	jr dskyMonIOMode
+                                dskyMonIOMode_Write:
+020D: 3A E4 00                  	ld a,(dskyMonDatIOAddr)
+0210: 4F                        	ld c,a
+0211: 78                        	ld a,b
+0212: ED 79                     	out (c),a
+0214: 3E 57                     	ld a,"W"
+0216: CD A6 03                  	call dskyMonStatIndicator
+0219: 18 B7                     	jr dskyMonIOMode
+                                dskyMonIOMode_Dec:
+021B: 3A E4 00                  	ld a,(dskyMonDatIOAddr)
+021E: 3D                        	dec a
+021F: 32 E4 00                  	ld (dskyMonDatIOAddr),a
+0222: 18 AE                     	jr dskyMonIOMode
+                                dskyMonIOMode_Inc:
+0224: 3A E4 00                  	ld a,(dskyMonDatIOAddr)
+0227: 3C                        	inc a
+0228: 32 E4 00                  	ld (dskyMonDatIOAddr),a
+022B: 18 A5                     	jr dskyMonIOMode
+                                dskyMonIOMode_Read:
+022D: 3E 52                     	ld a,"R"
+022F: CD A6 03                  	call dskyMonStatIndicator
+0232: 18 9E                     	jr dskyMonIOMode
+                                	
+                                dskyMonCallMode: ;menu for CALL
+0234: CD B0 03                  	call clear
+0237: 21 48 01                  	ld hl,dskyMonMsgCall
+023A: CD BD 03                  	call ioStringPrintL
+023D: 2A E2 00                  	ld hl,(dskyMonDatMAddr)
+0240: 0E 67                     	ld c,0x67
+0242: CD F7 03                  	call inputKey16 
+0245: 22 E2 00                  	ld (dskyMonDatMAddr),hl
+0248: FE 58                     	cp "X"
+024A: 28 16                     	jr z,dskyMonCall ;do the call
+024C: FE 4D                     	cp "M"
+024E: CA 54 01                  	jp z,dskyMonMemModeAddr ;enter new ram address
+0251: FE 49                     	cp "I"
+0253: CA BD 01                  	jp z,dskyMonIOModeAddr  ;enter new io address
+0256: FE 4A                     	cp "J"
+0258: CA 71 02                  	jp z,dskyMonJumpMode
+025B: FE 4B                     	cp "K"
+025D: CA 3E 03                  	jp z,dskyMonRegMode
+0260: 18 D2                     	jr dskyMonCallMode
+                                dskyMonCall:
+0262: 11 6B 02                      ld de,$+9 ;return address (returns to line BANANNA)
+0265: D5                        	push de 
+0266: E5                        	push hl ;jump address
+0267: CD F4 02                  	call dskyMon_loadregs
+026A: C9                        	ret ;jump to HL^^^
+                                	;BANANNA
+026B: CD A4 02                  	call dskyMon_saveregs
+026E: C3 3E 03                  	jp dskyMonRegMode ;go to register mode to view register results
+                                	
+                                dskyMonJumpMode: ;menu for JUMP
+0271: CD B0 03                  	call clear
+0274: 21 41 01                  	ld hl,dskyMonMsgJump
+0277: CD BD 03                  	call ioStringPrintL
+027A: 2A E2 00                  	ld hl,(dskyMonDatMAddr)
+027D: 0E 67                     	ld c,0x67
+027F: CD F7 03                  	call inputKey16 
+0282: 22 E2 00                  	ld (dskyMonDatMAddr),hl
+0285: FE 58                     	cp "X"
+0287: 28 16                     	jr z,dskyMonJump ;do the jump
+0289: FE 4D                     	cp "M"
+028B: CA 54 01                  	jp z,dskyMonMemModeAddr ;enter new ram address
+028E: FE 49                     	cp "I"
+0290: CA BD 01                  	jp z,dskyMonIOModeAddr  ;enter new io address
+0293: FE 4A                     	cp "J"
+0295: CA 34 02                  	jp z,dskyMonCallMode
+0298: FE 4B                     	cp "K"
+029A: CA 3E 03                  	jp z,dskyMonRegMode
+029D: 18 D2                     	jr dskyMonJumpMode
+                                dskyMonJump:
+029F: E5                        	push hl ;jump address
+02A0: CD F4 02                  	call dskyMon_loadregs
+02A3: C9                        	ret ;jump to HL
+                                	
+                                dskyMon_saveregs: ;saves registers to ram
+                                	;DB " A  F  B  C  D  E  H  L X0 X1 Y0 Y1 'A 'F 'B 'C 'D 'E 'H 'L  I "
+02A4: D9                        	EXX
+02A5: 08                        	ex af,af'        ;save from actual regs
+02A6: E5                        	push hl ;19 20
+02A7: D5                        	push de ;17 18
+02A8: C5                        	push bc ;15 16
+02A9: F5                        	push af ;13 14
+02AA: D9                        	EXX
+02AB: 08                        	ex af,af'
+02AC: FD E5                     	push iy ;11 12
+02AE: DD E5                     	push ix ;9 10
+02B0: E5                        	push hl ;7 8
+02B1: D5                        	push de ;5 6
+02B2: C5                        	push bc ;3 4
+02B3: F5                        	push af ;1 2
+02B4: CD EE 02                  	call dskyMon_saveRegsC ;get HL with location for A
+02B7: C1                        	pop bc ;af
+02B8: CD E3 02                  	call dskyMon_saveregsB
+02BB: C1                        	pop bc ;bc
+02BC: CD E3 02                  	call dskyMon_saveregsB
+02BF: C1                        	pop bc ;de
+02C0: CD E3 02                  	call dskyMon_saveregsB
+02C3: C1                        	pop bc ;hl
+02C4: CD E3 02                  	call dskyMon_saveregsB
+02C7: C1                        	pop bc ;ix
+02C8: CD E3 02                  	call dskyMon_saveregsB
+02CB: C1                        	pop bc ;iy
+02CC: CD E3 02                  	call dskyMon_saveregsB
+02CF: C1                        	pop bc ;af'
+02D0: CD E3 02                  	call dskyMon_saveregsB
+02D3: C1                        	pop bc ;bc'
+02D4: CD E3 02                  	call dskyMon_saveregsB
+02D7: C1                        	pop bc ;de'
+02D8: CD E3 02                  	call dskyMon_saveregsB
+02DB: C1                        	pop bc ;hl'
+02DC: CD E3 02                  	call dskyMon_saveregsB
+02DF: ED 57                     	ld a,i
+02E1: 77                        	ld (hl),a ;save i
+02E2: C9                        	ret
+                                dskyMon_saveregsB:	;load bc into ram
+                                	;pop af (example)
+02E3: 78                        	ld a,b
+02E4: 77                        	ld (hl),a ;save a
+02E5: 79                        	ld a,c
+02E6: 23                        	inc hl
+02E7: 23                        	inc hl
+02E8: 23                        	inc hl 
+02E9: 77                        	ld (hl),a ;save f
+02EA: 23                        	inc hl
+02EB: 23                        	inc hl
+02EC: 23                        	inc hl
+02ED: C9                        	ret
+                                dskyMon_saveRegsC: ;sets up HL with register RAM store address
+02EE: 21 E5 00                  	ld hl,dskyMonMsgRegs3 
+02F1: 23                        	inc hl
+02F2: 23                        	inc hl ;hl is now save location for reg A
+02F3: C9                        	ret
+                                
+                                dskyMon_loadregs: ;loads registers from ram
+                                	;DB " A  F  B  C  D  E  H  L X0 X1 Y0 Y1 'A 'F 'B 'C 'D 'E 'H 'L  I "
+02F4: CD EE 02                  	call dskyMon_saveRegsC ;get HL with location for A
+02F7: CD 33 03                  	call dskyMon_loadregsB ;load bc with af values
+02FA: C5                        	push bc ;af
+02FB: CD 33 03                  	call dskyMon_loadregsB
+02FE: C5                        	push bc ;bc
+02FF: CD 33 03                  	call dskyMon_loadregsB
+0302: C5                        	push bc ;de
+0303: CD 33 03                  	call dskyMon_loadregsB
+0306: C5                        	push bc ;hl
+0307: CD 33 03                  	call dskyMon_loadregsB
+030A: C5                        	push bc ;ix
+030B: CD 33 03                  	call dskyMon_loadregsB
+030E: C5                        	push bc ;iy
+030F: CD 33 03                  	call dskyMon_loadregsB
+0312: C5                        	push bc ;af'
+0313: CD 33 03                  	call dskyMon_loadregsB
+0316: C5                        	push bc ;bc'
+0317: CD 33 03                  	call dskyMon_loadregsB
+031A: C5                        	push bc ;de'
+031B: CD 33 03                  	call dskyMon_loadregsB
+031E: C5                        	push bc ;hl'
+031F: 7E                        	ld a,(hl)
+0320: ED 47                     	ld i,a ;load into actual regs
+0322: D9                        	EXX
+0323: 08                        	ex af,af'
+0324: E1                        	pop hl ;19 20
+0325: D1                        	pop de ;17 18
+0326: C1                        	pop bc ;15 16
+0327: F1                        	pop af ;13 14
+0328: D9                        	EXX
+0329: 08                        	ex af,af'
+032A: FD E1                     	pop iy ;11 12
+032C: DD E1                     	pop ix ;9 10
+032E: E1                        	pop hl ;7 8
+032F: D1                        	pop de ;5 6
+0330: C1                        	pop bc ;3 4
+0331: F1                        	pop af ;1 2
+0332: C9                        	ret
+                                dskyMon_loadregsB: ;load bc with next 2 reg values
+                                	;af (example)
+0333: 7E                        	ld a,(hl) ;load a
+0334: 47                        	ld b,a
+0335: 23                        	inc hl
+0336: 23                        	inc hl
+0337: 23                        	inc hl 
+0338: 7E                        	ld a,(hl) ;load f
+0339: 4F                        	ld c,a
+033A: 23                        	inc hl
+033B: 23                        	inc hl
+033C: 23                        	inc hl
+                                	;push bc (example)
+033D: C9                        	ret
+                                	
+                                dskyMonRegMode: ;display/edit registers before and after calls
+033E: CD B0 03                  	call clear
+0341: 21 4F 01                  	ld hl,dskyMonMsgRegs
+0344: CD BD 03                  	call ioStringPrintL
+0347: 3A 24 01                  	ld a,(dskyMonDatRegP)
+034A: 57                        	ld d,a
+034B: 21 E5 00                  	ld hl,dskyMonMsgRegs3 
+034E: 4F                        	ld c,a
+034F: 06 00                     	ld b,0
+0351: 09                        	add hl,bc 
+0352: 7E                        	ld a,(hl) ;label of register (left char)
+0353: D3 65                     	out (0x65),a
+0355: 23                        	inc hl
+0356: 7E                        	ld a,(hl) ;label of register (right char)
+0357: D3 64                     	out (0x64),a
+0359: 23                        	inc hl
+035A: 7E                        	ld a,(hl) ;stored value for register
+035B: 0E 62                     	ld c,0x62
+035D: CD D3 03                  	call inputKey8
+0360: FE 58                     	cp "X"
+0362: 28 19                     	jr z,dskyMonRegMode_Write ;write 
+0364: FE 28                     	cp "("
+0366: 28 1E                     	jr z,dskyMonRegMode_Dec ;prev register
+0368: FE 29                     	cp ")"
+036A: 28 2A                     	jr z,dskyMonRegMode_Inc ;next register
+036C: FE 49                     	cp "I"
+036E: CA BD 01                  	jp z,dskyMonIOModeAddr ;enter new ram address
+0371: FE 4D                     	cp "M"
+0373: CA 54 01                  	jp z,dskyMonMemModeAddr ;enter new io address
+0376: FE 4A                     	cp "J"
+0378: CA 34 02                  	jp z,dskyMonCallMode
+037B: 18 C1                     	jr dskyMonRegMode
+                                dskyMonRegMode_Write:
+037D: 78                        	ld a,b
+037E: 77                        	ld (hl),a
+037F: 3E 57                     	ld a,"W"
+0381: CD A6 03                  	call dskyMonStatIndicator
+0384: 18 B8                     	jr dskyMonRegMode
+                                dskyMonRegMode_Dec:
+0386: 7A                        	ld a,d
+0387: 3D                        	dec a
+0388: 3D                        	dec a
+0389: 3D                        	dec a
+038A: FE FD                     	cp 0xfd ;aka -3
+038C: C2 91 03                  	jp nz, dskyMonRegMode_DecB
+038F: 3E 3C                     	ld a,0x3c ;last byte in regs array
+                                	dskyMonRegMode_DecB:
+0391: 32 24 01                  	ld (dskyMonDatRegP),a
+0394: 18 A8                     	jr dskyMonRegMode
+                                dskyMonRegMode_Inc:
+0396: 7A                        	ld a,d
+0397: 3C                        	inc a
+0398: 3C                        	inc a
+0399: 3C                        	inc a
+039A: FE 3F                     	cp 0x3f ;+3 over
+039C: C2 A1 03                  	jp nz, dskyMonRegMode_IncB
+039F: 3E 00                     	ld a,0
+                                	dskyMonRegMode_IncB:
+03A1: 32 24 01                  	ld (dskyMonDatRegP),a
+03A4: 18 98                     	jr dskyMonRegMode
+                                
+                                
+                                dskyMonStatIndicator: ;displays ascii in A @69, waits for key release, clears 69
+03A6: D3 69                     	out (0x69),a
+03A8: CD 17 04                  	call getDskyKeyRelease
+03AB: 3E 20                     	ld a," "
+03AD: D3 69                     	out (0x69),a
+03AF: C9                        	ret
+                                	
+                                clear: ;clears the 16 character screen
+03B0: 0E 6F                     	ld c,0x6f
+                                	clearB:
+03B2: 3E 20                     	ld a,0x20 ;space char
+03B4: ED 79                     	out (c),a
+03B6: 0D                        	dec c
+03B7: 3E 5F                     	ld a,0x5f ;one less than 0x60
+03B9: B9                        	cp c
+03BA: 20 F6                     	jr nz,clearB
+03BC: C9                        	ret
+                                	
+                                ioStringPrintL: ;same as ioStringPrint, but always starts at 0x6f (left of leds)    
+03BD: 0E 6F                     	ld c,0x6f
+03BF: CD C3 03                  	call ioStringPrint
+03C2: C9                        	ret
+                                
+                                ioStringPrint: ;print null-terminated strings on hpdl1414 leds
+                                               ;takes c - starting address (left most, highest) digit of leds
+                                			   ;     hl - starting address (lowest) of string
+03C3: F5                        	push af
+03C4: E5                        	push hl
+                                	ioStringPrint_G:
+03C5: 7E                        	ld a,(hl)
+03C6: FE 00                     	cp 0
+03C8: 28 06                     	jr z,ioStringPrint_X
+03CA: ED 79                     	out (c),a
+03CC: 23                        	inc hl
+03CD: 0D                        	dec c
+03CE: 18 F5                     	jr ioStringPrint_G
+                                	ioStringPrint_X:
+03D0: E1                        	pop hl
+03D1: F1                        	pop af
+03D2: C9                        	ret
+                                
+                                inputKey8: ;use keys to enter a 2 character (8 bit) hex character
+                                           ;takes   c is address to display 3 characters when entering (io address of LED)
+                                		   ;        a existing value to be displayed
+                                		   ;returns b (entered data)
+                                		   ;        a (returned key, z set if X key pressed)
+03D3: D5                        	push de
+03D4: C5                        	push bc
+03D5: 57                        	ld d,a
+                                	inputKey8_b:
+03D6: 7A                        	ld a,d
+03D7: CD C0 04                  	call ioPrintHexAsc8
+03DA: CD 1D 04                  	call getDskyKeyWait
+03DD: 47                        	ld b,a
+03DE: E6 F0                     	and 0xf0
+                                	;if z, key is 0-f buttons, otherwise, it isn't
+03E0: 20 0B                     	jr nz, inputKey8_c
+03E2: 7A                        	ld a,d   ;shift and add the key
+03E3: E6 0F                     	and 0x0f
+03E5: 07                        	rlca
+03E6: 07                        	rlca
+03E7: 07                        	rlca
+03E8: 07                        	rlca
+03E9: 80                        	add a,b 
+03EA: 57                        	ld d,a
+03EB: 18 E9                     	jr inputKey8_b
+                                	inputKey8_c: ;non number key
+03ED: 78                        	ld a,b
+03EE: FE 58                     	cp "X" ;the X key (enter)
+                                	inputKey8_X:
+03F0: 5A                        	ld e,d
+03F1: 50                        	ld d,b
+03F2: C1                        	pop bc
+03F3: 7A                        	ld a,d
+03F4: 43                        	ld b,e
+03F5: D1                        	pop de
+03F6: C9                        	ret
+                                
+                                inputKey16:;use keys to enter a 4 character (16 bit) hex character
+                                           ;takes   c is address to display characters when entering (io address of LED)
+                                		   ;        hl existing value to be displayed
+                                		   ;returns hl (entered data)
+                                		   ;        b,a (returned key, z set if X key pressed)
+03F7: F5                        	push af
+03F8: D5                        	push de
+03F9: C5                        	push bc
+                                	inputKey16_b:
+03FA: CD 86 04                  	call ioPrintHex16
+03FD: CD 1D 04                  	call getDskyKeyWait
+0400: 47                        	ld b,a
+0401: E6 F0                     	and 0xf0
+                                	;if z, key is 0-f buttons, otherwise, it isn't
+0403: 20 09                     	jr nz, inputKey16_c
+0405: 29                        	add hl,hl
+0406: 29                        	add hl,hl
+0407: 29                        	add hl,hl
+0408: 29                        	add hl,hl
+0409: 78                        	ld a,b
+040A: 85                        	add a,l
+040B: 6F                        	ld l,a
+040C: 18 EC                     	jr inputKey16_b
+                                	inputKey16_c: ;non number key
+040E: 78                        	ld a,b
+040F: FE 58                     	cp "X" ;the X key (enter)
+                                	inputKey16_X:
+0411: C1                        	pop bc
+0412: 47                        	ld b,a
+0413: D1                        	pop de
+0414: F1                        	pop af
+0415: 78                        	ld a,b
+0416: C9                        	ret
+                                	
+                                getDskyKeyRelease: ;waits for all keys to be released
+0417: CD 26 04                  	call getDskyKey
+041A: 20 FB                     	jr nz,getDskyKeyRelease
+041C: C9                        	ret
+                                
+                                getDskyKeyWait: ;waits for all keys to be released, then waits for a key
+041D: CD 17 04                  	call getDskyKeyRelease
+                                	getDskyKeyWaitB:
+0420: CD 26 04                  	call getDskyKey
+0423: 28 FB                     	jr z,getDskyKeyWaitB
+0425: C9                        	ret
+                                
+                                getDskyKey: ;returns A with key scancode (or 255 and z if no key pressed)
+0426: C5                        	push bc
+0427: D5                        	push de
+0428: 1E 00                     	ld e,0
+042A: 16 01                     	ld d,1 ;will rotate to bit 0 in a moment
+                                	getDskyKey_Col: ;read col at address c and return a
+042C: 3E 60                     	ld a,0x60
+042E: 82                        	add a,d
+042F: CB 02                     	rlc d      ;generates 1,2,4,8 (the columns)
+0431: 4F                        	ld c,a
+0432: ED 78                     	in a,(c) ;read col address
+0434: 4F                        	ld c,a
+0435: 06 06                     	ld b,6
+                                	getDskyKey_loop1:
+0437: 3E 01                     	ld a,1
+0439: A1                        	and c
+043A: F5                        	push af
+043B: CB 09                     	rrc c
+043D: F1                        	pop af
+043E: 28 06                     	jr z, getDskyKeyCols_B 
+0440: 10 F5                     	djnz getDskyKey_loop1
+                                	;nothing found
+0442: 3E FF                     	ld a,255
+0444: 18 01                     	jr getDskyKeyCols_X
+                                	getDskyKeyCols_B: ;something found
+0446: 78                        	ld a,b
+                                	getDskyKeyCols_X: ;
+                                	;a is col keyboard scan code here (or 255 if not pressed)
+0447: FE FF                     	cp 255 ;check if no key was pressed
+0449: 47                        	ld b,a
+044A: 20 0C                     	jr nz,getDskyKeyCols_Y
+044C: 7A                        	ld a,d
+044D: FE 10                     	cp 16
+044F: 28 16                     	jr z,getDskyKey_Z
+0451: 47                        	ld b,a
+0452: 3E 06                     	ld a,6
+0454: 83                        	add a,e
+0455: 5F                        	ld e,a
+0456: 18 D4                     	jr getDskyKey_Col
+                                	getDskyKeyCols_Y: ;some key was pressed (get ready to return)
+                                	;b has col scan
+0458: 78                        	ld a,b
+0459: 83                        	add a,e
+045A: E5                        	push hl
+045B: 21 6E 04                  	ld hl,dskyKeyLUT ;lookup table base address
+045E: 06 00                     	ld b,0
+0460: 3D                        	dec a
+0461: 4F                        	ld c,a
+0462: 09                        	add hl,bc ;offset in LUT
+0463: 7E                        	ld a,(hl) ;content of LUT
+0464: E1                        	pop hl
+0465: 18 02                     	jr getDskyKey_Exit
+                                	getDskyKey_Z:
+                                	;no key pressed
+0467: 3E FF                     	ld a,255
+                                	getDskyKey_Exit:
+0469: FE FF                     	cp 255 ;if nokey
+046B: D1                        	pop de
+046C: C1                        	pop bc
+046D: C9                        	ret
+                                	dskyKeyLUT:
+046E: 4D                        	DB "M"  ;M
+046F: 0A                        	DB 0x0A ;A
+0470: 07                        	DB 0x07 ;7
+0471: 04                        	DB 0x04 ;4
+0472: 01                        	DB 0x01 ;1
+0473: 00                        	DB 0x00 ;0
+0474: 49                        	DB "I"  ;I
+0475: 0B                        	DB 0x0B ;B
+0476: 08                        	DB 0x08 ;8
+0477: 05                        	DB 0x05 ;5
+0478: 02                        	DB 0x02 ;2
+0479: 28                        	DB "(" ;LEFT
+047A: 4A                        	DB "J"  ;J
+047B: 0C                        	DB 0x0C ;C
+047C: 09                        	DB 0x09 ;9
+047D: 06                        	DB 0x06 ;6
+047E: 03                        	DB 0x03 ;3
+047F: 29                        	DB ")" ;RIGHT
+0480: 4B                        	DB "K"  ;K
+0481: 0D                        	DB 0x0D ;D
+0482: 0E                        	DB 0x0E ;E
+0483: 0F                        	DB 0x0F ;F
+0484: 56                        	DB "V"  ;V
+0485: 58                        	DB "X"  ;X
+                                
+                                ioPrintHex16: ;write (on ascii LEDs) the 2 character hex value of HL, 
+                                              ;starting with left most digit address of C
+0486: F5                        	push af
+0487: C5                        	push bc
+0488: 7C                        	ld a, h
+0489: CD 95 04                  	call ioPrintHex8
+048C: 0D                        	dec c
+048D: 0D                        	dec c
+048E: 7D                        	ld a, l
+048F: CD 95 04                  	call ioPrintHex8
+0492: C1                        	pop bc
+0493: F1                        	pop af
+0494: C9                        	ret
+                                
+                                ioPrintHex8: ;write (on ascii LEDs) the 2 character hex value of A, 
+                                             ;starting with left most digit address of C
+0495: F5                        	push af
+0496: C5                        	push bc
+0497: 47                        	ld b,a
+0498: E6 F0                     	and 0xf0
+049A: 0F                        	rrca
+049B: 0F                        	rrca
+049C: 0F                        	rrca
+049D: 0F                        	rrca
+049E: CD CC 04                  	call ioPrintHexNibble
+04A1: 0D                        	dec c
+04A2: 78                        	ld a,b
+04A3: CD CC 04                  	call ioPrintHexNibble
+04A6: C1                        	pop bc
+04A7: F1                        	pop af
+04A8: C9                        	ret
+                                
+                                ioPrintAsc:     ;writes ascii value of A to hpdl-1414 on C
+                                				;writes lowercase as uppercase and above 7f as blank
+04A9: F5                        	push af
+04AA: FE 61                     	cp 0x61 ;a greater than = 0x61?
+04AC: 38 08                     	jr c,ioPrintAsc_a ;no
+04AE: FE 7B                     	cp 0x7B ;less than 0x7b?
+04B0: 30 04                     	jr nc,ioPrintAsc_a ;no
+04B2: D6 20                     	sub 0x20 ;subtract to align with CAPS letters
+04B4: 18 06                     	jr ioPrintAsc_b
+                                	ioPrintAsc_a:
+04B6: FE 80                     	cp 0x80 ;a greater than = 0x80?
+04B8: 38 02                     	jr c,ioPrintAsc_b ;no
+04BA: 3E 00                     	ld a,0x00
+                                	ioPrintAsc_b:
+04BC: ED 79                     	out (c),a
+04BE: F1                        	pop af
+04BF: C9                        	ret
+                                	
+                                ioPrintHexAsc8: ;write (on ascii LEDs) the ascii representation of A,
+                                				;and the 2 character hex value of A,
+                                                ;starting with left most digit address of C
+04C0: F5                        	push af
+04C1: C5                        	push bc
+04C2: CD A9 04                  	call ioPrintAsc
+04C5: 0D                        	dec c
+04C6: CD 95 04                  	call ioPrintHex8
+04C9: C1                        	pop bc
+04CA: F1                        	pop af
+04CB: C9                        	ret
+                                	
+                                ioPrintHexNibble: ;prints lower nibble of a as hex to io c
+04CC: F5                        	push af
+04CD: E6 0F                     	and 0x0f
+04CF: FE 0A                     	cp 0x0a ;if carry, 0x0a>a
+04D1: 38 04                     	jr c,ioPrintHexNibble_letters
+04D3: C6 37                     	add a,0x37
+04D5: 18 02                     	jr ioPrintHexNibble_X
+                                	ioPrintHexNibble_letters:
+04D7: C6 30                     	add a,0x30
+                                	ioPrintHexNibble_X:
+04D9: ED 79                     	out (c),a
+04DB: F1                        	pop af
+04DC: C9                        	ret
+                                	
+                                ;***************************************CLOCK CHIP DISPLAY DEMO**********************************
+                                ;demo program for testing out the DS1513 Phantom Time Chip (Realtime clock)
+                                
+                                ;  org 0x3000
+                                burnram equ 0x8000 ;will be written to by the clock read/write functions. Must be in address range of clock chip
+                                monaddr equ orgAddress ;monitor address, for a return from this program
+                                
+                                txb:
+04DD: 00                        db 0x00
+04DE: 00                        db 0x00
+04DF: 00                        db 0x00
+04E0: 00                        db 0x00
+04E1: 00                        db 0x00
+04E2: 00                        db 0x00
+04E3: 00                        db 0x00
+04E4: 00                        db 0x00
+                                
+                                rxb:
+04E5: 00                        db 0x00
+04E6: 00                        db 0x00
+04E7: 00                        db 0x00
+04E8: 00                        db 0x00
+04E9: 00                        db 0x00
+04EA: 00                        db 0x00
+04EB: 00                        db 0x00
+04EC: 00                        db 0x00
+                                
+                                seq:
+04ED: C5                        db 0xc5
+04EE: 3A                        db 0x3a
+04EF: A3                        db 0xa3
+04F0: 5C                        db 0x5c
+04F1: C5                        db 0xc5
+04F2: 3A                        db 0x3a
+04F3: A3                        db 0xa3
+04F4: 5C                        db 0x5c
+                                
+                                clockdisp8: ;read the clock chip and display the read data in hex on the dsky display (from MS to LS left to right)
+04F5: CD 55 05                  call sendSeq
+04F8: 21 E5 04                  ld hl,rxb
+04FB: CD 72 05                  call clockRead
+04FE: 0E 61                     ld c,0x61
+0500: 21 E5 04                  ld hl,rxb
+                                clockdisp8loop1:
+0503: 7E                        ld a,(hl)
+0504: CD 95 04                  call ioPrintHex8
+0507: 23                        inc hl
+0508: 0C                        inc c
+0509: 0C                        inc c
+050A: 3E 71                     ld a,0x71
+050C: B9                        cp c
+050D: 20 F4                     jr nz,clockdisp8loop1
+050F: DB 61                     in a,(0x61) ;check to see if any key in dsky M row is pressed
+0511: FE FF                     cp 0xff
+0513: C2 D6 00                  jp nz,monaddr
+                                ;********************************display clock on built in led displays on 0x74-0x77***********************
+0516: 3A E5 04                  ld a,(rxb) ;check 10ths of seconds
+0519: E6 F0                     and 0xf0
+051B: FE 90                     cp 0x90
+051D: 28 12                     jr z,clockdisp8blank
+051F: 3A E8 04                  ld a,(rxb+3) ;minutes
+0522: 0E 77                     ld c,0x77
+0524: CD 95 04                  call ioPrintHex8
+0527: 3A E7 04                  ld a,(rxb+2) ;seconds
+052A: 0E 75                     ld c,0x75
+052C: CD 95 04                  call ioPrintHex8
+052F: 18 C4                     jr clockdisp8
+                                clockdisp8blank: ;"blink" off display to show seconds
+0531: 3E 00                     ld a,0
+0533: D3 77                     out (0x77),a
+0535: D3 76                     out (0x76),a
+0537: D3 75                     out (0x75),a
+0539: D3 74                     out (0x74),a
+053B: 18 B8                     jr clockdisp8
+                                
+                                start:
+053D: CD 55 05                  call sendSeq
+0540: 21 E5 04                  ld hl,rxb
+0543: CD 72 05                  call clockRead
+0546: C3 D6 00                  jp monaddr
+                                start2:
+0549: CD 55 05                  call sendSeq
+054C: 21 DD 04                  ld hl,txb
+054F: CD 5F 05                  call clockWrite
+0552: C3 D6 00                  jp monaddr 
+                                
+                                sendSeq:   ;writes the magic sequence to the clock chip. Uses one byte of extra ram.
+0555: 3A 00 80                  ld a,(burnram) ;inital read to reset sequence recognizer pointer inside clock chip
+0558: 21 ED 04                  ld hl,seq
+055B: CD 5F 05                  call clockWrite
+055E: C9                        ret
+                                
+                                clockWrite: ;writes 8 bytes to the clock chip, starting with the first byte at HL
+055F: 0E 08                     ld c, 8
+                                loop2:
+0561: 06 08                     ld b, 8
+0563: 7E                        ld a,(hl)
+                                loop1:
+0564: 32 00 80                  ld (burnram),a
+0567: 1F                        rra
+0568: 10 FA                     djnz loop1
+056A: 23                        inc hl
+056B: 0D                        dec c
+056C: 79                        ld a,c
+056D: FE 00                     cp 0
+056F: 20 F0                     jr nz,loop2
+0571: C9                        ret
+                                
+                                clockRead: ;reads 8 bytes from clock chip, places first byte at HL
+0572: 0E 08                     ld c, 8
+                                loop4:
+0574: 06 08                     ld b, 8
+                                loop3:
+0576: E6 FE                     and 0b11111110
+0578: 57                        ld d,a
+0579: 3A 00 80                  ld a,(burnram)
+057C: E6 01                     and 1 ;keep only D0
+057E: 82                        add a,d
+057F: 0F                        rrca
+0580: 10 F4                     djnz loop3
+0582: 77                        ld (hl),a
+0583: 23                        inc hl
+0584: 0D                        dec c
+0585: 79                        ld a,c
+0586: FE 00                     cp 0
+0588: 20 EA                     jr nz,loop4
+058A: C9                        ret
+                                	
+                                dskyMonProgramEnd:
+                                
+                                
+                                ;this fills in the rest of bank 0 ROM
+                                seek 0x3fff
+058B: FF                        db 0xff
+
+058C:

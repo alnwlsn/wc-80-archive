@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name OPL3_VGM_Player-rescue)(type Legacy)(uri ${KIPRJMOD}/OPL3_VGM_Player-rescue.lib)(options "")(descr ""))
+  (lib (name MegaBlaster2-cache)(type Legacy)(uri C:/Users/alnwlsn/Desktop/MegaBlaster2-master/schematic/MegaBlaster2-cache.lib)(options "")(descr ""))
+  (lib (name main-rescue)(type Legacy)(uri ${KIPRJMOD}/main-rescue.lib)(options "")(descr ""))
+)

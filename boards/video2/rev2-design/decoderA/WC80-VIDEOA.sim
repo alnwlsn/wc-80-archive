@@ -1,0 +1,85 @@
+%SIGNAL
+PIN   3 =  A10 
+PIN   8 =  A11 
+PIN   4 =  A12 
+PIN   5 =  A13 
+PIN   7 =  A14 
+PIN   6 =  A15 
+PIN  10 =  ADR0 
+PIN  14 =  ADR1 
+PIN  11 =  ADR2 
+PIN  13 =  ADR3 
+PIN  16 =  CHIP 
+PIN  17 =  I1 
+PIN  20 =  I2 
+PIN  23 =  INUSE 
+PIN  22 =  MSK0 
+PIN  21 =  MSK1 
+PIN   9 =  MSK2 
+PIN  15 =  MSK3 
+PIN  18 =  nCRMEM 
+PIN   1 =  nEXMEM 
+PIN   2 =  nMEMRQ 
+PIN  19 =  nSCMEM 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+!I1 =>
+    A15 & !ADR3
+  # !A15 & ADR3
+  # A14 & !ADR2
+  # !A14 & ADR2
+  # A13 & !ADR1
+  # !A13 & ADR1
+  # A12 & !ADR0
+  # !A12 & ADR0
+
+I2 =>
+    !A10 & !A11 & MSK0
+  # A10 & !A11 & MSK1
+  # !A10 & A11 & MSK2
+  # A10 & A11 & MSK3
+
+INUSE =>
+    !nSCMEM
+
+!nCRMEM =>
+    CHIP & I1 & I2 & !nEXMEM & !nMEMRQ
+
+!nSCMEM =>
+    !CHIP & I1 & I2 & !nEXMEM & !nMEMRQ
+
+ADR1.oe  =>
+    0 
+
+CHIP.oe  =>
+    0 
+
+I1.oe  =>
+    1 
+
+I2.oe  =>
+    1 
+
+INUSE.oe  =>
+    1 
+
+MSK0.oe  =>
+    0 
+
+MSK1.oe  =>
+    0 
+
+MSK3.oe  =>
+    0 
+
+nCRMEM.oe  =>
+    1 
+
+nSCMEM.oe  =>
+    1 
+
+%END

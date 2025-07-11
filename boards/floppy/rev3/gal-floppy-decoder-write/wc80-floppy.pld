@@ -1,0 +1,70 @@
+Name        wc80-floppy          ;
+Partno                           ;
+Revision    1                    ;
+Date        10/21/2021           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+
+/** address decoder for IO and MEM locations for the floppy controller **/
+
+/** Inputs  **/
+Pin 1   =  nOUT; 
+Pin 2   =  nWRITE;
+Pin 3   =  nREAD;
+Pin 4   =  37XX;
+Pin 5   =  EFX;
+Pin 6   =  nIN;
+Pin 7   =  A0; 
+Pin 8   =  A1;
+Pin 9   =  A4; 
+Pin 10  =  A3; 
+Pin 11  =  A2;
+Pin 13  =  nEXMEM; 
+
+
+/** Outputs **/
+Pin 14  =  n37E0; 
+Pin 15  =  58SEL; 
+Pin 16  =  nDFL;    
+Pin 17  =  nPRINTWRITE;   
+Pin 18  =  nDENSEL; 
+Pin 19  =  FLOP;
+Pin 20  =  nPRINTREAD;      
+Pin 21  =  nDFH;
+Pin 22  =  OPT; 
+Pin 23  =  INUSE;
+
+/** Logic Equations **/
+
+/** Interrupt Status read - MEM37E0 or IOF6  **/ 
+    !n37E0 = (EFX & !A3 & !A0)&((!nREAD & 37XX & !A4 & !A2 & !A1 & !nEXMEM)#(!nIN & A4 & A2 & A1));
+    
+/** Disk Controller MEM37EC-37EF or IOF0-F3**/
+    FLOP = EFX&(((!nREAD # !nWRITE) & 37XX & !A4 & A3 & A2 & !nEXMEM) # ((!nIN # !nOUT) & A4 & !A3 & !A2));
+    
+/** Printer write MEM37E8 OR IOF8**/
+    !nPRINTWRITE = (EFX & A3 & !A2 & !A1 & !A0)&(((!nWRITE) & 37XX & !A4 & !nEXMEM) # (!nOUT & A4));
+    
+/** Printer read MEM37E8 OR IOF8**/
+    !nPRINTREAD = (EFX & A3 & !A2 & !A1 & !A0)&((!nREAD & 37XX & !A4 & !nEXMEM) # (!nIN & A4));
+    
+/** Option selector latch write IOF6 **/
+    OPT = (!nOUT & EFX & A4 & !A3 & A2 & A1 & !A0);
+    
+/** Double Desnity address (write on floppy command - MEM37EC or IOF0) **/
+    !nDENSEL = (EFX & !A1 & !A0)&(((!nWRITE) & 37XX & !A4 & A3 & A2 & !nEXMEM)#(!nOUT & A4 & !A3 & !A2));
+    
+/** Double Desnity address (write on floppy sector select - MEM37EE or IOF2) **/
+    58SEL = (EFX & A1 & !A0)&(((!nWRITE) & 37XX & !A4 & A3 & A2 & !nEXMEM)#(!nOUT & A4 & !A3 & !A2));
+    
+/** low bits of Disk drive select - write on MEM37E1 or IOF4 **/
+    !nDFL = (EFX & !A3 & !A1)&(((!nWRITE) & 37XX & !A4 & !A2 & A0 & !nEXMEM)#(!nOUT & A4 & A2 & !A1));
+    
+/** high bytes of select drive & options (like a model 3) write IOF4 **/
+    !nDFH =  (!nOUT & EFX & A4 & !A3 & A2 & !A1 & !A0);
+
+INUSE = (!n37E0 # FLOP # !nPRINTWRITE # !nPRINTREAD # !nDENSEL # 58SEL # !nDFL);

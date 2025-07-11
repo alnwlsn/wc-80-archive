@@ -1,0 +1,16 @@
+Name     mem-decoder;
+PartNo   ;
+Date     06/13/2020;
+Revision 1;
+Designer ;
+Company  alnwlsn;
+Assembly None;
+Location ;
+Device   g22v10;
+
+
+ORDER: A10, A11, A12, A13, A14, A15, IORQ, MEMRQ, MRAM, RD, VRAM, WR, ZIN, ZOUT, ZRD, ZWR; 
+
+
+VECTORS:
+00001010*1*0****

@@ -1,0 +1,56 @@
+%SIGNAL
+PIN   8 =  A8 
+PIN   7 =  A9 
+PIN   6 =  A10 
+PIN   5 =  A11 
+PIN   4 =  A12 
+PIN   3 =  A13 
+PIN   2 =  A14 
+PIN   1 =  A15 
+PIN  10 =  IOREQ 
+PIN   9 =  MREQ 
+PIN  23 =  RAMCS 
+PIN  16 =  TIN 
+PIN  17 =  TOUT 
+PIN  14 =  TRD 
+PIN  15 =  TWR 
+PIN  11 =  ZRD 
+PIN  13 =  ZWR 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+RAMCS =>
+    A15
+  # !A11 & A12 & A13 & !A14 & !A15
+
+!TIN =>
+    !IOREQ & !ZRD
+
+!TOUT =>
+    !IOREQ & !ZWR
+
+!TRD =>
+    !MREQ & !ZRD
+
+!TWR =>
+    !MREQ & !ZWR
+
+RAMCS.oe  =>
+    1 
+
+TIN.oe  =>
+    1 
+
+TOUT.oe  =>
+    1 
+
+TRD.oe  =>
+    1 
+
+TWR.oe  =>
+    1 
+
+%END

@@ -1,0 +1,82 @@
+%SIGNAL
+PIN  10 =  A0 
+PIN   9 =  A1 
+PIN   8 =  A2 
+PIN   7 =  A3 
+PIN   6 =  A4 
+PIN   5 =  A5 
+PIN   4 =  A6 
+PIN   3 =  A7 
+PIN  20 =  CASSIN 
+PIN  19 =  CASSOUT 
+PIN  21 =  CLKDIV 
+PIN  14 =  MEMCHIP 
+PIN  15 =  UNUSED 
+PIN  16 =  nBANKSEL 
+PIN  22 =  nBUSBUF 
+PIN  13 =  nINUSE 
+PIN  23 =  nIORQ 
+PIN   2 =  nMEMRQ 
+PIN   1 =  nOUT 
+PIN  18 =  nRAM0 
+PIN  11 =  nRD 
+PIN  17 =  nROM0 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+!CASSIN =>
+    A0 & A1 & A2 & A3 & A4 & A5 & A6 & A7 & !nIORQ & !nRD
+
+!CASSOUT =>
+    A0 & A1 & A2 & A3 & A4 & A5 & A6 & A7 & !nOUT
+
+!CLKDIV =>
+    !A0 & !A1 & A2 & !A3 & A4 & A5 & A6 & !A7 & !nOUT
+
+!nBANKSEL =>
+    !A2 & !A3 & A4 & A5 & A6 & !A7 & !nOUT
+
+nBUSBUF =>
+    nINUSE & nIORQ
+  # !CASSIN & nINUSE
+  # nIORQ & nMEMRQ
+  # !CASSIN & nMEMRQ
+  # nRD
+
+!nRAM0 =>
+    MEMCHIP & nINUSE & !nMEMRQ
+
+!nROM0 =>
+    !MEMCHIP & nINUSE & !nMEMRQ
+
+CASSIN.oe  =>
+    1 
+
+CASSOUT.oe  =>
+    1 
+
+CLKDIV.oe  =>
+    1 
+
+MEMCHIP.oe  =>
+    0 
+
+nBANKSEL.oe  =>
+    1 
+
+nBUSBUF.oe  =>
+    1 
+
+nIORQ.oe  =>
+    0 
+
+nRAM0.oe  =>
+    1 
+
+nROM0.oe  =>
+    1 
+
+%END

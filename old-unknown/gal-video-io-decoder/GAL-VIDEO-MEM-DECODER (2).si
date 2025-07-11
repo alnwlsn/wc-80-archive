@@ -1,0 +1,17 @@
+Name     gal-video-MEM-decoder;
+PartNo   ;
+Date     08/23/2020;
+Revision 1;
+Designer ;
+Company  alnwlsn;
+Assembly None;
+Location ;
+Device   g22v10;
+
+
+ORDER: A8, A9, A10, A11, A12, A13, A14, A15, TRSMODE, USE, VIDCHAR, nCHARRAM, nINHIB, nLOCAL, nMEMREQ, nVIDRAM; 
+
+
+VECTORS:
+11111111010**10*
+11111111110**10*

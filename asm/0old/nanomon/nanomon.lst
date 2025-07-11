@@ -1,0 +1,69 @@
+                                ;nanomon - simple shared ram control program
+                                org 0x3200
+                                
+                                main:
+3200: 3A 69 32                  ld a,(command)
+3203: 47                        ld b,a
+3204: 3A 6A 32                  ld a,(status)
+3207: FE 00                     cp 0
+3209: 20 F5                     jr nz,main
+320B: 78                        ld a,b
+320C: FE 00                     cp 0
+320E: 28 12                     jr z,resetStatus
+3210: FE 01                     cp 1
+3212: 28 15                     jr z,readIO
+3214: FE 02                     cp 2
+3216: 28 21                     jr z,writeIO
+3218: FE 03                     cp 3
+321A: 28 2D                     jr z,readRam
+321C: FE 04                     cp 4
+321E: 28 37                     jr z,writeRam
+3220: 18 DE                     jr main
+                                
+                                resetStatus:
+3222: 3E 00                     	ld a,0
+3224: 32 6A 32                  	ld (status),a
+3227: 18 D7                     	jr main
+                                
+                                readIO:
+3229: 3A 65 32                  	ld a,(ioaddress)
+322C: 4F                        	ld c,a
+322D: ED 78                     	in a,(c)
+322F: 32 68 32                  	ld (data),a
+3232: 3E 01                     	ld a,1
+3234: 32 6A 32                  	ld (status),a
+3237: 18 C7                     	jr main
+                                	
+                                writeIO:
+3239: 3A 65 32                  	ld a,(ioaddress)
+323C: 4F                        	ld c,a
+323D: 3A 68 32                  	ld a,(data)
+3240: ED 79                     	out (c),a
+3242: 3E 02                     	ld a,2
+3244: 32 6A 32                  	ld (status),a
+3247: 18 B7                     	jr main
+                                
+                                readRam:
+3249: 2A 66 32                  	ld hl,(ramAddress)
+324C: 7E                        	ld a,(hl)
+324D: 32 68 32                  	ld (data),a
+3250: 3E 03                     	ld a,3
+3252: 32 6A 32                  	ld (status),a
+3255: 18 A9                     	jr main
+                                	
+                                writeRam:
+3257: 2A 66 32                  	ld hl,(ramAddress)
+325A: 3A 68 32                  	ld a,(data)
+325D: 77                        	ld (hl),a
+325E: 3E 04                     	ld a,4
+3260: 32 6A 32                  	ld (status),a
+3263: 18 9B                     	jr main
+                                
+                                
+3265: 00                        ioAddress: db 0x00
+3266: 00 00                     ramAddress: db 0x00, 0x00
+3268: 00                        data: db 0x00
+3269: 00                        command: db 0x00
+326A: 00                        status: db 0x00
+
+326B:

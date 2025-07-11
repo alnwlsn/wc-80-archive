@@ -1,0 +1,63 @@
+Name		cpu-keybd;
+Partno							 ;
+Revision	1					 ;
+Date		01/21/2021			 ;
+Designer						 ;
+Company		alnwlsn				 ;
+Assembly	None				 ;
+Location						 ;
+Device		g22v10				 ;
+Format		jedec				 ;
+
+/** cpu board keyboard option latch and address decoder **/
+
+/** decodes memory address for keyboard matrix read. Uses onboard latches to select multiple address locations **/
+
+/** Inputs	**/
+Pin 1	=  WRCLK; /** latch write pin (connect to decoded IO write **/
+Pin 2	=  nMEMRD;/** Z80 Ram read signal **/
+Pin 3	=  A15;
+Pin 4	=  A14;
+Pin 5	=  A13;
+Pin 6	=  A12;
+Pin 7	=  A11;
+Pin 8	=  A10;
+Pin 9	=  A9; 
+Pin 10	=  A8; 
+Pin 11	=  EXMEM; 
+Pin 13	=  D0;
+Pin 14  =  D1; 
+Pin 15	=  D2;
+Pin 16  =  D3;
+
+/** Outputs **/
+Pin 17	=  D0L;
+Pin 18  =  D1L;
+Pin 19	=  nKBD; /** To keyboard read buffer enable **/  
+Pin 20  =  D2L;
+Pin 21	=  D3L;
+Pin 22  =  X;
+Pin 23  =  nINUSE;
+
+/** Logic Equations **/
+D0L.d = D0;
+D1L.d = D1;
+D2L.d = D2;
+D3L.d = D3;
+
+D0L.ar  = 'b'0;
+D0L.sp  = 'b'0;
+D1L.ar  = 'b'0;
+D1L.sp  = 'b'0;
+D2L.ar  = 'b'0;
+D2L.sp  = 'b'0;
+D3L.ar  = 'b'0;
+D3L.sp  = 'b'0;
+
+!nKBD = (D3L & !D1L & !D0L &    EXMEM & !nMEMRD & !A15 & !A14 & A13 & A12 & A11 & !A10 & !A9 & !A8) /** 0x3800 **/
+      # (D3L & !D1L & D0L &     EXMEM & !nMEMRD & A15 & A14 & A13 & A12 & !A11 & A10 & !A9 & !A8) /** 0xF400 **/
+	  # (D3L & D1L & !D0L &  EXMEM & !nMEMRD & A15 & A14 & A13 & !A12 & A11 & A10 & A9 & A8) /** 0xEF00 **/
+	  # (D3L & D1L & D0L &   EXMEM & !nMEMRD & A15 & A14 & A13 & A12 & !A11 & A10 & A9 & A8) /** 0xF700 **/;
+
+nINUSE = nKBD;
+X = nKBD;

@@ -1,0 +1,94 @@
+                                org 0x3200
+                                
+                                
+                                setupSoundBoard:
+3200: 21 38 32                  	ld hl,LT6903_357
+3203: 3E B4                     	ld a,0b10110100
+3205: CD 24 32                  	call ltcFset
+3208: 21 48 32                  	ld hl,LT6903_1431
+320B: 3E 9C                     	ld a,0b10011100
+320D: CD 24 32                  	call ltcFset
+3210: 21 58 32                  	ld hl,LT6903_767
+3213: 3E AC                     	ld a,0b10101100
+3215: CD 24 32                  	call ltcFset
+                                	
+3218: 3E 3C                     	ld a,0b00111100 ;resets the sound chip, and thus clears the interrupt exerted by ym262
+321A: D3 BF                     	out (0xbf),a 
+321C: CD 68 32                  	call wait
+321F: 3E FC                     	ld a,0b11111100
+3221: D3 BF                     	out (0xbf),a 
+3223: C9                        	ret
+                                
+                                ltcFset: ;set the frequency of the LTC6903. Call with base value in A, and pointer to bit sequence in HL
+                                	;base value is chip select of interest clear, other chip selects set, and sdi and sck clear
+                                	;sequence is bytes with value 0 or 1, 16 bytes long, to represent the bits sent over SPI. D15 is first.
+3224: 4F                        	ld c,a
+3225: 06 10                     	ld b,16
+                                	ltcFsetLoop1:
+3227: 7E                        	ld a,(hl)
+3228: B1                        	or c
+3229: D3 BF                     	out (0xbf),a ;clk low
+322B: 7E                        	ld a,(hl)
+322C: B1                        	or c
+322D: F6 02                     	or 0x02
+322F: D3 BF                     	out (0xbf),a ;clk high
+3231: 23                        	inc hl
+3232: 10 F3                     	djnz ltcFsetLoop1
+3234: 79                        	ld a,c
+3235: D3 BF                     	out (0xbf),a ;done
+3237: C9                        	ret
+                                
+                                LT6903_357: ;sequence for setting the LT6903 clock to 3.57 MHz
+3238: 01 00 01 01 01 01 00 00   db 1,0,1,1,1,1,0,0,1,1,1,1,1,0,0,0
+3240: 01 01 01 01 01 00 00 00 
+                                
+                                LT6903_1431: ;sequence for setting the LT6903 clock to 14.31 MHz
+3248: 01 01 00 01 01 01 00 00   db 1,1,0,1,1,1,0,0,1,1,1,1,1,1,0,0
+3250: 01 01 01 01 01 01 00 00 
+                                
+                                LT6903_767: ;sequence for setting the LT6903 clock to 7.67 MHz
+3258: 01 01 00 00 01 01 01 00   db 1,1,0,0,1,1,1,0,0,1,0,0,0,0,0,0
+3260: 00 01 00 00 00 00 00 00 
+                                
+                                wait: 
+3268: 11 00 10                  	ld de,0x1000
+                                	waitLoop:
+326B: 00                        	nop
+326C: 1B                        	dec de
+326D: 7A                        	ld a,d
+326E: B3                        	or e
+326F: 20 FA                     	jr nz,waitLoop
+3271: C9                        	ret
+                                
+                                
+                                ; ioPrintHex8: ;write (on ascii LEDs) the 2 character hex value of A, 
+                                             ; ;starting with left most digit address of C
+                                	; ld b,a
+                                	; and 0xf0
+                                	; rrca
+                                	; rrca
+                                	; rrca
+                                	; rrca
+                                	; and 0x0f
+                                	; add a,0x30
+                                	; cp 0x3a ;if carry, 0x0a>a
+                                	; jr c,ioPrintHex8_1
+                                	; add a,0x07
+                                	; ioPrintHex8_1:
+                                	; out (c),a
+                                	; dec c
+                                	; ld a,b
+                                	; and 0x0f
+                                	; add a,0x30
+                                	; cp 0x3a
+                                	; jr c,ioPrintHex8_2
+                                	; add a,0x07
+                                	; ioPrintHex8_2:
+                                	; out (c),a
+                                	; ret
+                                
+                                	
+                                
+                                
+
+3272:

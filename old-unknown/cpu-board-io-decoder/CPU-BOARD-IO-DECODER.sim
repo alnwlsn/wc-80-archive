@@ -1,0 +1,81 @@
+%SIGNAL
+PIN   9 =  A0 
+PIN   8 =  A1 
+PIN   7 =  A2 
+PIN   6 =  A3 
+PIN   5 =  A4 
+PIN   4 =  A5 
+PIN   3 =  A6 
+PIN   2 =  A7 
+PIN  17 =  A15 
+PIN  15 =  AHIGH 
+PIN  16 =  ALOW 
+PIN  23 =  BIOL 
+PIN  18 =  RAMA15 
+PIN  19 =  RAMA16 
+PIN  22 =  n4CDW 
+PIN  13 =  nINHIBIT 
+PIN  11 =  nIORQ 
+PIN   1 =  nMEMRQ 
+PIN  21 =  nRAMCS 
+PIN  14 =  nRAMROM 
+PIN  20 =  nROMCS 
+PIN  10 =  nWR 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+BIOL =>
+    !A0 & !A1 & !A2 & A3 & A4 & A5 & A6 & !A7 & !nIORQ & !nWR
+
+RAMA15 =>
+    A15 & AHIGH
+  # !A15 & ALOW
+
+RAMA16 =>
+    A15
+
+!n4CDW =>
+    A2 & !A3 & A4 & A5 & A6 & !A7 & !nIORQ & !nWR
+
+!nRAMCS =>
+    nINHIBIT & !nMEMRQ & nRAMROM
+  # A15 & nINHIBIT & !nMEMRQ & !nRAMROM
+  # nINHIBIT & !nMEMRQ & !nRAMROM & !nWR
+
+!nROMCS =>
+    !A15 & nINHIBIT & !nMEMRQ & !nRAMROM & nWR
+
+A15.oe  =>
+    0 
+
+AHIGH.oe  =>
+    0 
+
+ALOW.oe  =>
+    0 
+
+BIOL.oe  =>
+    1 
+
+RAMA15.oe  =>
+    1 
+
+RAMA16.oe  =>
+    1 
+
+n4CDW.oe  =>
+    1 
+
+nRAMCS.oe  =>
+    1 
+
+nRAMROM.oe  =>
+    0 
+
+nROMCS.oe  =>
+    1 
+
+%END

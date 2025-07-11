@@ -1,0 +1,219 @@
+{COMPONENT C:\USERS\ALNWLSN\LIZARD-SYNC\PROJECTS\COMPUTERS\TRS-80\WC-80\BOARDS\VIDEO-MC6845\REV2\DECODERB\WC80-VIDEOB.SYM
+
+ {ENVIRONMENT
+  {PDIFvrev 3.00}
+  {Program "CUPL(WM) Version 5.0a"}
+  {DBtype "Schematic"}
+  {DBvrev 1.01}
+  {DBtime "Sun Nov 21 09:59:26 2021 "}
+  {DBunit "MIL"}
+  {DBgrid 10}
+  {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
+          "PINNAM" 6 "PINCON" 4 "REFDES" 2 "ATTR" 6 "SDOT" 1 
+          "DEVICE" 5 "OUTLIN" 5 "ATTR2" 6 "NOTES" 6 "NETNAM" 4 
+          "CMPNAM" 5 "BORDER" 5}
+ }
+
+ {USER
+  {VIEW
+   {Mode SYMB}
+   {Nlst OPEN}
+   {Vw 0 0 2}
+   {Lv 12 2 2 2 0 0 2 2 2 2 0 0 2 1 2 0 0 0 0}
+   {Gs 10 10}
+  }
+ }
+
+ {DISPLAY
+  [Ly "PINNUM"]
+  [Ls "SOLID"][Wd 0]
+  [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+ }
+
+ {SYMBOL
+  {PIN_DEF
+   [Ly "PINCON"]
+   {P Z80CLK {Pt "INPUT"}{Lq 0}{Ploc 100 380}}
+   {P NOUT {Pt "INPUT"}{Lq 0}{Ploc 100 340}}
+   {P NIN {Pt "INPUT"}{Lq 0}{Ploc 100 320}}
+   {P A0 {Pt "INPUT"}{Lq 0}{Ploc 100 300}}
+   {P A1 {Pt "INPUT"}{Lq 0}{Ploc 100 280}}
+   {P A2 {Pt "INPUT"}{Lq 0}{Ploc 100 260}}
+   {P A3 {Pt "INPUT"}{Lq 0}{Ploc 100 240}}
+   {P A4 {Pt "INPUT"}{Lq 0}{Ploc 100 220}}
+   {P A5 {Pt "INPUT"}{Lq 0}{Ploc 100 200}}
+   {P A6 {Pt "INPUT"}{Lq 0}{Ploc 100 180}}
+   {P A7 {Pt "INPUT"}{Lq 0}{Ploc 100 160}}
+   {P NC1 {Pt "INPUT"}{Lq 0}{Ploc 100 140}}
+   {P NC2 {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
+   {P NC3 {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
+   {P NC4 {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
+   {P NC6 {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
+   {P NC7 {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
+   {P NC8 {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
+   {P OPT1 {Pt "I/O"}{Lq 0}{Ploc 330 20}}
+   {P VIDSTAT {Pt "I/O"}{Lq 0}{Ploc 330 40}}
+   {P NCRTC {Pt "I/O"}{Lq 0}{Ploc 330 60}}
+   {P OPT2 {Pt "I/O"}{Lq 0}{Ploc 330 80}}
+  }
+
+  {PKG
+   [Ly "REFDES"]
+   [Ts 25][Tj "CB"][Tr 0][Tm "N"]
+   {Rdl 215 410}
+
+   [Ly "PINNUM"]
+   [Ts 15][Tj "RC"]
+   {Pnl 120 390}
+   [Ts 15][Tj "RC"]
+   {Pnl 120 350}
+   {Pnl 120 330}
+   {Pnl 120 310}
+   {Pnl 120 290}
+   {Pnl 120 270}
+   {Pnl 120 250}
+   {Pnl 120 230}
+   {Pnl 120 210}
+   {Pnl 120 190}
+   {Pnl 120 170}
+   {Pnl 120 150}
+   {Pnl 120 130}
+   {Pnl 120 110}
+   {Pnl 120 90}
+   {Pnl 120 70}
+   {Pnl 120 50}
+   {Pnl 120 30}
+   [Ts 15][Tj "LC"]
+   {Pnl 310 30}
+   {Pnl 310 50}
+   {Pnl 310 70}
+   {Pnl 310 90}
+
+   {Sd A 1 2 3 4 5 6 7 8 9 10 11 13 16 17 18 20 21 22 14 15 19 23}
+  }
+
+  {PIC
+   [Ly "GATE"]
+   [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+   {R 130 400 300 0}
+   {L 130 380 100 380}
+   {L 130 390 140 380 130 370}
+   {L 130 340 100 340}
+   {L 130 320 100 320}
+   {L 130 300 100 300}
+   {L 130 280 100 280}
+   {L 130 260 100 260}
+   {L 130 240 100 240}
+   {L 130 220 100 220}
+   {L 130 200 100 200}
+   {L 130 180 100 180}
+   {L 130 160 100 160}
+   {L 130 140 100 140}
+   {L 130 120 100 120}
+   {L 130 100 100 100}
+   {L 130 80 100 80}
+   {L 130 60 100 60}
+   {L 130 40 100 40}
+   {L 130 20 100 20}
+   {L 300 20 330 20}
+   {L 300 40 330 40}
+   {L 300 60 330 60}
+   {L 300 80 330 80}
+   [Ly "PINNAM"]
+   [Tj "LC"]
+   {T "Z80CLK" 140 380}
+   {T "NOUT" 140 340}
+   {T "NIN" 140 320}
+   {T "A0" 140 300}
+   {T "A1" 140 280}
+   {T "A2" 140 260}
+   {T "A3" 140 240}
+   {T "A4" 140 220}
+   {T "A5" 140 200}
+   {T "A6" 140 180}
+   {T "A7" 140 160}
+   {T "NC1" 140 140}
+   {T "NC2" 140 120}
+   {T "NC3" 140 100}
+   {T "NC4" 140 80}
+   {T "NC6" 140 60}
+   {T "NC7" 140 40}
+   {T "NC8" 140 20}
+   [Tj "RC"]
+   {T "OPT1" 290 20}
+   {T "VIDSTAT" 290 40}
+   {T "NCRTC" 290 60}
+   {T "OPT2" 290 80}
+   [Ly "DEVICE"]
+   [Tj "CT"]
+   {T "G22V10" 215 -10}
+  }
+
+  {ATR
+   {IN
+    {Org 100 20}
+    {Ty 255}
+   }
+   {EX
+    [Ly "ATTR2"]
+    [Ts 12][Tj "CT"][Tr 0][Tm "N"]
+    {At PLD C:\USERS\ALNWLSN\LIZARD-SYNC\PROJECTS\COMPUTERS\TRS-80\WC-80\BOARDS\VIDEO-MC6845\REV2\DECODERB\WC80-VIDEOB 215 400}
+   }
+  }
+ }
+
+ {DETAIL
+  {ANNOTATE
+  }
+
+  {NET_DEF
+   {N Z80CLK
+   }
+   {N NOUT
+   }
+   {N NIN
+   }
+   {N A0
+   }
+   {N A1
+   }
+   {N A2
+   }
+   {N A3
+   }
+   {N A4
+   }
+   {N A5
+   }
+   {N A6
+   }
+   {N A7
+   }
+   {N NC1
+   }
+   {N NC2
+   }
+   {N NC3
+   }
+   {N NC4
+   }
+   {N NC6
+   }
+   {N NC7
+   }
+   {N NC8
+   }
+   {N OPT1
+   }
+   {N VIDSTAT
+   }
+   {N NCRTC
+   }
+   {N OPT2
+   }
+  }
+
+  {SUBCOMP
+  }
+ }
+}

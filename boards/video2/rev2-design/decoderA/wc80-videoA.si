@@ -1,0 +1,16 @@
+Name     wc80-videoA;
+PartNo   ;
+Date     11/20/2021;
+Revision 1;
+Designer ;
+Company  alnwlsn;
+Assembly None;
+Location ;
+Device   g22v10;
+
+
+ORDER: A10, A11, A12, A13, A14, A15, ADR0, ADR1, ADR2, ADR3, CHIP, I1, I2, INUSE, MSK0, MSK1, MSK2, MSK3, nCRMEM, nEXMEM, nMEMRQ, nSCMEM; 
+
+
+VECTORS:
+00000000001***1000*00*

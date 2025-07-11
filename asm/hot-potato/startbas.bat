@@ -1,0 +1,1 @@
+trs80gp -m1 -l2 -ld -dx -mem 16 -nlc

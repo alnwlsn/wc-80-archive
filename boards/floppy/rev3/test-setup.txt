@@ -1,0 +1,18 @@
+WD-80 2793 Floppy Controller Calibration
+
+no test link
+dd mode - out (0xf0),fa
+insert test link
+measure 2793 pin #31 (WD)
+look at pulse width
+adjust write precompensation pot (RV2) so pulse width is 125 - 150 nS
+
+measure 2793 pin #29 (TG43)
+look at pulse width
+adjust data seperator pot (RV1) so pulse width is 500 nS
+
+measure 2793 pin #16 (DIRC) 
+look at frequency
+adjust trimmer cap so that frequency is 250 kHz
+
+remove test link

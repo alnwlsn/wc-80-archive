@@ -1,0 +1,45 @@
+Name        wc80-videoB          ;
+Partno                           ;
+Revision    1                    ;
+Date        11/20/2021           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+
+/** video board IO decoder **/
+
+/** Inputs  **/
+Pin 1   =  Z80CLK; 
+Pin 2   =  nOUT;
+Pin 3   =  nIN;
+Pin 4   =  A0;
+Pin 5   =  A1;
+Pin 6   =  A2;
+Pin 7   =  A3; 
+Pin 8   =  A4;
+Pin 9   =  A5; 
+Pin 10  =  A6; 
+Pin 11  =  A7;
+Pin 13  =  NC1; 
+   
+/** Outputs **/
+Pin 14  =  OPT1;
+Pin 15  =  VIDSTAT;  
+Pin 16  =  NC2;
+Pin 17  =  NC3;   
+Pin 18  =  NC4; 
+Pin 19  =  nCRTC;
+Pin 20  =  NC6;    
+Pin 21  =  NC7;
+Pin 22  =  NC8;  
+Pin 23  =  OPT2;
+
+/** Logic Equations **/
+	
+	!VIDSTAT = !nIN & !A7 & A6 & !A5 & A4 & A3 & A2 & A1 & A0;
+	OPT1 = !nOUT & !A7 & A6 & !A5 & A4 & A3 & A2 & A1 & !A0;
+	OPT2 = !nOUT & !A7 & A6 & !A5 & A4 & A3 & A2 & A1 & A0;
+	!nCRTC = (!nOUT # !nIN) & !A7 & A6 & !A5 & A4 & A3 & A2 & !A1;

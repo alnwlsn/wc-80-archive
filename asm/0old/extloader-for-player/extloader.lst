@@ -1,0 +1,56 @@
+                                ;nanomon - simple shared ram control program
+                                org 0x3200
+                                
+3200: 3E 00                     ld a,0 ;allow external ram
+3202: D3 72                     out (0x72),a
+3204: 3A 84 32                  ld a,(exBankReg)
+3207: D3 7C                     out (0x7c),a
+3209: 21 00 80                  ld hl,0x8000
+320C: 22 82 32                  ld (addressReg),hl
+                                
+                                main:
+320F: 3A 80 32                  	ld a,(controlReg)
+3212: FE 00                     	cp 0
+3214: 20 F9                     	jr nz,main
+                                
+                                comparse:
+                                	;write dp ram externally here
+3216: 3A 80 32                  	ld a,(controlReg)
+3219: FE 01                     	cp 1
+321B: 28 05                     	jr z, sWriteEx
+321D: FE FF                     	cp 255
+321F: C8                        	ret z
+3220: 18 F4                     	jr comparse
+                                
+                                sWriteEx:
+3222: 3A 84 32                  	ld a,(exBankReg)
+3225: D3 7C                     	out (0x7c),a
+3227: 2A 82 32                  	ld hl,(addressReg)
+322A: 3A 81 32                  	ld a,(dataReg)
+322D: 77                        	ld (hl),a
+322E: 23                        	inc hl
+322F: 22 82 32                  	ld (addressReg),hl
+3232: 11 01 A0                  	ld de,0xa001
+3235: B7                        	or a ;cp hl,de
+3236: ED 52                     	sbc hl,de
+3238: 19                        	add hl,de
+3239: 28 02                     	jr z,nextExBank
+323B: 18 D2                     	jr main
+                                	nextExBank:
+323D: 21 00 80                  		ld hl,0x8000
+3240: 22 82 32                  		ld (addressReg),hl
+3243: 3A 84 32                  		ld a,(exBankReg)
+3246: 3C                        		inc a
+3247: 32 84 32                  		ld (exBankReg),a
+324A: D3 7C                     		out (0x7c),a
+324C: 18 C1                     		jr main
+                                
+                                
+                                seek 0x80
+                                org 0x3280
+3280: 00                        controlReg: db 0x00
+3281: 00                        dataReg: db 0x00
+3282: 00 00                     addressReg: db 0x00, 0x00
+3284: 00                        exBankReg: db 0x00
+
+3285:

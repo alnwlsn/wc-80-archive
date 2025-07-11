@@ -1,0 +1,51 @@
+Name        wc80-arduino         ;
+Partno                           ;
+Revision    1                    ;
+Date        09/29/2021           ;
+Designer                         ;
+Company     alnwlsn              ;
+Assembly    None                 ;
+Location                         ;
+Device      g22v10               ;
+Format      jedec                ;
+
+/** arduino board io decoder and glue logic **/
+
+/** decodes IO addresses for extra ram at 0x8000-0xFFFF **/
+/** and IO output for bank selection - choose 4 of 64 banks, 8K each **/
+
+/** Inputs  **/
+Pin 1   =  nOUT; /** io write from or gate (TRS80 *OUT) **/
+Pin 2   =  nMEMRQ; /** z80 memrq pin (or TRS80 *RAS) **/
+Pin 3   =  A0;
+Pin 4   =  A1;
+Pin 5   =  A2;
+Pin 6   =  A3;
+Pin 7   =  A4;
+Pin 8   =  A5;
+Pin 9   =  A6; 
+Pin 10  =  A7; 
+Pin 11  =  A15;
+Pin 13  =  A14; 
+Pin 14  =  A13; 
+Pin 15  =  A12; 
+Pin 21  =  A11; 
+Pin 22  =  A10;   
+Pin 23  =  nEXMEM; 
+Pin 17  =  nENEXTRA;    /** when low, enables the extra ram. can be turned off to leave open bus for other devices **/
+
+
+/** Outputs **/
+Pin 16  =  nINUSE;   /** LOW when EXMEM and any RAM is being read or written  **/    
+Pin 18  =  nDpRAM;   /** to chip select on Dual Port RAM **/
+Pin 19  =  nExRAM;   /** to chip select on Extra RAM **/
+Pin 20  =  nSelector; /** to chip select on Extra RAM bank selector **/
+
+/** Logic Equations **/
+!nSelector = (!nOUT & !A7 & A6 & A5 & A4 & A3 & A2); /** IO write to 0x7C - 0x7F (register file selectors)**/
+!nExRAM = (!nMEMRQ & !nEXMEM & A15 & !nENEXTRA); /** Extra RAM chip 0x8000-0xffff **/
+!nDpRAM = (!nMEMRQ & !nEXMEM & !A15 & !A14 & A13 & A12 & !A11 & !A10); /** Dual Port RAM at 0x3000 - 0x33ff **/
+
+!nINUSE = nExRAM & nDpRAM; /** Output for the INUSE signal **/
+
+NC = nINUSE; /** Just something for the NC signal to do **/

@@ -1,0 +1,84 @@
+%SIGNAL
+PIN   3 =  A0 
+PIN   4 =  A1 
+PIN   5 =  A2 
+PIN   6 =  A3 
+PIN   7 =  A4 
+PIN   8 =  A5 
+PIN   9 =  A6 
+PIN  10 =  A7 
+PIN  16 =  BRG 
+PIN  14 =  E8OUT 
+PIN  17 =  EAOUT 
+PIN  11 =  NC1 
+PIN  13 =  NC2 
+PIN  21 =  NC3 
+PIN  15 =  nE8IN 
+PIN  18 =  nEAIN 
+PIN  19 =  nEBIN 
+PIN  20 =  nEBOUT 
+PIN   2 =  nIN 
+PIN  23 =  nJSTK 
+PIN   1 =  nOUT 
+PIN  22 =  nPADTRG 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+BRG =>
+    A0 & !A1 & !A2 & A3 & !A4 & A5 & A6 & A7 & !nOUT
+
+E8OUT =>
+    !A0 & !A1 & !A2 & A3 & !A4 & A5 & A6 & A7 & !nOUT
+
+EAOUT =>
+    !A0 & A1 & !A2 & A3 & !A4 & A5 & A6 & A7 & !nOUT
+
+!nE8IN =>
+    !A0 & !A1 & !A2 & A3 & !A4 & A5 & A6 & A7 & !nIN
+
+!nEAIN =>
+    !A0 & A1 & !A2 & A3 & !A4 & A5 & A6 & A7 & !nIN
+
+!nEBIN =>
+    A0 & A1 & !A2 & A3 & !A4 & A5 & A6 & A7 & !nIN
+
+!nEBOUT =>
+    A0 & A1 & !A2 & A3 & !A4 & A5 & A6 & A7 & !nOUT
+
+!nJSTK =>
+    !A0 & !A1 & !A2 & !A3 & !A4 & !A5 & !A6 & !A7 & !nIN
+
+!nPADTRG =>
+    !A0 & !A1 & !A2 & !A3 & !A4 & !A5 & !A6 & !A7 & !nOUT
+
+BRG.oe  =>
+    1 
+
+E8OUT.oe  =>
+    1 
+
+EAOUT.oe  =>
+    1 
+
+nE8IN.oe  =>
+    1 
+
+nEAIN.oe  =>
+    1 
+
+nEBIN.oe  =>
+    1 
+
+nEBOUT.oe  =>
+    1 
+
+nJSTK.oe  =>
+    1 
+
+nPADTRG.oe  =>
+    1 
+
+%END
