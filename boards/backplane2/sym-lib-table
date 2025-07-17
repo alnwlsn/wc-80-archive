@@ -1,3 +1,5 @@
 (sym_lib_table
-  (lib (name wilson-z80)(type Legacy)(uri ${KIPRJMOD}/wilson-z80.lib)(options "")(descr ""))
+  (version 7)
+  (lib (name "wilson-z80")(type "Legacy")(uri "${KIPRJMOD}/wilson-z80.lib")(options "")(descr ""))
+  (lib (name "main-rescue")(type "KiCad")(uri "${KIPRJMOD}/main-rescue.kicad_sym")(options "")(descr ""))
 )
