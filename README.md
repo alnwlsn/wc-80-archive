@@ -2,7 +2,7 @@
 
 ![image of WC-80 Cube running](img/running.jpg)
 
-Homebrew Z80 computer which is not exactly a TRS-80 Model 1 clone. 
+My homebrew Z80 computer which is not exactly a TRS-80 Model 1 clone. Archive from 2020-2023.
 
 ## Background
 Some time ago when I was in college (not that long ago, mind you, it was like 2018), I found a TRS-80 Model 1. It was the first (non-IBM PC) retrocomputer I had ever got my hands on, and in my book, is absolutely legendary, for reasons I'll have to get into some other time. What's important is that what I got was *only* the keyboard, so no power supply, no cables, no display. The first thing I tried to do with it was cobble up a power supply, and wire up an adapter so I could plug the machine into a regular TV's composite video. I powered it on. It was a working unit. 
@@ -83,6 +83,19 @@ As the system took shape, I thought I might install it into a case, and make a p
         - execution must be done either in a ROM or from external RAM, since you can't be both read the instructions and write the special sequence while being on the internal RAM
         - probably get rid of this in the next version, the Arduino board has the same thing already
 - [I think this is the current version of the CPU](boards/cpu/cpu-rev2/)
+
+### Keyboard
+![keyboard](img/keyboard.jpg)
+- key switches wired per TRS-80 key matrix
+- NMI and Reset keys broken out on board
+- some extra keys for which there is room on the matrix but normally no switch there (Control key, etc) have been added 
+- memory mapped, but relocatable from the default 3800 address, like a model 4
+    - only uses 256 addresses, not the minimally decoded 1K the Model 1 has
+- 8 leds
+- a fairly standard mechanical keyboard build otherwise
+- keycaps are [custom labeled](keyboard-labels/) using the [lasered toner method](https://www.youtube.com/watch?v=_V5DmHmCMaU)
+- this was supposed to be a simple PCB mounted switch design, but the switches I got ended up being plate mounted. I had to reconfigure my CNC machine to be a 3D printer, as I did not have one large enough to print a full-sized backplate at the time.
+![cnc 3d printer](img/cnc-3dp.png)
 
 ### Old CPU
 ![Old CPU](img/old-cpu-board.jpg)
